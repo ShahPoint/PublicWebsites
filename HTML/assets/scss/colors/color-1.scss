@@ -1,0 +1,613 @@
+@import "../variables";
+
+a {
+	color: $primary-color-1;
+
+	&:hover, &:active, &:focus {
+		color: $primary-color-1-lighten;
+	}
+}
+
+#page-preloader {
+	.preloader {
+		.circle {
+			&:before {
+				border-color: $primary-color-1 transparent transparent transparent;
+			}
+		}
+	}
+}
+
+.button-full {
+	@include button-colors($primary-color-1,$white,$primary-color-1-lighten,$white);
+	border: 2px solid $primary-color-1;
+
+	&:hover {
+		border: 2px solid $primary-color-1-lighten;
+	}
+}
+
+.button-border {
+	@include button-colors(transparent,$primary-color-1,$primary-color-1-lighten,$white);
+	border: 2px solid $primary-color-1;
+
+	&:hover {
+		border: 2px solid $primary-color-1-lighten;
+	}
+}
+
+.color-block {
+	background-color: $primary-color-1-bg;
+}
+
+.bg-primary-color {
+	background-color: $primary-color-1;
+}
+
+.bg-second-color {
+	background-color: $second-color-1;
+}
+
+.site-header {
+	.header-content-color {
+		background-color: $primary-color-1;
+	}
+
+	.header-content-gradient {
+		background: $primary-color-1;
+		background: -moz-linear-gradient(-45deg, $primary-color-1-gradient 0%, $primary-color-1 50%, $primary-color-1 100%);
+		background: -webkit-gradient(left top, right bottom, color-stop(0%, $primary-color-1), color-stop(50%, $primary-color-1), color-stop(100%, $primary-color-1));
+		background: -webkit-linear-gradient(-45deg, $primary-color-1-gradient 0%, $primary-color-1 50%, $primary-color-1 100%);
+		background: -o-linear-gradient(-45deg, $primary-color-1-gradient 0%, $primary-color-1 50%, $primary-color-1 100%);
+		background: -ms-linear-gradient(-45deg, $primary-color-1-gradient 0%, $primary-color-1 50%, $primary-color-1 100%);
+		background: linear-gradient(135deg, $primary-color-1-gradient 0%, $primary-color-1 50%, $primary-color-1 100%);
+	}
+
+	.header-container-color, .header-container-color {
+		.header-nav-buttons .button-white-border {
+			background-color: $primary-color-1;
+		}
+	}
+
+	.header-content-color {
+		.header-nav-buttons {
+			.button-full {
+				color: $primary-color-1;
+
+				&:hover, &:active, &:focus {
+					color: $primary-color-1-lighten;
+				}
+			}
+		}
+	}
+
+	.header-color-block {
+		background: $primary-color-1;
+	}
+
+	.header-image-block {
+		.header-bg-overlay {
+			background: $primary-color-1-opacity;
+		}
+	}
+
+	.header-bg-text-color {
+		p {
+			color: $black;
+		}
+	}
+}
+
+.section-block {
+	h2, h3 {
+		span.badge-primary {
+			background-color: $primary-color-1;
+		}
+
+		span.badge-second {
+			background-color: $second-color-1;
+		}
+	}
+}
+
+.feature-box {
+	span.badge-primary {
+		color: $primary-color-1;
+	}
+
+	span.badge-second {
+		color: $second-color-1;
+	}
+}
+
+.features, .prices {
+	span.badge-primary {
+		background-color: $primary-color-1;
+	}
+
+	span.badge-second {
+		background-color: $second-color-1;
+	}
+}
+
+.bg-primary-color {
+	span.badge-primary {
+		color: $primary-color-1 !important;
+	}
+}
+
+.bg-second-color {
+	span.badge-second {
+		color: $second-color-1 !important;
+	}
+}
+
+.feature-box-primary {
+	background-color: $primary-color-1;
+}
+
+.feature-box-second {
+	background-color: $second-color-1;
+}
+
+.figs {
+	background-color: $primary-color-1-fig;
+
+	&:before {
+		background-color: $primary-color-1;
+	}
+}
+
+.nav-light {
+	.navbar-brand {
+		color: $black;
+
+		&:hover, &:focus, &:active {
+			color: $primary-color-1;
+		} 
+	}
+
+	.navbar-nav > li > a, .nav > li > a:focus, .nav > li > a:active {
+		color: $black;
+	}
+
+	.nav > li > a:hover {
+		color: $primary-color-1;
+	}
+
+	.dropdown-menu {
+		& > li > a:hover, & > li > a:focus {
+			background-color: $white-darken;
+		}
+	}
+
+	.nav-icon span {
+		background: $primary-color-1;
+	}
+
+	.menu-buttons {
+		ul {
+			li {
+				.button-simple {
+					color: $black;
+
+					&:hover, &:focus, &:active {
+						color: $primary-color-1-lighten;
+					}
+				}
+
+				.button-full {
+					color: $white;
+					background-color: $primary-color-1;
+
+					&:hover, &:focus, &:active {
+						background-color: $primary-color-1-lighten;
+					}
+				}
+			}
+		}
+	}
+}
+
+.nav-dark {
+	.navbar-brand {
+		color: $white;
+
+		&:hover, &:focus, &:active {
+			color: $white-darken;
+		} 
+	}
+
+	.navbar-nav > li > a, .nav > li > a:focus, .nav > li > a:active {
+		color: $white;
+	}
+
+	.nav > li > a:hover {
+		color: $white-darken;
+	}
+
+	.dropdown-menu {
+		& > li > a:hover, & > li > a:focus {
+			background-color: $white-darken;
+		}
+	}
+
+	.nav-icon span {
+		background: $primary-color-1;
+	}
+
+	.menu-buttons {
+		ul {
+			li {
+				.button-simple {
+					color: $white;
+
+					&:hover, &:focus, &:active {
+						color: $white-darken;
+					}
+				}
+
+				.button-full {
+					color: $primary-color-1;
+					background-color: $white;
+
+					&:hover, &:focus, &:active {
+						color: $primary-color-1-lighten;
+					}
+				}
+			}
+		}
+	}
+
+	.nav-shadow {
+		.navbar-brand {
+			color: $black;
+
+			&:hover, &:focus, &:active {
+				color: $primary-color-1-lighten;
+			} 
+		}
+
+		.navbar-nav > li > a, .nav > li > a:focus, .nav > li > a:active {
+			color: $black;
+		}
+
+		.nav > li > a:hover {
+			color: $primary-color-1-lighten;
+		}
+
+		.menu-buttons {
+			ul {
+				li {
+					.button-simple {
+						color: $black;
+
+						&:hover, &:focus, &:active {
+							color: $primary-color-1-lighten;
+						}
+					}
+
+					.button-full {
+						color: $white;
+						background-color: $primary-color-1;
+
+						&:hover, &:focus, &:active {
+							color: $white;
+							background-color: $primary-color-1-lighten;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.about-1, .about-2, .about-3, .about-4, .about-5, .about-6 {
+	ul {
+		li {
+			&:before {
+				color: $primary-color-1;
+			}
+		}
+	}
+}
+
+.features {
+	.feature-primary-color {
+		i {
+			color: $primary-color-1;
+		}
+	}
+
+	.feature-second-color {
+		i {
+			color: $second-color-1;
+		}
+	}
+}
+
+.price {
+	.bg-primary-color {
+		.button {
+			color: $primary-color-1;
+
+			&:hover, &:active, &:focus {
+				color: $primary-color-1-lighten;
+			}
+		}
+	}
+
+	.bg-second-color {
+		.button {
+			color: $second-color-1;
+
+			&:hover, &:active, &:focus {
+				color: $second-color-1;
+			}
+		}
+	}
+
+	.disable {
+		color: $primary-color-1-opacity;
+	}
+}
+
+.price-3 {
+	h4 {
+		color: $primary-color-1;
+	}
+
+	.time {
+		border-bottom: 1px solid $primary-color-1-opacity;
+	}
+}
+
+.bg-primary-color .cta-button {
+	.button {
+		color: $primary-color-1;
+
+		&:hover, &:active, &:focus {
+			color: $primary-color-1-lighten;
+		}
+	}
+}
+
+.bg-second-color .cta-button {
+	.button {
+		color: $second-color-1;
+
+		&:hover, &:active, &:focus {
+			color: $second-color-1-lighten;
+		}
+	}	
+}
+
+.bg-primary-color .cta-button-img {
+	.button {
+		background-color: $primary-color-1;
+
+		&:hover, &:active, &:focus {
+			background-color: $primary-color-1-lighten;
+		}
+	}
+}
+
+.bg-second-color .cta-button-img {
+	.button {
+		background-color: $second-color-1;
+
+		&:hover, &:active, &:focus {
+			background-color: $second-color-1-lighten;
+		}
+	}	
+}
+
+.cta-bg-image {
+	.button {
+		border: 2px solid $primary-color-1;
+	}
+}
+
+.counter-1 {
+	.counter-left-block {
+		background: $primary-color-1;
+	}
+
+	.counter-right-block {
+		.number, .number-desc {
+			color: $primary-color-1;
+		}
+	}
+}
+
+.counter-2 {
+	background: $primary-color-1;
+}
+
+.how-to-use {
+	h3 {
+		span.number {
+			background: $primary-color-1;
+		}	
+	}
+}
+
+.contact-form-section {
+	.center-form {
+		.contact-form {
+			input[type="text"], input[type="email"], textarea {
+				border-color: $primary-color-1;
+			}
+		}
+	}
+}
+
+.newsletter-form-section {
+	.newsletter-form {
+		input[type="submit"] {
+			color: $primary-color-1;
+
+			&:hover, &:focus, &:active {
+				color: $primary-color-1-lighten;
+			}
+		}
+	}
+}
+
+.header-newsletter-form {
+	.button-form {
+		color: $primary-color-1;
+
+		&:hover, &:focus, &:active {
+			color: $primary-color-1-lighten;
+		}
+	}
+}
+
+.bg-primary-color {
+	.newsletter-form {
+		input[type="submit"] {
+			color: $primary-color-1;
+
+			&:hover, &:focus, &:active {
+				color: $primary-color-1-lighten;
+			}
+		}
+	}
+}
+
+.bg-second-color {
+	.newsletter-form {
+		input[type="submit"] {
+			color: $second-color-1;
+
+			&:hover, &:focus, &:active {
+				color: $second-color-1-lighten;
+			}
+		}
+	}
+}
+
+.index-slider {
+	.owl-nav {
+		.owl-prev, .owl-next {
+			background: $primary-color-1;
+		}
+	}
+}
+
+.site-footer {
+	.site-bottom-footer {
+		.footer-nav {
+			text-align: center;
+
+			ul {
+				li {
+					a:hover, a:active, a:focus {
+						color: $primary-color-1-lighten;
+					}
+				}
+			}
+		}
+
+		.footer-social-icons {
+			li {
+				a {
+					background: $primary-color-1;
+					
+					&:hover, &:active, &:focus {
+						background: $primary-color-1-lighten;
+					}
+				}
+			}
+		}
+	}
+
+	.site-top-footer {
+		.footer-col {
+			a {
+				&:hover, &:active, &:focus {
+					color: $primary-color-1;
+				}
+			}
+		}
+
+		.bottom-footer {
+			.footer-social-icons {
+				li {
+					a {
+						&:hover, &:active, &:focus {
+							color: $primary-color-1;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.footer-color {
+	background: $footer-bg-1;
+}
+
+@media (max-width: 991px) {
+	.reviews-2 {
+		.review {
+			border-bottom: 1px solid $primary-color-1-opacity;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.nav-dark {
+		.navbar-brand {
+			color: $black;
+
+			&:hover, &:focus, &:active {
+				color: $primary-color-1;
+			} 
+		}
+
+		.navbar-nav > li > a, .nav > li > a:focus, .nav > li > a:active {
+			color: $black;
+		}
+
+		.nav > li > a:hover {
+			color: $primary-color-1;
+		}
+
+		.dropdown-menu {
+			& > li > a:hover, & > li > a:focus {
+				background-color: $white-darken;
+			}
+		}
+
+		.nav-icon span {
+			background: $primary-color-1;
+		}
+
+		.menu-buttons {
+			ul {
+				li {
+					.button-simple {
+						color: $black;
+
+						&:hover, &:focus, &:active {
+							color: $primary-color-1-lighten;
+						}
+					}
+
+					.button-full {
+						color: $white;
+						background-color: $primary-color-1;
+
+						&:hover, &:focus, &:active {
+							background-color: $primary-color-1-lighten;
+							color: $white;
+						}
+					}
+				}
+			}
+		}
+	}
+}

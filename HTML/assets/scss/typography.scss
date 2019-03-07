@@ -1,0 +1,132 @@
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+	font-style: inherit;
+	font-weight: 700;
+	color: $black;
+}
+
+h1, .h1 {
+	@include type-setting(5);
+	margin: 0 0 $base-line-height 0;
+}
+
+h2, .h2 {
+	@include type-setting(4);
+	margin: $base-line-height 0;
+}
+
+h3, .h3 {
+	@include type-setting(3);
+	margin: $base-line-height 0;
+}
+
+h4, .h4 {
+	@include type-setting(2);
+	margin: $base-line-height 0;
+}
+
+h5, .h5 { 
+	@include type-setting(1);
+	margin: $base-line-height 0;
+}
+
+h6, .h6 {
+	@include type-setting(0);
+	margin: $base-line-height 0 0 0;
+}
+
+.page-content {
+	h1, .h1 {
+		@include type-setting(4);
+		margin: 0 0 $base-line-height 0;
+	}
+
+	h2, .h2 {
+		@include type-setting(3);
+		margin: $base-line-height 0;
+	}
+
+	h3, .h3 {
+		@include type-setting(2);
+		margin: $base-line-height 0;
+	}
+
+	h4, .h4 {
+		@include type-setting(1);
+		margin: $base-line-height 0;
+	}
+
+	h5, .h5 { 
+		@include type-setting(0);
+		margin: $base-line-height 0;
+	}
+
+	h6, .h6 {
+		@include type-setting(-1);
+		margin: $base-line-height 0 0 0;
+	}
+}
+
+p {
+	@include type-setting(0);
+}
+
+p, ul, ol, pre, table, blockquote, dl, dd, figcaption {
+	margin-top: 0;
+	margin-bottom: $base-line-height;
+}
+
+ul ul, ol ol, ul ol, ol ul{
+	margin-left: $base-line-height;
+}
+
+pre {
+  padding: $base-line-height / 2;
+}
+
+a {
+	text-decoration: none;
+}
+
+blockquote { }
+
+::-webkit-input-placeholder {
+	color: $black;
+	font-weight: 400;
+}
+
+::-moz-placeholder {
+	color: $black;
+	font-weight: 400;
+}
+
+:-ms-input-placeholder {
+	color: $black;
+	font-weight: 400;
+}
+
+:-moz-placeholder {
+	color: $black;
+	font-weight: 400;
+}
+
+.invert ::-webkit-input-placeholder {
+	color: rgba( 255, 255, 255, 0.5 );
+}
+
+.invert ::-moz-placeholder {
+	color: rgba( 255, 255, 255, 0.5 );
+}
+
+.invert :-ms-input-placeholder {
+	color: rgba( 255, 255, 255, 0.5 );
+}
+
+.invert :-moz-placeholder {
+	color: rgba( 255, 255, 255, 0.5 );
+}
+
+@media (max-width: 991px) {
+	html {
+		font-size: 90%;
+	}
+}
