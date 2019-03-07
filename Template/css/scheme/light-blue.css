@@ -1,0 +1,179 @@
+/* CSS crunched with Crunch - http://crunchapp.net/ */
+.navbar .navbar-brand {
+  background: #109BBD;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  background-color: #109BBD;
+}
+.dropdown-menu {
+  background-color: #109BBD;
+}
+a {
+  color: #109BBD;
+}
+.main-color {
+  color: #109BBD;
+}
+.white-color{
+    color: #ffffff;
+}
+.slides-navigation a:hover {
+  background: #109BBD;
+}
+.slides-pagination a.current {
+  background: #109BBD;
+}
+.header-center a:hover {
+  color: #109BBD;
+}
+.totop:hover span > a.hover {
+  color: #109BBD;
+}
+.left-icon .icon {
+  background: #109BBD;
+}
+.styled div span {
+  background: #109BBD;
+}
+footer.footer {
+  background: #109BBD;
+}
+.post .post-meta .post-icon:hover {
+  background: #109BBD;
+}
+.post .post-meta span a {
+  color: #109BBD;
+}
+.post .read-more {
+  border: 1px solid #109BBD;
+}
+.mejs-controls .mejs-time-rail .mejs-time-current {
+  background-color: #109BBD;
+}
+.mejs-horizontal-volume-current {
+  background: #109BBD;
+}
+.skill-bar ul li .bar {
+  background: #109BBD;
+}
+.pagination .pag-prev a,
+.pagination .pag-next a {
+  background: #109BBD;
+  border-color: #109BBD;
+}
+.testimonial-list .testimonial-item a.current ~ .testi-link,
+.testimonial-list .testimonial-item a:hover ~ .testi-link {
+  background: rgba(76, 221, 243, 0.8);
+}
+.body-shadow{
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	background:hsla(0,0%,0%,0.5);
+	position:fixed;
+	z-index:9999999;
+	display:none;
+}
+.message-state{
+	width:30%;
+	box-sizing:border-box;
+	padding:10px;
+	border-radius:3px;
+	top:50%;
+	left:50%;
+	-webkit-transform:translate(-50%, -50%);
+	transform:translate(-50%, -50%);
+	position:relative;
+	background:#fff;
+	color:#000;
+	box-shadow:0 0 5px #000;
+}
+.end-button{
+	position:absolute;
+	top:-25px;
+	right:-25px;
+	cursor:pointer;
+}
+.message-thanks{
+	font-size:1.5em;
+	margin-bottom:1em;
+}
+.side-tab{
+	position:fixed;
+	box-sizing:border-box;
+	padding:2px 5px;
+	right:0;
+	top:50%;
+	background:#109BBD;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+	border-bottom:solid 1px #1b6b91;
+	z-index:99999;
+	cursor:pointer;
+}
+.side-tab-txt{
+	color:#fff;
+	float:right;
+	font-weight:bold;
+	padding:4px 5px 0 4px;
+}
+.calendar-tab{
+	background:#fff;
+	position:fixed;
+	right:-40%;
+	top:0;
+	height:100%;
+	width:40%;
+	box-sizing:border-box;
+	padding:10px 20px 0;
+	text-align:center;
+	z-index:9999;
+}
+.exit-image{
+	background:url(../../images/exit-image.png) no-repeat center center;
+	width:25px;
+	height:25px;
+	position:absolute;
+	top:0;
+	right:0;
+	cursor:pointer;
+}
+.calendar-tab-shd{
+	box-shadow:0 0 5px #000;
+}
+.calendar-tab img{
+	max-width:90%;
+}
+@media screen and (max-width:900px){
+	.side-tab-txt{
+		display:none;
+	}
+}
+@media screen and (max-width:650px){
+	.calendar-tab{
+		width:100%;
+		right:-100%;
+	}
+}
+
+.small-business-info{
+	margin:0;
+	padding:0;
+	list-style:inherit;
+}
+.og-expanded{
+	overflow:inherit;
+}
+.og-details{
+	overflow:auto;
+}
+.og-title p{
+	font-size:0.9em;
+}
+.small-business-info li{
+	display:inherit;
+	height:inherit;
+}
