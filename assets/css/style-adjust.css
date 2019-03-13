@@ -1,0 +1,118 @@
+/*
+    Header
+ */
+
+#masthead .navbar-header img{
+    max-width:125px;
+    height:auto;
+}
+
+/*
+    Banner
+ */
+
+#banner h3{
+    color:#ffffff;
+    margin-bottom:5px;
+}
+#banner form input{
+    margin-bottom:10px;
+    width:85%;
+}
+
+/*
+    Feature List
+ */
+
+#features---2 div.col-md-4{
+    height:175px;
+}
+
+/*
+    Try it Free Section
+ */
+
+.cta{
+    background-color:#38ceea;
+}
+
+.cta a{
+    color:#38ceea;
+}
+.cta h2{
+    color: #ffffff;
+}
+
+/*
+    Careers
+ */
+
+.careers-content{
+   padding-top:150px;
+}
+
+#career-contact{
+    margin-bottom:50px;
+}
+#career-contact input:not([type=submit]){
+    margin-bottom:10px;
+}
+
+/*
+    Validation
+ */
+label.error{
+    display:block;
+}
+
+/*
+    Fly Out
+ */
+.side-fly-out {
+    background: #fff;
+    position: fixed;
+    right: -40%;
+    top: 0;
+    height: 100%;
+    width: 40%;
+    box-sizing: border-box;
+    padding: 10px 20px 0;
+    text-align: center;
+    z-index: 9999;
+}
+
+.side-fly-out > div{
+    position:relative;
+    top:50%;
+    -webkit-transform:translateY(-50%);
+    -ms-transform:translateY(-50%);
+    -moz-transform:translateY(-50%);
+    -o-transform:translateY(-50%);
+    transform:translateY(-50%);
+}
+
+.side-fly-out.shadow{
+    box-shadow: 0 0 5px #000;
+}
+
+.side-tab{
+    position: fixed;
+    box-sizing: border-box;
+    padding: 0.375rem 1.5rem;
+    right: 0;
+    top: 50%;
+    background-color: #38ceea;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom: solid 1px #1b6b91;
+    z-index: 99;
+    cursor: pointer;
+    color:#ffffff;
+}
+
+/*
+    Corrections
+ */
+.cta-button .button-full:hover{
+    background-color:#58d6ed;
+}
