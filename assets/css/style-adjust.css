@@ -1,10 +1,36 @@
+p{
+    color:#6b748a;
+}
+
 /*
     Header
  */
 
 #masthead .navbar-header img{
-    max-width:125px;
+    max-width:225px;
     height:auto;
+}
+.nav-no-shadow img.scroll, .nav-shadow img.standard{
+    display:none;
+}
+.main-navigation .navbar-brand{
+    height:auto;
+}
+.main-navigation .menu-buttons{
+    margin-top:1.5rem;
+}
+
+.site-header .title-centered-content .header-image, .site-header .title-centered-content .header-text{
+    left:auto;
+}
+
+@media (max-width: 991px){
+    .site-header .title-centered-content .header-image{
+        margin-top:100px;
+    }
+    .site-header .title-centered-content .header-text{
+        padding-top:1.5rem;
+    }
 }
 
 /*
@@ -19,6 +45,18 @@
     margin-bottom:10px;
     width:85%;
 }
+.site-header .title-centered-content .title-desc p{
+    font-size:1.5rem;
+}
+
+@media (max-width: 991px){
+    #banner form input{
+        margin-bottom:10px;
+        width:100%;
+    }
+}
+
+
 
 /*
     Feature List
@@ -27,21 +65,36 @@
 #features---2 div.col-md-4{
     height:175px;
 }
+.features .feature-second-color i{
+    color:#0e83b7;
+}
+
+
 
 /*
     Try it Free Section
  */
 
 .cta{
-    background-color:#38ceea;
+    background-color:#0e83b7;
 }
 
 .cta a{
-    color:#38ceea;
+    color:#0e83b7;
 }
 .cta h2{
     color: #ffffff;
 }
+
+
+/*
+    About
+ */
+
+#about---1 img{
+    max-width:200px;
+}
+
 
 /*
     Careers
@@ -58,12 +111,25 @@
     margin-bottom:10px;
 }
 
+
+
+/*
+    FAQ
+ */
+#faq---2 .panel-heading h4 a{
+    display:block;
+}
+
+
+
 /*
     Validation
  */
 label.error{
     display:block;
 }
+
+
 
 /*
     Fly Out
@@ -81,7 +147,22 @@ label.error{
     z-index: 9999;
 }
 
-.side-fly-out > div{
+@media (max-width: 767px){
+    .side-fly-out{
+        width: 100%;
+    }
+}
+
+.exit-image{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.side-fly-out > div:not(.exit-image){
     position:relative;
     top:50%;
     -webkit-transform:translateY(-50%);
@@ -101,7 +182,7 @@ label.error{
     padding: 0.375rem 1.5rem;
     right: 0;
     top: 50%;
-    background-color: #38ceea;
+    background-color: #0e83b7;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
     border-bottom: solid 1px #1b6b91;
@@ -110,9 +191,11 @@ label.error{
     color:#ffffff;
 }
 
+
+
 /*
     Corrections
  */
 .cta-button .button-full:hover{
-    background-color:#58d6ed;
+    background-color:#0e83b7;
 }

@@ -2,8 +2,8 @@
 
 if($_SERVER['REQUEST_METHOD'] != 'POST') exit();
 
-$receiptant_email = 'steve.wilson@cloudpcr.net, jay.shah@cloudpcr.net';
-//$receiptant_email = 'erik@brightthought.net';
+//$receiptant_email = 'steve.wilson@cloudpcr.net, jay.shah@cloudpcr.net';
+$receiptant_email = 'erik@brightthought.net';
 
 $full_name = $_POST['name'];
 $email = $_POST['email'];
@@ -15,8 +15,13 @@ $first_name = $last_name = '';
 if(count($name) == 1){
 	$first_name = $last_name = $name[0];
 }else{
-	$first_name = $name[0];
-	$last_name = $name[1];
+	foreach($name as $key => $value){
+		if($key == 0 ){
+			$first_name = $value;
+		}else {
+			$last_name .= $value . ' ';
+		}
+	}
 }
 
 $user_data = [

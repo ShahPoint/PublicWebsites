@@ -1368,7 +1368,7 @@ pre code {
     right: 41.66667%;
   }
   .col-md-pull-6 {
-    right: 50%;
+    right: 50% !important;
   }
   .col-md-pull-7 {
     right: 58.33333%;
@@ -1407,7 +1407,7 @@ pre code {
     left: 41.66667%;
   }
   .col-md-push-6 {
-    left: 50%;
+    left: 50% !important;
   }
   .col-md-push-7 {
     left: 58.33333%;

@@ -374,12 +374,12 @@ function slideOut(){
         flyout = jQuery('.side-fly-out'),
         sideTab = jQuery('.side-tab');
 
-    if(windowWidth <= 650){
+    if(windowWidth <= 767){
         minusDefault = '-100%';
         positiveDefault = '100%';
         cal = '100%';
         flyout.css('right', minusDefault);
-        flyout.append('<div class="exit-image"></div>');
+        flyout.append('<div class="exit-image"><i class="fas fa-times"></i></div>');
     }else{
         minusDefault = '-40%',
             positiveDefault = '40%',
@@ -388,12 +388,12 @@ function slideOut(){
     jQuery(window).on('resize', function(e) {
         windowWidth = $(window).width();
 
-        if(windowWidth <= 650){
+        if(windowWidth <= 767){
             minusDefault = '-100%';
             positiveDefault = '100%';
             cal = '100%';
             flyout.css('right', minusDefault);
-            flyout.append('<div class="exit-image"></div>');
+            flyout.append('<div class="exit-image"><i class="fas fa-times"></i></div>');
         }else{
             minusDefault = '-40%',
                 positiveDefault = '40%',
@@ -402,7 +402,7 @@ function slideOut(){
         }
     });
 
-    jQuery('body').on('.exit-image', 'click', function(){
+    jQuery('body').on('click', '.exit-image', function(){
         flyout.animate({right: side},{
             duration: 300,
             step: function(){
