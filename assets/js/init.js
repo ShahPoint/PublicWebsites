@@ -397,10 +397,14 @@ function generalContact(){
                 data: data,
                 success: function(e){
                     if(e === 'true'){
+                        $this.before('<p class="header-send">Thank you!</p>');
+                        
                         $this.find('input:not([type=submit])').each((i, e) => {
                             jQuery(e).val('');
                         });
-                        $this.before('<p class="header-send">Thank you!</p>');
+                        $this.find('textarea').each((i, e) => {
+                           jQuery(e).val('');
+                        });
                     }
                 }
             })
