@@ -28,7 +28,6 @@ $message = "Submission Content\r\n"
 try{
 	$mail->isSMTP();
 	$mail->HOST = 'smtp.sendgrid.net';
-	$mail->SMTPAuth = true;
 	$mail->Username = 'jay.shah@shahpoint.com';
 	$mail->Password = '1qaz!QAZ';
 	$mail->Port = 587;
