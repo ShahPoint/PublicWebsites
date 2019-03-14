@@ -53,21 +53,7 @@ $response = curl_exec($curl);
 $err = curl_error($curl);
 
 if($err){
-	echo "There was an error";
-	exit();
-}
-
-$message = "Name: $full_name\r\n";
-$message .= "Email: $email\r\n";
-$message .= "Phone: $phone";
-
-$headers  = "From: " . strip_tags($email) . "\r\n";
-$headers .= "Reply-To: ". strip_tags($email) . "\r\n";
-$headers .= "MIME-Version: 1.0\r\n";
-$headers .= "Content-type:text/plain; Charset=UTF-8 \r\n";
-
-if(mail($receiptant_email, 'Free Trial Submission', $message, $headers)){
-	echo 'true';
+	echo "true";
 	exit();
 }
 
