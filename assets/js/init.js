@@ -42,6 +42,7 @@ jQuery(function($) {
     trialSubmission();
     slideOut();
     careerSubmission();
+    generalContact();
 
 });
 
@@ -353,10 +354,11 @@ function careerSubmission(){
             var data = $this.serialize();
 
             jQuery.ajax({
-                url: 'contact.php',
+                url: 'careers.php',
                 type: 'POST',
                 data: data,
                 success: function(e){
+                    console.log(e);
                     if(e === 'true'){
                         $this.find('input:not([type=submit])').each((i, e) => {
                            jQuery(e).val('');
@@ -368,6 +370,45 @@ function careerSubmission(){
         }
     });
 }
+
+
+function generalContact(){
+
+    var trialForm = jQuery('.general-contact');
+
+    trialForm.validate({
+        rules: {
+            phone:{
+                required: true,
+                phoneUS: true
+            }
+        }
+    });
+
+    trialForm.on('submit', function(e){
+        e.preventDefault();
+
+        var $this = jQuery(this);
+        if($this.valid()){
+            var data = $this.serialize();
+
+            jQuery.ajax({
+                url: 'contact.php',
+                type: 'POST',
+                data: data,
+                success: function(e){
+                    if(e === 'true'){
+                        $this.find('input:not([type=submit])').each((i, e) => {
+                            jQuery(e).val('');
+                        });
+                        $this.before('<p class="header-send">Thank you!</p>');
+                    }
+                }
+            })
+        }
+    });
+}
+
 
 function slideOut(){
     //Call to Action slide out
