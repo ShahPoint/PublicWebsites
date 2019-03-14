@@ -7,7 +7,7 @@ p{
  */
 
 #masthead .navbar-header img{
-    max-width:225px;
+    max-width:180px;
     height:auto;
 }
 .nav-no-shadow img.scroll, .nav-shadow img.standard{
@@ -94,6 +94,10 @@ p{
 #about---1 img{
     max-width:200px;
 }
+.about-1 ul li:before, .about-2 ul li:before, .about-3 ul li:before, .about-4 ul li:before, .about-5 ul li:before, .about-6 ul li:before{
+    color:#0e83b7;
+}
+
 
 
 /*
@@ -117,9 +121,20 @@ p{
     FAQ
  */
 #faq---2 .panel-heading h4 a{
-    display:block;
+    display:flex;
+}
+#faq---2 .panel-heading h4 a span:first-child{
+    padding-left:5px;
+}
+#faq---2 .panel-heading h4 a span:last-child{
+    padding-left:10px;
 }
 
+@media (max-width: 767px){
+    #faq---2 .panel-heading h4 a{
+        line-height:1.75rem;
+    }
+}
 
 
 /*

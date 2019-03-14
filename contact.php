@@ -29,7 +29,7 @@ try{
 	$mail->isSMTP();
 	$mail->HOST = 'localhost';
 	$mail->SMTPAuth = false;
-	$mail->Port = 25;
+	$mail->Port = 1025;
 
 	//$mail->addAddress('steve.wilson@cloudpcr.net', 'Steve Wilson');
 	//$mail->addAddress('jay.shah@cloudpcr.net', 'Jay Shah');

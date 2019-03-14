@@ -2,8 +2,6 @@
 
 if($_SERVER['REQUEST_METHOD'] != 'POST') exit();
 
-//$receiptant_email = 'steve.wilson@cloudpcr.net, jay.shah@cloudpcr.net';
-$receiptant_email = 'erik@brightthought.net';
 
 $full_name = $_POST['name'];
 $email = $_POST['email'];
@@ -53,10 +51,10 @@ $response = curl_exec($curl);
 $err = curl_error($curl);
 
 if($err){
-	echo "true";
+	echo "false";
 	exit();
 }
 
-echo 'failed';
+echo 'true';
 exit();
 
