@@ -358,7 +358,6 @@ function careerSubmission(){
                 type: 'POST',
                 data: data,
                 success: function(e){
-                    console.log(e);
                     if(e === 'true'){
                         $this.find('input:not([type=submit])').each((i, e) => {
                            jQuery(e).val('');

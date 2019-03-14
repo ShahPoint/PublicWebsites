@@ -2,6 +2,7 @@
 
 if($_SERVER['REQUEST_METHOD'] != 'POST') exit();
 
+require_once 'vendor/autoload.php';
 
 $full_name = $_POST['name'];
 $email = $_POST['email'];
@@ -100,6 +101,26 @@ if($err){
 	}
 }
 
-echo 'true';
+$message = "Form Content<br>"
+          ."<p>Name: ".strip_tags($full_name)."</p>"
+          ."<p>Email: ".strip_tags($email)."</p>"
+          ."<p>Phone: ".strip_tags($phone)."</p>"
+          ."<p>Message: ".strip_tags($user_message)."</p>";
+
+$sendgrid = new \SendGrid("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");
+$grid_email    = new \SendGrid\Mail\Mail();
+
+$grid_email->addTo("jay.shah@cloudpcr.net");
+$grid_email->setFrom($email);
+$grid_email->setSubject("Career Form Submission");
+$grid_email->addContent("text/html", $message);
+
+try {
+	$sendgrid->send( $grid_email );
+	echo 'true';
+}catch(Exception $e){
+	echo 'failed';
+}
+
 exit();
 
