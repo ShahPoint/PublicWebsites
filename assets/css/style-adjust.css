@@ -1,6 +1,13 @@
 p{
     color:#6b748a;
 }
+input.error, textarea.error{
+    border:solid thin red;
+}
+label.error{
+    display:none !important;
+}
+
 
 /*
     Header
@@ -95,7 +102,7 @@ p{
     max-width:200px;
 }
 .about-1 ul li:before, .about-2 ul li:before, .about-3 ul li:before, .about-4 ul li:before, .about-5 ul li:before, .about-6 ul li:before{
-    color:#0e83b7;
+    color:#6b748a;
 }
 
 
@@ -134,14 +141,6 @@ p{
     #faq---2 .panel-heading h4 a{
         line-height:1.75rem;
     }
-}
-
-
-/*
-    Validation
- */
-label.error{
-    display:block;
 }
 
 
@@ -213,4 +212,8 @@ label.error{
  */
 .cta-button .button-full:hover{
     background-color:#0e83b7;
+}
+
+.contact-form-section .form-bg{
+    background:none;
 }
