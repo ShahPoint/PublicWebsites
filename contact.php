@@ -79,7 +79,7 @@ if($response[0]){
 			'name' => 'Website contact form submission'
 		]
 	];
-/*
+
 	$con_response = $curl->init('conversation', 'POST', $response['id'], $con_data);
 
 
@@ -87,7 +87,7 @@ if($response[0]){
 		echo "false";
 		exit();
 	}
-*/
+
 	//Add to list
 	$list_data = ['list' => 1];
 	$list = $curl->init('list', 'POST', $response['id'], $list_data);
