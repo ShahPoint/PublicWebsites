@@ -131,7 +131,7 @@
                             </div>
 
                             <h3>Start your 90-day free trial</h3>
-                            <form action="#" method="post" class="free-trial-form" onsubmit="SubmitCoreInfo()">
+                            <form action="#" method="post" class="free-trial-form" onsubmit="SubmitCoreInfo($(this))">
                                 <fieldset>
                                     <input type="text" name="name" class="form-control" placeholder="Name" required>
                                     <input type="email" name="email" class="form-control" placeholder="Email" required>
@@ -742,7 +742,7 @@
 
         <!-- Start Contact Form -->
         <div class="col-md-12 center-form border-box">
-            <form class="contact-form free-trial-form">
+            <form class="contact-form free-trial-form" onsubmit="SubmitCoreInfo($(this))">
 
                 <div class="col-md-12 text-center">
                     <h2>Start your 90-day free trial</h2>

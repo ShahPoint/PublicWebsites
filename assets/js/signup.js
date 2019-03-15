@@ -20,8 +20,8 @@ function getUrlParameter(name) {
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 };
 
-function SubmitCoreInfo() {
-    let $form = $("#signupForm")
+function SubmitCoreInfo($form) {
+    // let $form = $("#signupForm")
     let validator = $form.validate();
 
     if (validator.form()) {
@@ -30,14 +30,14 @@ function SubmitCoreInfo() {
         // formData.leadContext = getUrlParameter("leadContext");
         // formData.demo = true;
         // formData.testing = true;
-        let name = $("[name=name]").val().trim().split(" ");
+        let name = $("[name=name]", $form).val().trim().split(" ");
         
         let formData = {
             leadOrigin: getUrlParameter("leadOrigin"),
             leadContext: getUrlParameter("leadContext"),
             demo: true,
-            emailAddress: $("[name=email]").val(),
-            phoneNumber: $("[name=phone]").val(),
+            emailAddress: $("[name=email]", $form).val(),
+            phoneNumber: $("[name=phone]", $form).val(),
             firstName: name[0],
             lastName: name[name.length - 1]
         };
