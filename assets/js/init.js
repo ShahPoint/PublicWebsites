@@ -1,4 +1,5 @@
 //jQuery code
+
 jQuery(function($) {
 
     'use strict';
@@ -294,6 +295,7 @@ function initNewsletterInHeader() {
     });
 }
 
+
 function trialSubmission(){
 
     var trialForm = jQuery('.free-trial-form');
@@ -312,8 +314,14 @@ function trialSubmission(){
         e.preventDefault();
 
         var $this = jQuery(this);
+        $this.find('.loading').show();
+
         if($this.valid()){
-            var data = $this.serialize();
+            var key = Cookies.get('__ca__chat');
+            var data = {
+                'data' : $this.serializeArray(),
+                'key' : key
+            };
 
             jQuery.ajax({
                 url: 'mail.php',
@@ -322,10 +330,7 @@ function trialSubmission(){
                 success: function(e){
 
                     if(e === 'true'){
-                        $this.find('input:not([type=submit])').each((i, e) => {
-                            jQuery(e).val('');
-                        });
-                        $this.before('<p class="header-send">Thank you!</p>');
+                        window.location.href = 'thankyou.html';
                     }
                 }
             })
@@ -350,6 +355,8 @@ function careerSubmission(){
         e.preventDefault();
 
         var $this = jQuery(this);
+        $this.find('.loading').show();
+
         if($this.valid()){
             var data = $this.serialize();
 
@@ -359,13 +366,16 @@ function careerSubmission(){
                 data: data,
                 success: function(e){
                     if(e === 'true'){
+                        jQuery('.contact-form-modal').modal('show');
                         $this.find('input:not([type=submit])').each((i, e) => {
                            jQuery(e).val('');
                         });
-                        $this.before('<p class="header-send">Thank you!</p>');
+                        $this.find('.loading').hide();
                     }
                 }
             })
+        }else{
+            $this.find('.loading').hide();
         }
     });
 }
@@ -388,17 +398,27 @@ function generalContact(){
         e.preventDefault();
 
         var $this = jQuery(this);
+        $this.find('.loading').show();
+
         if($this.valid()){
-            var data = $this.serialize();
+
+            var key = Cookies.get('__ca__chat');
+            var data = {
+                'data' : $this.serializeArray(),
+                'key' : key
+            };
+
 
             jQuery.ajax({
                 url: 'contact.php',
                 type: 'POST',
                 data: data,
                 success: function(e){
+
                     if(e === 'true'){
-                        $this.before('<p class="header-send">Thank you!</p>');
-                        
+                        jQuery('.contact-form-modal').modal('show');
+                        $this.find('.loading').hide();
+
                         $this.find('input:not([type=submit])').each((i, e) => {
                             jQuery(e).val('');
                         });
@@ -407,7 +427,9 @@ function generalContact(){
                         });
                     }
                 }
-            })
+            });
+        }else{
+            $this.find('.loading').hide();
         }
     });
 }

@@ -2,7 +2,7 @@ p{
     color:#6b748a;
 }
 input.error, textarea.error{
-    border:solid thin red;
+    border:solid thin red !important;
 }
 label.error{
     display:none !important;

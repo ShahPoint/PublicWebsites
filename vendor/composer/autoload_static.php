@@ -18,6 +18,10 @@ class ComposerStaticInitd478e4bca1cfd401d4542f80b01bcee9
             'SendGrid\\Contacts\\' => 18,
             'SendGrid\\' => 9,
         ),
+        'C' => 
+        array (
+            'CloudPCR\\' => 9,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -37,6 +41,10 @@ class ComposerStaticInitd478e4bca1cfd401d4542f80b01bcee9
         array (
             0 => __DIR__ . '/..' . '/sendgrid/php-http-client/lib',
             1 => __DIR__ . '/..' . '/sendgrid/sendgrid/lib',
+        ),
+        'CloudPCR\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/control',
         ),
     );
 

@@ -2,11 +2,24 @@
 
 if($_SERVER['REQUEST_METHOD'] != 'POST') exit();
 
+require_once 'vendor/autoload.php';
 
-$full_name = $_POST['name'];
-$email = $_POST['email'];
-$phone = $_POST['phone'];
+$curl = new \CloudPCR\curl_control();
 
+//Function to get the key of the desired value
+function getKey( $value, $array ){
+	return array_search($value, array_column($array, 'name'));
+}
+
+//Get form post data
+$data = $_POST['data'];
+
+//Set post data to variables
+$full_name = $data[getKey('name', $data)]['value'];
+$email = $data[getKey('email', $data)]['value'];
+$phone = $data[getKey('phone', $data)]['value'];
+
+//Prepare the data to be sent to User.com
 $name = explode( ' ', $full_name);
 $first_name = $last_name = '';
 
@@ -22,6 +35,7 @@ if(count($name) == 1){
 	}
 }
 
+//Create array to be sent to User.com
 $user_data = [
 	'email' => $email,
 	'first_name' => $first_name,
@@ -29,59 +43,26 @@ $user_data = [
 ];
 
 
-$url = 'https://cloudpcrtest.user.com/api/public/users/';
+//Find the user to update
+$search = $curl->init('search', 'GET', $_POST['key']);
+$search = json_decode($search[1], true);
 
-$curl = curl_init($url);
 
-curl_setopt_array($curl, array(
-	CURLOPT_RETURNTRANSFER => true,
-	CURLOPT_ENCODING => "",
-	CURLOPT_MAXREDIRS => 10,
-	CURLOPT_TIMEOUT => 30,
-	CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-	CURLOPT_CUSTOMREQUEST => "POST",
-	CURLOPT_POSTFIELDS => json_encode($user_data),
-	CURLOPT_HTTPHEADER => array(
-		"authorization: Token TR5Of4PN9qzowKnyONRAfKQZFBF76ybekYyvwvFrZBxJa09VPGTEfcPHCuClSC11",
-		"content-type: application/json"
-	),
-));
+//Update the the user
+$response = $curl->init('update', 'PUT', $search['id'], $user_data);
 
-$response = curl_exec($curl);
-$err = curl_error($curl);
-
-curl_close($curl);
-
-if($err){
+//Check to make sure there wasn't an error
+if($response[0]){
 	echo "false";
 	exit();
 }else{
-	$response = json_decode($response, true);
+	$response = json_decode($response[1], true);
 
-	$list_url = "https://cloudpcrtest.user.com/api/public/users/{$response['id']}/add_to_list/";
-	$list_curl = curl_init($list_url);
-
+	//Add to list
 	$list_data = ['list' => 1];
+	$list = $curl->init('list', 'POST', $response['id'], $list_data);
 
-	curl_setopt_array($list_curl, array(
-		CURLOPT_RETURNTRANSFER => true,
-		CURLOPT_ENCODING => "",
-		CURLOPT_MAXREDIRS => 10,
-		CURLOPT_TIMEOUT => 30,
-		CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-		CURLOPT_CUSTOMREQUEST => "POST",
-		CURLOPT_POSTFIELDS => json_encode($list_data),
-		CURLOPT_HTTPHEADER => array(
-			"authorization: Token TR5Of4PN9qzowKnyONRAfKQZFBF76ybekYyvwvFrZBxJa09VPGTEfcPHCuClSC11",
-			"content-type: application/json"
-		),
-	));
-
-	$list_response = curl_exec($list_curl);
-	$err = curl_error($list_curl);
-	curl_close($list_curl);
-
-	if($err){
+	if($list[0]){
 		echo "false";
 		exit();
 	}

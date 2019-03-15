@@ -27,9 +27,9 @@ $message = "Submission Content<br>"
 $sendgrid = new \SendGrid("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");
 $email    = new \SendGrid\Mail\Mail();
 
-$email->addTo("jay.shah@cloudpcr.net");
+$email->addTo("erik@brightthought.co");
 $email->setFrom($user_email);
-$email->setSubject("Career Form Submission");
+$email->setSubject("Careers - $full_name");
 $email->addContent("text/html", $message);
 
 try {

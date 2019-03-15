@@ -4,116 +4,118 @@ if($_SERVER['REQUEST_METHOD'] != 'POST') exit();
 
 require_once 'vendor/autoload.php';
 
-$full_name = $_POST['name'];
-$email = $_POST['email'];
-$phone = $_POST['phone'];
-$user_message = $_POST['message'];
+$curl = new \CloudPCR\curl_control();
 
+//Function to get the key of the desired value
+function getKey( $value, $array ){
+	return array_search($value, array_column($array, 'name'));
+}
+
+//Get form post data
+$data = $_POST['data'];
+
+//Set post data to variables
+$full_name = $data[getKey('name', $data)]['value'];
+$email = $data[getKey('email', $data)]['value'];
+$phone = $data[getKey('phone', $data)]['value'];
+$user_message = $data[getKey('message', $data)]['value'];
+
+//Prepare name for use with User.com
 $name = explode( ' ', $full_name);
 $first_name = $last_name = '';
 
 if(count($name) == 1){
+
 	$first_name = $last_name = $name[0];
+
 }else{
+
 	foreach($name as $key => $value){
+
 		if($key == 0 ){
+
 			$first_name = $value;
+
 		}else {
+
 			$last_name .= $value . ' ';
+
 		}
 	}
 }
 
+//Set array to pass to User.com
 $user_data = [
 	'email' => $email,
 	'first_name' => $first_name,
 	'last_name' => $last_name
 ];
 
+//Find the user to update
+$search = $curl->init('search', 'GET', $_POST['key']);
+$search = json_decode($search[1], true);
 
-$url = 'https://cloudpcrtest.user.com/api/public/users/';
 
-$curl = curl_init($url);
+//Update the the user
+$response = $curl->init('update', 'PUT', $search['id'], $user_data);
 
-curl_setopt_array($curl, array(
-	CURLOPT_RETURNTRANSFER => true,
-	CURLOPT_ENCODING => "",
-	CURLOPT_MAXREDIRS => 10,
-	CURLOPT_TIMEOUT => 30,
-	CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-	CURLOPT_CUSTOMREQUEST => "POST",
-	CURLOPT_POSTFIELDS => json_encode($user_data),
-	CURLOPT_HTTPHEADER => array(
-		"authorization: Token TR5Of4PN9qzowKnyONRAfKQZFBF76ybekYyvwvFrZBxJa09VPGTEfcPHCuClSC11",
-		"content-type: application/json"
-	),
-));
+if($response[0]){
 
-$response = curl_exec($curl);
-$err = curl_error($curl);
+	echo "false";
+	exit();
 
-curl_close($curl);
+}else{
 
+	//Get response from user update
+	$response = json_decode($response[1], true);
+
+	//Create the array to update the conversation with User.com
+	$con_data = [
+		'content' => strip_tags($user_message),
+		'source' => 3,
+		'user' => $response['id'],
+		'source_context' => [
+			'name' => 'Website contact form submission'
+		]
+	];
+/*
+	$con_response = $curl->init('conversation', 'POST', $response['id'], $con_data);
+
+
+	if($con_response[0]){
+		echo "false";
+		exit();
+	}
+*/
+	//Add to list
+	$list_data = ['list' => 1];
+	$list = $curl->init('list', 'POST', $response['id'], $list_data);
+
+	if($list[0]){
+		echo "false";
+		exit();
+	}
+}
+
+
+
+//Setup the message for the email
 $message = "Contact Information: \r\n\n"
            ."Name: ".strip_tags($full_name)."\r\n"
            ."Email: ".strip_tags($email)."\r\n"
            ."Phone: ".strip_tags($phone)."\r\n"
            ."Message: ".strip_tags($user_message)."\r\n";
 
-if($err){
-	echo "false";
-	exit();
-}else{
-	$response = json_decode($response, true);
-
-	$con_data = [
-		'content' => strip_tags($user_message),
-		'source' => 3,
-		'source_context' => [
-			'name' => 'Website contact form submission'
-		]
-	];
-
-	$con_url = "https://cloudpcrtest.user.com/api/public/users/{$response['id']}/conversations/";
-	$con_curl = curl_init($con_url);
-
-	curl_setopt_array($con_curl, array(
-		CURLOPT_RETURNTRANSFER => true,
-		CURLOPT_ENCODING => "",
-		CURLOPT_MAXREDIRS => 10,
-		CURLOPT_TIMEOUT => 30,
-		CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-		CURLOPT_CUSTOMREQUEST => "POST",
-		CURLOPT_POSTFIELDS => json_encode($con_data),
-		CURLOPT_HTTPHEADER => array(
-			"authorization: Token TR5Of4PN9qzowKnyONRAfKQZFBF76ybekYyvwvFrZBxJa09VPGTEfcPHCuClSC11",
-			"content-type: application/json"
-		),
-	));
-
-	$con_response = curl_exec($con_curl);
-	$err = curl_error($con_curl);
-	curl_close($con_curl);
-
-	if($err){
-		echo "false";
-		exit();
-	}
-}
-
-$message = "Form Content<br>"
-          ."<p>Name: ".strip_tags($full_name)."</p>"
-          ."<p>Email: ".strip_tags($email)."</p>"
-          ."<p>Phone: ".strip_tags($phone)."</p>"
-          ."<p>Message: ".strip_tags($user_message)."</p>";
-
+//Establish Send Grid connecton
 $sendgrid = new \SendGrid("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");
 $grid_email    = new \SendGrid\Mail\Mail();
 
-$grid_email->addTo("jay.shah@cloudpcr.net");
+//Set sending variables
+$grid_email->addTo("erik@brightthought.co");
 $grid_email->setFrom($email);
-$grid_email->setSubject("Career Form Submission");
+$grid_email->setSubject("Contact-Us -  $full_name");
 $grid_email->addContent("text/html", $message);
+
 
 try {
 	$sendgrid->send( $grid_email );
