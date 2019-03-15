@@ -340,8 +340,7 @@ function careerSubmission(){
     trialForm.validate({
         rules: {
             phone:{
-                required: true,
-                phoneUS: true
+                required: true
             }
         }
     });
@@ -378,8 +377,7 @@ function generalContact(){
     trialForm.validate({
         rules: {
             phone:{
-                required: true,
-                phoneUS: true
+                required: true
             }
         }
     });
