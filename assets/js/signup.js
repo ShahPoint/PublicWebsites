@@ -21,7 +21,7 @@ function getUrlParameter(name) {
 };
 
 function SubmitCoreInfo($form) {
-    let $form = $("#signupForm")
+    // let $form = $("#signupForm")
     let validator = $form.validate();
 
     if (validator.form()) {
