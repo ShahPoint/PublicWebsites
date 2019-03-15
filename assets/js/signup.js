@@ -41,7 +41,6 @@ function SubmitCoreInfo($form) {
             firstName: name[0],
             lastName: name[name.length - 1]
         };
-        debugger;
         // let loading = SetLoading();
 
         jQuery.ajax({
