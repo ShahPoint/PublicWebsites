@@ -68,10 +68,11 @@ if($response[0]){
 
 	//Get response from user update
 	$response = json_decode($response[1], true);
+	$con_message = "User Message: " . $user_message;
 
 	//Create the array to update the conversation with User.com
 	$con_data = [
-		'content' => strip_tags($user_message),
+		'content' => strip_tags($con_message),
 		'source' => 3,
 		'user' => $response['id'],
 		'source_context' => [
@@ -111,7 +112,7 @@ $sendgrid = new \SendGrid("SG.NwntYIpZQXSp_M0MSAjYHg.pxI6ytbxjQq5iZV1g2yNIzNTvuW
 $grid_email    = new \SendGrid\Mail\Mail();
 
 //Set sending variables
-$grid_email->addTo("erik@brightthought.co");
+$grid_email->addTo("jay.shah@cloudpcr.net");
 $grid_email->setFrom($email);
 $grid_email->setSubject("Contact-Us -  $full_name");
 $grid_email->addContent("text/html", $message);
