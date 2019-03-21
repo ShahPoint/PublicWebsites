@@ -314,9 +314,9 @@ function trialSubmission(){
         e.preventDefault();
 
         var $this = jQuery(this);
-        $this.find('.loading').show();
 
         if($this.valid()){
+            $this.find('.loading').show();
             var key = Cookies.get('__ca__chat');
             var data = {
                 'data' : $this.serializeArray(),
@@ -354,9 +354,9 @@ function careerSubmission(){
         e.preventDefault();
 
         var $this = jQuery(this);
-        $this.find('.loading').show();
 
         if($this.valid()){
+            $this.find('.loading').show();
             var data = $this.serialize();
 
             jQuery.ajax({
@@ -396,9 +396,9 @@ function generalContact(){
         e.preventDefault();
 
         var $this = jQuery(this);
-        $this.find('.loading').show();
 
         if($this.valid()){
+            $this.find('.loading').show();
 
             var key = Cookies.get('__ca__chat');
             var data = {
