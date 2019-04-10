@@ -59,7 +59,7 @@ if($response[0]){
 	$response = json_decode($response[1], true);
 
 	//Add to list
-	$list_data = ['list' => 1];
+	$list_data = ['list' => 3];
 	$list = $curl->init('list', 'POST', $response['id'], $list_data);
 
 	if($list[0]){

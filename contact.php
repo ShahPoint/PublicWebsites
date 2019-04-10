@@ -55,7 +55,6 @@ $user_data = [
 $search = $curl->init('search', 'GET', $_POST['key']);
 $search = json_decode($search[1], true);
 
-
 //Update the the user
 $response = $curl->init('update', 'PUT', $search['id'], $user_data);
 
@@ -72,15 +71,10 @@ if($response[0]){
 
 	//Create the array to update the conversation with User.com
 	$con_data = [
-		'content' => strip_tags($con_message),
-		'source' => 3,
-		'user' => $response['id'],
-		'source_context' => [
-			'name' => 'Website contact form submission'
-		]
+		'note' => strip_tags($con_message),
 	];
 
-	$con_response = $curl->init('conversation', 'POST', $response['id'], $con_data);
+	$con_response = $curl->init('note', 'POST', $response['id'], $con_data);
 
 
 	if($con_response[0]){
@@ -89,7 +83,7 @@ if($response[0]){
 	}
 
 	//Add to list
-	$list_data = ['list' => 1];
+	$list_data = ['list' => 3];
 	$list = $curl->init('list', 'POST', $response['id'], $list_data);
 
 	if($list[0]){

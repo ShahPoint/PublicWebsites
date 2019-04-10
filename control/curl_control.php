@@ -25,17 +25,17 @@ class curl_control {
 
 	private function curl_url($type, $id){
 		switch($type){
-			case 'conversation':
-				$url = "https://cloudpcrtest.user.com/api/public/users/$id/conversations/";
+			case 'note':
+				$url = "https://app.userengage.com/api/public/users/$id/notes/";
 				break;
 			case 'update':
-				$url = "https://cloudpcrtest.user.com/api/public/users/$id/";
+				$url = "https://app.userengage.com/api/public/users/$id/";
 				break;
 			case 'search':
-				$url = "https://cloudpcrtest.user.com/api/public/users/search/?key=$id";
+				$url = "https://app.userengage.com/api/public/users/search/?key=$id";
 				break;
 			case 'list':
-				$url ="https://cloudpcrtest.user.com/api/public/users/$id/add_to_list/";
+				$url ="https://app.userengage.com/api/public/users/$id/add_to_list/";
 				break;
 		}
 
@@ -54,7 +54,7 @@ class curl_control {
 			CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 			CURLOPT_CUSTOMREQUEST => $method,
 			CURLOPT_HTTPHEADER => array(
-				"authorization: Token TR5Of4PN9qzowKnyONRAfKQZFBF76ybekYyvwvFrZBxJa09VPGTEfcPHCuClSC11",
+				"authorization: Token m1h1JjTwtln4GmmAQg2BbQBZHrMWkOvzg9edvgNvK4xYhGBnySGPh07VjWY2K5NW",
 				"content-type: application/json"
 			)
 		);
