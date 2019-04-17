@@ -384,13 +384,7 @@ function generalContact(){
 
     var trialForm = jQuery('.general-contact');
 
-    trialForm.validate({
-        rules: {
-            phone:{
-                required: true
-            }
-        }
-    });
+    trialForm.validate();
 
     trialForm.on('submit', function(e){
         e.preventDefault();
