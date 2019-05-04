@@ -9,7 +9,7 @@ License: GNU General Public License v2 or later
 Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
 Text Domain: rindu
 
-BLUE: #109BBD;
+BLUE: #124b75;
 */
 
 /* ======== IMPORT FONT ========== */
@@ -26,7 +26,7 @@ BLUE: #109BBD;
     -moz-border-radius: 0;
     -webkit-border-radius: 0;
     border: 0;
-    background: #25292c;
+    background: #124b75;
 }
 .navbar .navbar-brand {
     font-family:'Raleway', sans-serif;
@@ -36,7 +36,7 @@ BLUE: #109BBD;
     font-weight: 900;
     text-transform: uppercase;
     height: auto;
-    background: #109BBD;
+    background: #124b75;
     outline: 0;
 }
 .navbar .navbar-brand img {
@@ -53,7 +53,7 @@ BLUE: #109BBD;
     font-size: 13px;
 }
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
-    background-color: #109BBD;
+    background-color: #124b75;
     color: #FFF;
 }
 .navbar-default .navbar-nav>li>a:hover {
@@ -102,7 +102,7 @@ BLUE: #109BBD;
     margin: 2px 0 0;
     list-style: none;
     font-size: 14px;
-    background-color: #109BBD;
+    background-color: #124b75;
     border: 0;
     border: 0;
     border-radius: 0px;
@@ -128,9 +128,9 @@ BLUE: #109BBD;
     outline: 0;
 }
 .btn-dark {
-    background: #25292c;
+    background: #124b75;
     color: #FFF;
-    border-color: #25292c;
+    border-color: #124b75;
 }
 .btn-dark:hover {
     background: #454545;
@@ -152,8 +152,8 @@ BLUE: #109BBD;
 }
 .btn-outline:hover {
     text-decoration: none;
-    background: #25292c;
-    border-color: #25292c;
+    background: #124b75;
+    border-color: #124b75;
 }
 /*
     FORM
@@ -177,7 +177,7 @@ BLUE: #109BBD;
 .form-control:focus {
     box-shadow: none;
     -webkit-box-shadow:none;
-    border-color: #25292c;
+    border-color: #124b75;
 }
 label {
     font-weight: 300;
@@ -199,7 +199,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 a {
     outline: 0;
-    color: #109BBD;
+    color: #124b75;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     -ms-transition: all .2s ease-in-out;
@@ -234,7 +234,7 @@ p {
     font-weight: 300 !important;
 }
 .main-color {
-    color: #109BBD;
+    color: #124b75;
 }
 .section-wrapper.text-left, .text-left {
     text-align: left;
@@ -340,12 +340,12 @@ p {
     text-align: center;
     line-height: 50px;
     font-size: 35px;
-    background: #25292c;
+    background: #124b75;
     color: #FFF;
     outline: 0;
 }
 .slides-navigation a:hover {
-    background: #109BBD;
+    background: #124b75;
 }
 .slides-navigation a.prev {
     padding-right: 5px;
@@ -371,7 +371,7 @@ p {
     width: 100%;
     height: 50px;
     padding-top: 15px;
-    background: #25292c;
+    background: #124b75;
     letter-spacing: -999999999px;
 }
 .slides-pagination a {
@@ -405,7 +405,7 @@ p {
     box-shadow: inset 0px -1px 0px 0px rgba(255, 255, 255, 0.14);
 }
 .slides-pagination a.current {
-    background: #109BBD;
+    background: #124b75;
     -webkit-box-shadow: inset 0px -2px 0px 0px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: inset 0px -2px 0px 0px rgba(0, 0, 0, 0.3);
     box-shadow: inset 0px -2px 0px 0px rgba(0, 0, 0, 0.3);
@@ -465,9 +465,9 @@ p {
     outline: 0;
 }
 .header-center a:hover {
-    background: #25292c;
-    border-color: #25292c;
-    color: #109BBD;
+    background: #124b75;
+    border-color: #124b75;
+    color: #124b75;
     outline: 0;
 }
 /* Animation of the content inside the header */
@@ -588,7 +588,7 @@ p {
 }
 .totop:hover span > a.hover {
     top: 0px;
-    color: #109BBD;
+    color: #124b75;
 }
 /* ============= SECTION =============== */
  .section-outter {
@@ -718,7 +718,7 @@ p {
     border-radius: 50%;
     line-height: 43px;
     text-align: center;
-    background: #109BBD;
+    background: #124b75;
     color: #FFF;
     font-size: 20px;
 }
@@ -726,7 +726,7 @@ p {
     TEAM
 */
  .teams {
-    background: #25292c;
+    background: #124b75;
     margin-bottom: 40px;
     position: relative;
     z-index: 1;
@@ -797,7 +797,7 @@ p {
     width: 160px;
     margin-top: 10px;
     padding: 8px 12px;
-    background: #109BBD;
+    background: #124b75;
     font-size: 17px;
     font-weight: normal;
     text-transform: uppercase;
@@ -833,7 +833,7 @@ p {
     text-align: center;
     margin-top: 5px;
     margin-bottom: 10px;
-    background: #25292c;
+    background: #124b75;
     padding-top: 15px;
 }
 /*
@@ -965,7 +965,7 @@ p {
     FOOTER
 */
  footer.footer {
-    background: #109BBD;
+    background: #124b75;
 }
 .footer-nav {
     margin: 0;
@@ -1026,7 +1026,7 @@ p {
     font-size: 24px;
     text-align: center;
     line-height: 53px;
-    background: #25292c;
+    background: #124b75;
     display: inline-block;
     margin-bottom: 12px;
     border-radius: 3px;
@@ -1036,7 +1036,7 @@ p {
     transition: all 0.2s ease-in-out;
 }
 .post .post-meta .post-icon:hover {
-    background: #109BBD;
+    background: #124b75;
 }
 .post .post-meta h5 {
     font-size: 13px;
@@ -1049,7 +1049,7 @@ p {
     font-weight: 300;
 }
 .post .post-meta span a {
-    color: #109BBD;
+    color: #124b75;
 }
 .post .post-title {
     font-size: 22px;
@@ -1068,7 +1068,7 @@ p {
 }
 .post .read-more {
     padding:4px 7px;
-    border:1px solid #109BBD;
+    border:1px solid #124b75;
     display: inline-block;
     font-size: 14px;
 }
@@ -1101,7 +1101,7 @@ p {
     padding: 0 20px 40px 20px;
     border: 1px solid #222;
     position: relative;
-    background: #25292c;
+    background: #124b75;
 }
 .post-author .blog-author-content {
     position: relative;
@@ -1153,7 +1153,7 @@ p {
     padding: 15px;
 }
 .blog-comments .blog-comment-content .media-list li:nth-child(2n+1) {
-    background: #25292c;
+    background: #124b75;
 }
 .blog-comments .blog-comment-content .media-body .media-heading a {
     color: #FFF;
@@ -1331,7 +1331,7 @@ p {
     background: none;
 }
 .mejs-controls .mejs-time-rail .mejs-time-current {
-    background-color: #109BBD;
+    background-color: #124b75;
     border-radius: 3px;
     -webkit-border-radius: 3px;
 }
@@ -1376,7 +1376,7 @@ p {
     width: 100%;
 }
 .mejs-horizontal-volume-current {
-    background: #109BBD;
+    background: #124b75;
     border-radius: 3px;
     -webkit-border-radius: 3px;
     height: 14px;
@@ -1410,7 +1410,7 @@ p {
     height: 35px;
     line-height: 35px;
     width: 100%;
-    background: #25292c;
+    background: #124b75;
     position: relative;
     margin-bottom: 15px;
 }
@@ -1425,7 +1425,7 @@ p {
 .skill-bar ul li .bar {
     padding-left: 15px;
     height: 100%;
-    background: #109BBD;
+    background: #124b75;
     width: 0%;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
@@ -1534,7 +1534,7 @@ p {
     padding: 0;
 }
 .panel-default>.panel-heading {
-    color: #25292c;
+    color: #124b75;
     background-color: #3a3e45;
     border-color: transparent;
 }
@@ -1549,7 +1549,7 @@ p {
     padding: 20px;
 }
 .panel-body {
-    background: #25292c;
+    background: #124b75;
 }
 .panel-group .panel-heading+.panel-collapse .panel-body {
     border-top: 0;
@@ -1558,7 +1558,7 @@ p {
     NAV TABS
 */
  .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-    background: #25292c;
+    background: #124b75;
     color: #3a3e45;
     border-radius: 0;
     webkit-border-radius: 0;
@@ -1598,7 +1598,7 @@ p {
 .nav-tabs > li > a {
     border-bottom: 1px solid #CCC;
     border:0;
-    color: #25292c;
+    color: #124b75;
 }
 .nav-tabs > li > a:hover {
     color: #FFF;
@@ -1612,7 +1612,7 @@ p {
     border-left: 0;
 }
 .tab-content {
-    background: #25292c;
+    background: #124b75;
     padding: 15px;
     border:0;
 }
@@ -1727,7 +1727,7 @@ p {
 */
  .well {
     border-radius: 0;
-    background: #25292c;
+    background: #124b75;
     border:1px solid #3E3E45;
 }
 /*
@@ -1739,9 +1739,9 @@ p {
     border-radius: 0;
 }
 .pagination .pag-prev a, .pagination .pag-next a {
-    background: #109BBD;
+    background: #124b75;
     color: #FFF;
-    border-color:#109BBD;
+    border-color:#124b75;
 }
 .pagination .pag-prev a:hover, .pagination .pag-next a:hover {
     border-color: #DDD;
@@ -1803,13 +1803,13 @@ p {
     line-height: 1.4;
     text-align: center;
     border: 1px solid #3a3e45;
-    background-color: #25292c;
+    background-color: #124b75;
 }
 /*
     TABLE
 */
  .table.table-bordered {
-    background: #25292c;
+    background: #124b75;
 }
 .table-bordered {
     border: 1px solid #3a3e45;

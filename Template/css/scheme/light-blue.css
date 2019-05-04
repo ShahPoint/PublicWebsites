@@ -1,67 +1,67 @@
 /* CSS crunched with Crunch - http://crunchapp.net/ */
 .navbar .navbar-brand {
-  background: #109BBD;
+  background: #ffffff;
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #109BBD;
+  background-color: #124b75;
 }
 .dropdown-menu {
-  background-color: #109BBD;
+  background-color: #124b75;
 }
 a {
-  color: #109BBD;
+  color: #124b75;
 }
 .main-color {
-  color: #109BBD;
+  color: #124b75;
 }
 .white-color{
     color: #ffffff;
 }
 .slides-navigation a:hover {
-  background: #109BBD;
+  background: #124b75;
 }
 .slides-pagination a.current {
-  background: #109BBD;
+  background: #124b75;
 }
 .header-center a:hover {
-  color: #109BBD;
+  color: #124b75;
 }
 .totop:hover span > a.hover {
-  color: #109BBD;
+  color: #124b75;
 }
 .left-icon .icon {
-  background: #109BBD;
+  background: #F7F7F7;
 }
 .styled div span {
-  background: #109BBD;
+  background: #124b75;
 }
 footer.footer {
-  background: #109BBD;
+  background: #124b75;
 }
 .post .post-meta .post-icon:hover {
-  background: #109BBD;
+  background: #124b75;
 }
 .post .post-meta span a {
-  color: #109BBD;
+  color: #124b75;
 }
 .post .read-more {
-  border: 1px solid #109BBD;
+  border: 1px solid #124b75;
 }
 .mejs-controls .mejs-time-rail .mejs-time-current {
-  background-color: #109BBD;
+  background-color: #124b75;
 }
 .mejs-horizontal-volume-current {
-  background: #109BBD;
+  background: #124b75;
 }
 .skill-bar ul li .bar {
-  background: #109BBD;
+  background: #124b75;
 }
 .pagination .pag-prev a,
 .pagination .pag-next a {
-  background: #109BBD;
-  border-color: #109BBD;
+  background: #124b75;
+  border-color: #124b75;
 }
 .testimonial-list .testimonial-item a.current ~ .testi-link,
 .testimonial-list .testimonial-item a:hover ~ .testi-link {
@@ -107,7 +107,7 @@ footer.footer {
 	padding:2px 5px;
 	right:0;
 	top:50%;
-	background:#109BBD;
+	background:#124b75;
 	border-top-left-radius:3px;
 	border-bottom-left-radius:3px;
 	border-bottom:solid 1px #1b6b91;
