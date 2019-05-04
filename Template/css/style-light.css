@@ -496,7 +496,7 @@ p {
 }
 /* Animation of the content inside the header */
  .header-center.fade-in {
-    /*
+    
     zoom: 0;
     animation: fadeit 1s ease-out forwards;
     animation-iteration-count: 1;
@@ -506,7 +506,7 @@ p {
     -moz-animation-iteration-count: 1;
     -ms-animation: fadeit 1s;
     -ms-animation-iteration-count: 1;
-    */
+    
 }
 @keyframes fadeit {
     from {
