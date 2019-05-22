@@ -106,7 +106,12 @@ $sendgrid = new \SendGrid("SG.NwntYIpZQXSp_M0MSAjYHg.pxI6ytbxjQq5iZV1g2yNIzNTvuW
 $grid_email    = new \SendGrid\Mail\Mail();
 
 //Set sending variables
-$grid_email->addTo("jay.shah@cloudpcr.net");
+$send_to = [
+	"jay.shah@cloudpcr.net" => "Jay Shah",
+	"steve.wilson@cloudpcr.net" => "Steve Wilson",
+	"sam.kilzer@cloudpcr.net" => "Sam Kilzer"
+];
+$grid_email->addTos($send_to);
 $grid_email->setFrom($email);
 $grid_email->setSubject("Contact-Us -  $full_name");
 $grid_email->addContent("text/html", $message);

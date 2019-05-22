@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: erik
- * Date: 2019-03-15
- * Time: 12:35
- */
 
 namespace CloudPCR;
 
