@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>CloudPCR - Electronic Patient Care Report</title>
+    <link href="css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+   
+   
+   
+   <!-- Hotjar Tracking Code for www.cloudpcr.net -->
+<script>
+(function(h,o,t,j,a,r){
+h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+h._hjSettings={hjid:1153747,hjsv:6};
+a=o.getElementsByTagName('head')[0];
+r=o.createElement('script');r.async=1;
+r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+a.appendChild(r);
+})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+   
+   
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+ {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+ n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+ if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+ n.queue=[];t=b.createElement(e);t.async=!0;
+ t.src=v;s=b.getElementsByTagName(e)[0];
+ s.parentNode.insertBefore(t,s)}(window, document,'script',
+ 'https://connect.facebook.net/en_US/fbevents.js');
+ fbq('init', '239662376473941');
+ fbq('track', 'PageView');
+</script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=239662376473941&ev=PageView&noscript=1" /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <!-- Global site tag (gtag.js) - Google AdWords: 944207136 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-944207136"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+
+ gtag('config', 'AW-944207136');
+</script>
+
+    <!-- Event snippet for AdWords Leads conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+        function gtag_report_conversion(url) {
+ var callback = function () {
+   if (typeof(url) != 'undefined') {
+     window.location = url;
+   }
+ };
+ gtag('event', 'conversion', {
+     'send_to': 'AW-944207136/xuYmCM-2ioUBEKDqncID',
+     'value': 1.0,
+     'currency': 'USD',
+     'event_callback': callback
+ });
+ return false;
+}
+</script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-66443307-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-66443307-1');
+</script>
+
+    <style>
+        .feature-item {
+      padding: 0 !important;
+    }
+    .col {
+      padding-left: 2px;
+      padding-right: 2px;
+    }
+    .form-group {
+      margin-bottom: 0 !important;
+    }
+    .signup {
+      margin-top: -25px;
+      padding-bottom: 0 !important;
+      padding-top: 20px !important;
+    }
+    section.signup .section-heading {
+      margin-bottom: 10px;
+    }
+    </style>
+
+</head>
+
+<body id="page-top">
+    <div class="container">
+        <img src="img/LargeLogoTrans.png" alt="CloudPCR Logo" width="175" height="65">
+    </div>
+
+    <section class="signup" id="signup">
+        <div class="container" id="signuphead">
+            <div style="margin-bottom: 0;" class="section-heading text-center cushycms">
+                <h2>&quot;It&#39;s The Easiest PCR Software I&#39;ve Ever Used!&quot;</h2>
+
+                <p class="text-muted cushycms">CloudPCR is not only affordable, it is by far the most customizable and
+                    easy to use ePCR software on the market!<br />
+                    <br />
+                    Fill out the below info and we will get with you to get your demo account setup on the ASAP.</p>
+
+                <hr />
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8" style="margin-top:0;" id="features">
+                    <div class="container-fluid">
+                        <div class="row" style="text-align: center;">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe allow="autoplay;" class="embed-responsive-item" src="https://player.vimeo.com/video/286383998?autoplay=1"
+                                    allowfullscreen allowautoplay></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div id="running" style="display:none;verticle-align:middle;text-align:center;border:2px solid silver;padding:10px;margin:10px">
+                        <div id="alive" style="display:none">
+                            <p></p>
+
+                            <p>One Moment While We Create Your Account</p>
+
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <form id="myForm"><span style="margin-left:10px;font-weight: bold;font-size: 18px;">Free
+                            Trial Sign Up</span>
+
+                            <!-- <span style="margin-left:10px">Agency Information</span> -->
+            <div class="form row">
+
+              <div class="form-group col col-9">
+                <label for="agencyName">Agency Name</label>
+                <input type="text" class="form-control" id="agencyName" aria-describedby="agencyHelp" required="required">
+                <small id="agencyHelp" class="form-text text-muted"></small>
+              </div>
+              <div class="form-group col col-3">
+                <label style="width:100%" for="sel1">State</label>
+                <select style="width:100%;padding-right: 0; padding-left: 5px;" class="form-control" id="agencyState" required="required">
+                  <option value=""></option>
+                  <option value="AL">AL</option>
+                  <option value="AK">AK</option>
+                  <option value="AR">AR</option>
+                  <option value="AZ">AZ</option>
+                  <option value="CA">CA</option>
+                  <option value="CO">CO</option>
+                  <option value="CT">CT</option>
+                  <option value="DC">DC</option>
+                  <option value="DE">DE</option>
+                  <option value="FL">FL</option>
+                  <option value="GA">GA</option>
+                  <option value="HI">HI</option>
+                  <option value="IA">IA</option>
+                  <option value="ID">ID</option>
+                  <option value="IL">IL</option>
+                  <option value="IN">IN</option>
+                  <option value="KS">KS</option>
+                  <option value="KY">KY</option>
+                  <option value="LA">LA</option>
+                  <option value="MA">MA</option>
+                  <option value="MD">MD</option>
+                  <option value="ME">ME</option>
+                  <option value="MI">MI</option>
+                  <option value="MN">MN</option>
+                  <option value="MO">MO</option>
+                  <option value="MS">MS</option>
+                  <option value="MT">MT</option>
+                  <option value="NC">NC</option>
+                  <option value="NE">NE</option>
+                  <option value="NH">NH</option>
+                  <option value="NJ">NJ</option>
+                  <option value="NM">NM</option>
+                  <option value="NV">NV</option>
+                  <option value="NY">NY</option>
+                  <option value="ND">ND</option>
+                  <option value="OH">OH</option>
+                  <option value="OK">OK</option>
+                  <option value="OR">OR</option>
+                  <option value="PA">PA</option>
+                  <option value="RI">RI</option>
+                  <option value="SC">SC</option>
+                  <option value="SD">SD</option>
+                  <option value="TN">TN</option>
+                  <option value="TX">TX</option>
+                  <option value="UT">UT</option>
+                  <option value="VT">VT</option>
+                  <option value="VA">VA</option>
+                  <option value="WA">WA</option>
+                  <option value="WI">WI</option>
+                  <option value="WV">WV</option>
+                  <option value="WY">WY</option>
+                </select>
+              </div>
+
+
+
+            </div>
+
+                        <span style="margin-left:10px">Initial Administrator</span>
+                        <div class="form row">
+
+                                <div class="form-group col col-6">
+                                  <label for="firstName">First Name</label>
+                                  <input type="text" class="form-control" id="firstName" aria-describedby="emailHelp" required="required">
+                                  <small id="emailHelp" class="form-text text-muted"></small>
+                                </div>
+                                <div class="form-group col col-6">
+                                  <label for="exampleInputLast">Last Name</label>
+                                  <input type="text" class="form-control" id="lastName" aria-describedby="emailHelp" required="required">
+                                  <small id="emailHelp" class="form-text text-muted"></small>
+                                </div>
+                                <div class="form-group col col-12">
+                                  <label for="exampleInputEmail1">Email</label>
+                                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required="required">
+                                  <small id="emailHelp" class="form-text text-muted"></small>
+                                </div>
+                                <div class="form-group col col-12">
+                                  <label for="exampleInputPhone1">Phone</label>
+                                  <input type="text" class="form-control" id="phone" aria-describedby="phoneHelp" required="required"
+                                    placeholder="(XXX)XXX-XXXX">
+                                </div>
+                  
+                              </div>
+                        <span style="margin-left:10px 10px 0 0; padding: 5px 10px;display: inline-block;"><button class="btn1 btn-outline1 btn-xl"
+                                id="button" onclick="myFunction(); fbq('track', 'Lead'); gtag_report_conversion();"
+                                type="button">Start My Free Trial!</button>
+              <span style="display: block; text-align: center;">(No Payment Information Required)</span>
+            </span>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container" id="yay" style="display:none">
+            <div class="section-heading text-center">
+              <h2>Almost There!</h2>
+              <p class="text-muted">Here is some information to get you started</p>
+            </div>
+            <div class="col-lg-12 my-auto" id="features">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <div class="feature-item">
+                      <i class="fas fa-sign-in-alt fa-3x"></i>
+                      <h3>How Do I sign In?</h3>
+                      <p>Once you receive your credentials, you can log in <a href="https://cloudpcrv3.azurewebsites.net/Account/Login" target="_blank">Here!</a></p>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="feature-item">
+                      <i class="fas fa-cloud-download-alt fa-3x"></i>
+                      <h3>Required Download?</h3>
+                      <p>Nope! Our software is on the web - no need to install anything on your device!</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="feature-item">
+                      <i class="fas fa-question-circle fa-3x"></i>
+                      <h3>How do I Set Up?</h3>
+                      <p>Check out our <a href="https://intercom.help/cloudpcr" target="_blank">Help Articles</a> to show you the ropes!</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-4">
+                    <div class="feature-item">
+                      <i class="fab fa-chrome fa-3x"></i>
+                      <h3>Preferred Browser?</h3>
+                      <p>Google Chrome! This is where we test, and what you should use for best performance.</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="feature-item">
+                      <i class="fas fa-comment-alt fa-3x"></i>
+                      <h3>Confused?</h3>
+                      <p>Just send us a message in the in-app chat!</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="feature-item">
+                      <i class="fas fa-map-marker-alt fa-3x"></i>
+                      <h3>Smart location</h3>
+                      <p>Make sure location services are turned on!</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="contact bg-primary" id="contact" style="display: none">
+        <div class="container">
+            <p></p>
+
+            <p></p>
+
+            <p>
+                <script>
+                    window.intercomSettings = {
+                        app_id: "qdubw2o4"
+                    };
+                </script>
+                <script>
+                    (function () {
+                        var w = window;
+                        var ic = w.Intercom;
+                        if (typeof ic === "function") {
+                            ic('reattach_activator');
+                            ic('update', intercomSettings);
+                        } else {
+                            var d = document;
+                            var i = function () {
+                                i.c(arguments)
+                            };
+                            i.q = [];
+                            i.c = function (args) {
+                                i.q.push(args)
+                            };
+                            w.Intercom = i;
+
+                            function l() {
+                                var s = d.createElement('script');
+                                s.type = 'text/javascript';
+                                s.async = true;
+                                s.src = 'https://widget.intercom.io/widget/qdubw2o4';
+                                var x = d.getElementsByTagName('script')[0];
+                                x.parentNode.insertBefore(s, x);
+                            }
+                            if (w.attachEvent) {
+                                w.attachEvent('onload', l);
+                            } else {
+                                w.addEventListener('load', l, false);
+                            }
+                        }
+                    })()
+                </script>
+            </p>
+        </div>
+    </section>
+    <script src="js/jquery/jquery.js"></script>
+    <script src="js/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="js/jquery-easing/jquery.easing.js"></script>
+    <!-- <script src="js/landing.js"></script> -->
+    <script src="js/myFunction.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+
+</html>
