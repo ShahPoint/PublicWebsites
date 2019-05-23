@@ -17,9 +17,18 @@ class feature_display {
 	}
 
 	private function get_content( $file ){
+		$opts = [
+			'http' => [
+				'method' => 'GET',
+				'header' => "Content-Type: text/html"
+			]
+		];
+
+		$context = stream_context_create($opts);
+
 		$file_path = 'features_content/' . $file . '.html';
 		if(file_exists($file_path)){
-			$html = file_get_contents($file_path);
+			$html = file_get_contents($file_path, false, $context);
 			echo $html;
 		}else{
 			echo 'failed';
