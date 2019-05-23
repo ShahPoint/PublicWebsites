@@ -75,7 +75,30 @@ label.error{
 .features .feature-second-color i{
     color:#0e83b7;
 }
+.features .feature-second-color a {
+    display:block;
+    text-align:center;
+}
+.swal2-content{
+    text-align:left;
+    margin-top:25px !important;
+}
+#swal2-content{
+    text-align:left !important;;
+}
 
+#swal2-content ul{
+    margin:10px 0 0 20px;
+}
+#swal2-content ul li:not(:last-child){
+    margin-bottom:5px;
+}
+#swal2-content p{
+    margin-bottom:8px;
+}
+#swal2-content img{
+    margin-bottom:10px;
+}
 
 
 /*

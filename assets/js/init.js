@@ -367,7 +367,7 @@ function careerSubmission(){
                     if(e === 'true'){
                         jQuery('.contact-form-modal').modal('show');
                         $this.find('input:not([type=submit])').each((i, e) => {
-                           jQuery(e).val('');
+                            jQuery(e).val('');
                         });
                         $this.find('.loading').hide();
                     }
@@ -415,7 +415,7 @@ function generalContact(){
                             jQuery(e).val('');
                         });
                         $this.find('textarea').each((i, e) => {
-                           jQuery(e).val('');
+                            jQuery(e).val('');
                         });
                     }
                 }
@@ -512,3 +512,34 @@ function slideOut(){
     });
 
 }
+
+
+/*
+
+Icon modal popup
+
+ */
+
+jQuery('.feature-center a').on('click', function(e){
+    e.preventDefault();
+
+    var heading = jQuery(this).parent().prev('h3').text(),
+        data = {
+            'heading' : heading
+        };
+
+    jQuery.ajax({
+        url: 'feature_display.php',
+        type: 'POST',
+        data: data,
+        success: function(e){
+            if(e !== 'failed') {
+                Swal.fire({
+                    html: e,
+                    showCloseButton: true,
+                    showCancelButton: false
+                })
+            }
+        }
+    });
+});
