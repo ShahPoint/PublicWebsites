@@ -299,23 +299,14 @@ function initNewsletterInHeader() {
 function trialSubmission(){
 
     var trialForm = jQuery('.free-trial-form');
-    trialForm.each(function(){
-        jQuery(this).validate({
-            rules: {
-                phone:{
-                    required: true,
-                    phoneUS: true
-                }
-            }
-        });
-    });
+
 
     trialForm.on('submit', function(e){
         e.preventDefault();
 
         var $this = jQuery(this);
 
-        if($this.valid()){
+
             $this.find('.loading').show();
             var key = Cookies.get('__ca__chat');
             var data = {
@@ -334,7 +325,7 @@ function trialSubmission(){
                     }
                 }
             })
-        }
+
     });
 }
 
@@ -342,20 +333,12 @@ function careerSubmission(){
 
     var trialForm = jQuery('#career-contact');
 
-    trialForm.validate({
-        rules: {
-            phone:{
-                required: true
-            }
-        }
-    });
-
     trialForm.on('submit', function(e){
         e.preventDefault();
 
         var $this = jQuery(this);
 
-        if($this.valid()){
+
             $this.find('.loading').show();
             var data = $this.serialize();
 
@@ -373,9 +356,7 @@ function careerSubmission(){
                     }
                 }
             })
-        }else{
-            $this.find('.loading').hide();
-        }
+
     });
 }
 
@@ -384,14 +365,14 @@ function generalContact(){
 
     var trialForm = jQuery('.general-contact');
 
-    trialForm.validate();
+
 
     trialForm.on('submit', function(e){
         e.preventDefault();
 
         var $this = jQuery(this);
 
-        if($this.valid()){
+
             $this.find('.loading').show();
 
             var key = Cookies.get('__ca__chat');
@@ -420,9 +401,7 @@ function generalContact(){
                     }
                 }
             });
-        }else{
-            $this.find('.loading').hide();
-        }
+
     });
 }
 
