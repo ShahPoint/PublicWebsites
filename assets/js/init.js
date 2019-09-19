@@ -44,7 +44,8 @@ jQuery(function($) {
     slideOut();
     careerSubmission();
     generalContact();
-
+    additionalForm();
+    getUTMData();
 });
 
 // Dropdown header menu
@@ -52,7 +53,7 @@ function initBootstrapHoverDropdown() {
     $('.bs-dropdown').dropdownHover().dropdown();
 }
 
-// Navigation background 
+// Navigation background
 function initNavBg() {
 
     var nav = $('.container-nav');
@@ -295,7 +296,26 @@ function initNewsletterInHeader() {
     });
 }
 
+//Sets cookie for UTM data
+function getUTMData(){
+    var params = new URLSearchParams(window.location.search),
+        match = ['utm_source', 'utm_medium', 'utm_campaign','utm_content', 'utm_term'],
+        utm = [];
 
+    for(var pair of params.entries()){
+        if(match.includes(pair[0])){
+            utm.push(pair[0] + ' = ' + pair[1]);
+        }
+    }
+
+   if(utm.length){
+       Cookies.set('cloud_utm', JSON.stringify(utm), {expires: 120});
+   }
+
+}
+
+
+//Submits Trial Form
 function trialSubmission(){
 
     var trialForm = jQuery('.free-trial-form');
@@ -307,24 +327,24 @@ function trialSubmission(){
         var $this = jQuery(this);
 
 
-            $this.find('.loading').show();
-            var key = Cookies.get('__ca__chat');
-            var data = {
-                'data' : $this.serializeArray(),
-                'key' : key
-            };
+        $this.find('.loading').show();
+        var key = Cookies.get('__ca__chat');
+        var data = {
+            'data' : $this.serializeArray(),
+            'key' : key
+        };
 
-            jQuery.ajax({
-                url: 'mail.php',
-                type: 'POST',
-                data: data,
-                success: function(e){
+        jQuery.ajax({
+            url: 'mail.php',
+            type: 'POST',
+            data: data,
+            success: function(e){
 
-                    if(e === 'true'){
-                        window.location.href = 'thankyou.html';
-                    }
+                if(e === 'true'){
+                    window.location.href = 'thankyou.html';
                 }
-            })
+            }
+        })
 
     });
 }
@@ -339,23 +359,23 @@ function careerSubmission(){
         var $this = jQuery(this);
 
 
-            $this.find('.loading').show();
-            var data = $this.serialize();
+        $this.find('.loading').show();
+        var data = $this.serialize();
 
-            jQuery.ajax({
-                url: 'careers.php',
-                type: 'POST',
-                data: data,
-                success: function(e){
-                    if(e === 'true'){
-                        jQuery('.contact-form-modal').modal('show');
-                        $this.find('input:not([type=submit])').each((i, e) => {
-                            jQuery(e).val('');
-                        });
-                        $this.find('.loading').hide();
-                    }
+        jQuery.ajax({
+            url: 'careers.php',
+            type: 'POST',
+            data: data,
+            success: function(e){
+                if(e === 'true'){
+                    jQuery('.contact-form-modal').modal('show');
+                    $this.find('input:not([type=submit])').each((i, e) => {
+                        jQuery(e).val('');
+                    });
+                    $this.find('.loading').hide();
                 }
-            })
+            }
+        })
 
     });
 }
@@ -373,38 +393,62 @@ function generalContact(){
         var $this = jQuery(this);
 
 
-            $this.find('.loading').show();
+        $this.find('.loading').show();
 
-            var key = Cookies.get('__ca__chat');
-            var data = {
+        var key = Cookies.get('__ca__chat'),
+            data = {
                 'data' : $this.serializeArray(),
                 'key' : key
-            };
+            },
+            urlencode = $this.serialize();
 
+        jQuery.ajax({
+            url: 'contact.php',
+            type: 'POST',
+            data: data,
+            success: function(e){
 
-            jQuery.ajax({
-                url: 'contact.php',
-                type: 'POST',
-                data: data,
-                success: function(e){
-
-                    if(e === 'true'){
-                        jQuery('.contact-form-modal').modal('show');
-                        $this.find('.loading').hide();
-
-                        $this.find('input:not([type=submit])').each((i, e) => {
-                            jQuery(e).val('');
-                        });
-                        $this.find('textarea').each((i, e) => {
-                            jQuery(e).val('');
-                        });
-                    }
+                if(e === 'true'){
+                    window.location.href = window.location.href + 'thankyou-contact.html?' + urlencode;
                 }
-            });
+            }
+        });
 
     });
 }
 
+function additionalForm(){
+    var form = jQuery('#thankyou-form'),
+        params = new URLSearchParams(window.location.search);
+
+    form.on('submit', function(e){
+        e.preventDefault();
+
+        var $this = jQuery(this);
+
+
+        $this.find('.loading').show();
+
+        var data = {
+            'data' : $this.serializeArray()
+        };
+        data.data.push({name: "name", value: params.get('name')});
+        data.data.push({name: "email", value: params.get('email')});
+
+        jQuery.ajax({
+            url: 'thankyou-form.php',
+            type: 'POST',
+            data: data,
+            success: function(e){
+
+                //if(e === 'true') {
+                $this.find('.loading').html('Message Sent');
+                //}
+            }
+        });
+
+    });
+}
 
 function slideOut(){
     //Call to Action slide out

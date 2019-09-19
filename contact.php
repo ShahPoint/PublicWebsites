@@ -4,6 +4,7 @@ if($_SERVER['REQUEST_METHOD'] != 'POST') exit();
 
 require_once 'vendor/autoload.php';
 
+//Loads the curl object
 $curl = new \CloudPCR\curl_control();
 
 //Function to get the key of the desired value
@@ -24,6 +25,7 @@ $user_message = $data[getKey('message', $data)]['value'];
 $name = explode( ' ', $full_name);
 $first_name = $last_name = '';
 
+//Set the users name
 if(count($name) == 1){
 
 	$first_name = $last_name = $name[0];

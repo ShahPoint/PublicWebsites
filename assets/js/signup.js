@@ -31,7 +31,7 @@ function SubmitCoreInfo($form) {
         // formData.demo = true;
         // formData.testing = true;
         let name = $("[name=name]", $form).val().trim().split(" ");
-        
+
         let formData = {
             leadOrigin: getUrlParameter("leadOrigin"),
             leadContext: getUrlParameter("leadContext"),
@@ -91,7 +91,7 @@ function SubmitAdditionalInfo() {
 }
 
 function SetLoading() {
-    let loading = $(`<i class="fa fa-spin fa-spinner"></i>`); 
+    let loading = $(`<i class="fa fa-spin fa-spinner"></i>`);
     $("#loading").append(loading);
     return loading;
 }

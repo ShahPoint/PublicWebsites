@@ -5,8 +5,16 @@ namespace CloudPCR;
 
 class curl_control {
 
-	function __construct(){}
-
+	/**
+	 * Initiates the Curl request
+	 *
+	 * @param $type
+	 * @param $method
+	 * @param null $key
+	 * @param array $data
+	 *
+	 * @return array
+	 */
 	function init($type, $method, $key = null, Array $data = []){
 
 		$url = $this->curl_url($type, $key);
@@ -17,6 +25,14 @@ class curl_control {
 
 	}
 
+	/**
+	 * Find the correct curl url to hit
+	 *
+	 * @param $type
+	 * @param $id
+	 *
+	 * @return string
+	 */
 	private function curl_url($type, $id){
 		switch($type){
 			case 'note':
@@ -36,6 +52,15 @@ class curl_control {
 		return $url;
 	}
 
+	/**
+	 * Preform the curl request
+	 *
+	 * @param $method
+	 * @param $data
+	 * @param $url
+	 *
+	 * @return array
+	 */
 	private function curl( $method, $data, $url ){
 
 		$curl = curl_init($url);
