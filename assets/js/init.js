@@ -417,6 +417,7 @@ function generalContact(){
     });
 }
 
+
 function additionalForm(){
     var form = jQuery('#thankyou-form'),
         params = new URLSearchParams(window.location.search);
@@ -441,9 +442,10 @@ function additionalForm(){
             data: data,
             success: function(e){
 
-                //if(e === 'true') {
-                $this.find('.loading').html('Message Sent');
-                //}
+                if(e === 'true') {
+                $this.fadeOut(300);
+                jQuery('.thank-message').fadeOut(300);
+                }
             }
         });
 
