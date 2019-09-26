@@ -308,9 +308,9 @@ function getUTMData(){
         }
     }
 
-   if(utm.length){
-       Cookies.set('cloud_utm', JSON.stringify(utm), {expires: 120});
-   }
+    if(utm.length){
+        Cookies.set('cloud_utm', JSON.stringify(utm), {expires: 120});
+    }
 
 }
 
@@ -330,9 +330,10 @@ function trialSubmission(){
         $this.find('.loading').show();
         var key = Cookies.get('__ca__chat');
         var data = {
-            'data' : $this.serializeArray(),
-            'key' : key
-        };
+                'data' : $this.serializeArray(),
+                'key' : key
+            },
+            urlencode = $this.serialize();
 
         jQuery.ajax({
             url: 'mail.php',
@@ -341,7 +342,7 @@ function trialSubmission(){
             success: function(e){
 
                 if(e === 'true'){
-                    window.location.href = 'thankyou.html';
+                    window.location.href = 'thankyou.html?page=trial&' + urlencode;
                 }
             }
         })
@@ -409,7 +410,7 @@ function generalContact(){
             success: function(e){
 
                 if(e === 'true'){
-                    window.location.href = window.location.href + 'thankyou-contact.html?' + urlencode;
+                    window.location.href = window.location.href + 'thankyou.html?page=contact&' + urlencode;
                 }
             }
         });
@@ -443,8 +444,8 @@ function additionalForm(){
             success: function(e){
 
                 if(e === 'true') {
-                $this.fadeOut(300);
-                jQuery('.thank-message').fadeOut(300);
+                    $this.fadeOut(300);
+                    jQuery('.thank-message').fadeOut(300);
                 }
             }
         });

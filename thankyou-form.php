@@ -19,7 +19,7 @@ $message = "Additional Form Date: \r\n\n";
 
 foreach($data as $value){
 	if($value['name'] != 'form') {
-		$message .= $value['name'] . ": " . strip_tags( $value['value'] ) . "\r\n";
+		$message .= $value['name'] . ": " . strip_tags( $value['value'] ) . "\r\r\n";
 	}
 }
 
