@@ -409,9 +409,9 @@ function generalContact(){
             data: data,
             success: function(e){
 
-                //if(e === 'true'){
+                if(e === 'true'){
                     window.location.href = 'thankyou.html?page=contact&' + urlencode;
-                //}
+                }
             }
         });
 
