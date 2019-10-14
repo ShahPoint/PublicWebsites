@@ -344,7 +344,7 @@ function trialSubmission(){
         // });
 
         // jQuery.when(promise1, promise2)
-        jQuery.when(promise1)
+        promise1
             .done((r) => {
                 // console.log(r);
                 // if (r[1] === 'true') {
