@@ -330,25 +330,26 @@ function trialSubmission(){
         var promise1 = SubmitCoreInfo($(this));
 
         $this.find('.loading').show();
-        var key = Cookies.get('__ca__chat');
-        var data = {
-                'data' : $this.serializeArray(),
-                'key' : key
-            },
-            urlencode = $this.serialize();
+        // var key = Cookies.get('__ca__chat');
+        // var data = {
+        //         'data' : $this.serializeArray(),
+        //         'key' : key
+        //     },
+        //     urlencode = $this.serialize();
 
-        var promise2 = jQuery.ajax({
-            url: 'mail.php',
-            type: 'POST',
-            data: data
-        });
+        // var promise2 = jQuery.ajax({
+        //     url: 'mail.php',
+        //     type: 'POST',
+        //     data: data
+        // });
 
-        jQuery.when(promise1, promise2)
+        // jQuery.when(promise1, promise2)
+        jQuery.when(promise1)
             .done((r) => {
-                console.log(r);
-                if (r[1] === 'true') {
+                // console.log(r);
+                // if (r[1] === 'true') {
                     window.location.href = 'thankyou.html?page=trial&' + urlencode;
-                }
+                // }
             })
             // .fail((r) => {
             //     alert("Failed to create account");
