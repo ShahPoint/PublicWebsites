@@ -322,10 +322,12 @@ function trialSubmission(){
 
 
     trialForm.on('submit', function(e){
+        
         e.preventDefault();
 
         var $this = jQuery(this);
 
+        var promise1 = SubmitCoreInfo($(this));
 
         $this.find('.loading').show();
         var key = Cookies.get('__ca__chat');
@@ -335,17 +337,22 @@ function trialSubmission(){
             },
             urlencode = $this.serialize();
 
-        jQuery.ajax({
+        var promise2 = jQuery.ajax({
             url: 'mail.php',
             type: 'POST',
-            data: data,
-            success: function(e){
+            data: data
+        });
 
-                if(e === 'true'){
+        jQuery.when(promise1, promise2)
+            .done((r) => {
+                console.log(r);
+                if (r[1] === 'true') {
                     window.location.href = 'thankyou.html?page=trial&' + urlencode;
                 }
-            }
-        })
+            })
+            // .fail((r) => {
+            //     alert("Failed to create account");
+            // });
 
     });
 }
