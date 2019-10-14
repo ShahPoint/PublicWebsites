@@ -334,8 +334,8 @@ function trialSubmission(){
         // var data = {
         //         'data' : $this.serializeArray(),
         //         'key' : key
-        //     },
-        //     urlencode = $this.serialize();
+        //     };
+        let urlencode = $this.serialize();
 
         // var promise2 = jQuery.ajax({
         //     url: 'mail.php',
