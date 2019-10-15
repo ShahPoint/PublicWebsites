@@ -346,9 +346,9 @@ function trialSubmission(){
         jQuery.when(promise1, promise2)
             .done((r) => {
                 console.log(r);
-                if (r[1] === 'true') {
+                // if (r[1] === 'true') {
                     window.location.href = 'thankyou.html?page=trial&' + urlencode;
-                }
+                // }
             })
             // .fail((r) => {
             //     alert("Failed to create account");

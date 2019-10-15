@@ -43,7 +43,7 @@ function SubmitCoreInfo($form) {
         };
         // let loading = SetLoading();
 
-        jQuery.ajax({
+        return jQuery.ajax({
             type: "GET",
             url: URL,
             data: formData
@@ -57,6 +57,9 @@ function SubmitCoreInfo($form) {
         })//.always(() => loading.remove());
     }
     else {
+        var d = new $.Deferred();
+        d.reject();
+        return d;
         // swal("Oops!", "There appears to be some information missing, please fill out the form completely", "warning");
     }
 }
