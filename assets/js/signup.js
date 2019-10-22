@@ -1,4 +1,5 @@
 const HOST = "https://cloudpcrv3.azurewebsites.net";
+// const HOST = "https://cloudpcrv3-prod.azurewebsites.net";
 // const HOST = "https://localhost:44300";
 const URL = `${HOST}/Account/RegistrationApi`;
 
@@ -21,6 +22,26 @@ function getUrlParameter(name) {
 };
 
 function SubmitCoreInfo($form) {
+
+    let utmData = (function getUTMData(){
+        // let cookie = Cookies.get("utm_source");
+        // console.log(cookie);
+        let params = new URLSearchParams(window.location.search),
+            match = ['utm_source', 'utm_medium', 'utm_campaign','utm_content', 'utm_term'],
+            utm = {};
+    
+        for(let pair of params.entries()){
+            if(match.includes(pair[0].toLowerCase())){
+                let key = pair[0].toLowerCase();
+                let index = key.indexOf("_");
+                key = key.substr(0, index) + key.substr(index + 1, 1).toUpperCase() + key.substr(index + 2);
+                utm[key] = pair[1];
+            }
+        }
+
+        return utm;
+    })();
+
     // let $form = $("#signupForm")
     let validator = $form.validate();
 
@@ -33,14 +54,15 @@ function SubmitCoreInfo($form) {
         let name = $("[name=name]", $form).val().trim().split(" ");
 
         let formData = {
-            leadOrigin: getUrlParameter("leadOrigin"),
-            leadContext: getUrlParameter("leadContext"),
+            utmData: utmData,
             demo: true,
             emailAddress: $("[name=email]", $form).val(),
             phoneNumber: $("[name=phone]", $form).val(),
             firstName: name[0],
             lastName: name[name.length - 1]
         };
+
+        formData = Object.assign(formData, utmData);
         // let loading = SetLoading();
 
         return jQuery.ajax({

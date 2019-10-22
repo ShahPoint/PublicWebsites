@@ -303,7 +303,7 @@ function getUTMData(){
         utm = [];
 
     for(var pair of params.entries()){
-        if(match.includes(pair[0])){
+        if(match.includes(pair[0].toLowerCase())){
             utm.push(pair[0] + ' = ' + pair[1]);
         }
     }
