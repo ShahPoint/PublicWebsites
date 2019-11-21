@@ -12,6 +12,17 @@
         gtag('config', 'UA-131481152-1');
     </script>
 
+    <script>
+        window.addEventListener('load',function(){
+        if(window.location.pathname == "/thankyou.html"){
+        gtag('event', 'submit', {
+        'event_category' : 'form',
+        'event_label' : 'thank you'
+        });
+        }
+        });
+    </script>
+
     <title>CloudPCR &#8211; CloudPCR an industry leader in ePCR.</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
