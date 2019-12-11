@@ -35,6 +35,21 @@
     <link href="assets/css/style-adjust.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
+    <style>
+        label.error {
+            display: initial !important;
+        }
+        #banner form input {
+            margin-top: 10px;
+            margin-bottom: 0 !important;
+        }
+
+        .contact-form-section .center-form .contact-form input[type="text"], .contact-form-section .center-form .contact-form input[type="email"], .contact-form-section .center-form .contact-form textarea {
+            margin-bottom: 0 !important;
+            margin-top: 1.5rem;
+        }
+    </style>
+
     <!--[if IE]>
     <link href="assets/css/ie.css" rel="stylesheet">
     <![endif]-->
@@ -143,7 +158,8 @@
                                 <fieldset>
                                     <input type="text" name="name" class="form-control" placeholder="Name" required>
                                     <input type="email" name="email" class="form-control" placeholder="Email" required>
-                                    <input type="text" name="phone" class="form-control" placeholder="Phone Number">
+                                    <input type="text" name="phone" class="form-control" placeholder="Phone Number" data-rule-international-phone-number>
+                                    <br />
                                     <button type="submit" class="button button-white" style="color:#0e83b7; border:solid thin #0e83b7">Create Demo Login</button><span style="padding-left:10px;display:none;" class="loading"><i class="fas fa-spin fa-spinner"></i></span>
                                 </fieldset>
                             </form>
@@ -748,7 +764,7 @@
 
                                     <input type="text" name="name" class="form-control" placeholder="Name" required>
                                     <input type="email" name="email" class="form-control" placeholder="Email" required>
-                                    <input type="text" name="phone" class="form-control" placeholder="Phone Number">
+                                    <input type="text" name="phone" class="form-control" placeholder="Phone Number" data-rule-international-phone-number>
                                     <textarea name="message" class="form-control" style="min-height:75px;" placeholder="Message" required></textarea>
 
                                     <div class="clearfix"></div>
@@ -832,7 +848,7 @@
 
                 <input type="text" name="name" class="form-control" placeholder="Name" required>
                 <input type="email" name="email" class="form-control" placeholder="Email" required>
-                <input type="text" name="phone" class="form-control" placeholder="Phone Number">
+                <input type="text" name="phone" class="form-control" placeholder="Phone Number" data-rule-international-phone-number>
 
                 <div class="clearfix"></div>
 
@@ -872,6 +888,14 @@
 <script src="assets/js/js-cookie.js"></script>
 <script src="assets/js/init.js"></script>
 <script src="assets/js/signup.js"></script>
+<script>
+    // $(document).ready(() => {
+        $.validator.addMethod("international-phone-number", (value, element) => {
+            console.log(value);
+            return value.trim().startsWith('+');
+        }, "International Phone number must start with '+'");
+    // });
+</script>
 
 <!--[if lte IE 9]>
 <script src="assets/js/placeholders.js"></script>
