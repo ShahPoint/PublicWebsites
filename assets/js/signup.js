@@ -59,7 +59,8 @@ function SubmitCoreInfo($form) {
             emailAddress: $("[name=email]", $form).val(),
             phoneNumber: $("[name=phone]", $form).val(),
             firstName: name[0],
-            lastName: name[name.length - 1]
+            lastName: name[name.length - 1],
+            software: "CloudPCR"
         };
 
         formData = Object.assign(formData, utmData);
