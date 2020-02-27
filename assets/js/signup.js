@@ -1,4 +1,4 @@
-const HOST = "https://cloudpcrv3.azurewebsites.net";
+const HOST = "https://cloudpcrv3-staging.azurewebsites.net";
 // const HOST = "https://localhost:44300";
 const URL = `${HOST}/Account/RegistrationApi`;
 
