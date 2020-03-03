@@ -21,6 +21,26 @@ function getUrlParameter(name) {
 };
 
 function SubmitCoreInfo($form) {
+
+    let utmData = (function getUTMData(){
+        // let cookie = Cookies.get("utm_source");
+        // console.log(cookie);
+        let params = new URLSearchParams(window.location.search),
+            match = ['utm_source', 'utm_medium', 'utm_campaign','utm_content', 'utm_term'],
+            utm = {};
+    
+        for(let pair of params.entries()){
+            if(match.includes(pair[0].toLowerCase())){
+                let key = pair[0].toLowerCase();
+                let index = key.indexOf("_");
+                key = key.substr(0, index) + key.substr(index + 1, 1).toUpperCase() + key.substr(index + 2);
+                utm[key] = pair[1];
+            }
+        }
+
+        return utm;
+    })();
+
     // let $form = $("#signupForm")
     let validator = $form.validate();
 
@@ -36,6 +56,7 @@ function SubmitCoreInfo($form) {
             leadOrigin: getUrlParameter("leadOrigin"),
             leadContext: getUrlParameter("leadContext"),
             demo: true,
+            utmData: utmData,
             emailAddress: $("[name=email]", $form).val(),
             phoneNumber: $("[name=phone]", $form).val(),
             firstName: name[0],
@@ -43,6 +64,8 @@ function SubmitCoreInfo($form) {
             software: "AmbuSoft"
         };
         // let loading = SetLoading();
+
+        formData = Object.assign(formData, utmData);
 
         return jQuery.ajax({
             type: "GET",
