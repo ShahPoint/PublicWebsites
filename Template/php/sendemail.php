@@ -25,7 +25,7 @@ $cleaned = array_map('cleaner', $_POST);
 		
 		}else{
 			
-		echo 'Something went wrong and your message was not sent please try again later. Name: ' . $cleaned['name'] . ' Email: ' . $cleaned['name'] . ' To: ' . $mailto;
+		echo 'Something went wrong and your message was not sent please try again later. Name: ' . $cleaned['name'] . ' Email: ' . $cleaned['email'] . ' To: ' . $mailto;
 		
 		}
 	}else{
