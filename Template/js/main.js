@@ -152,7 +152,7 @@ dp(document).ready(function() {
 		
 		
 		dp.ajax({
-			url : 'http://threesixfiveconsulting.com/Template/php/sendemail.php',
+			url : 'http://365consulting.io/Template/php/sendemail.php',
 			dataType:"text",
 			type: 'POST',
 			crossDomain:true,
