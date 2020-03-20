@@ -1,5 +1,5 @@
 <?php 
-$mailto = 'jameset1024@gmail.com';
+$mailto = 'steve.wilson@365consulting.io';
 $subject = 'Website Contact Form';
 function cleaner($value){
 	$badstuff = array('to:', 'cc:', 'bss:', 'content-type:', 'mime-version:', 'multipart-mixed:', 'content-transfer-encoding:');
