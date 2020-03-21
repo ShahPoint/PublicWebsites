@@ -109,15 +109,14 @@ $grid_email    = new \SendGrid\Mail\Mail();
 
 //Set sending variables
 $send_to = [
-	"jay.shah@365consulting.io" => "Jay Shah",
-	"steve.wilson@365consulting.io" => "Steve Wilson",
-	"nick.brattoli@365consulting.io" => "Nick Brattoli",
-	"ryan.tedeschi@cloudpcr.net" => "Ryan Tedeschi"
+	"jay.shah@cloudpcr.net" => "Jay Shah",
+	"steve.wilson@cloudpcr.net" => "Steve Wilson",
+	"sam.kilzer@cloudpcr.net" => "Sam Kilzer"
 ];
 $grid_email->addTos($send_to);
 $grid_email->setFrom($email);
-$grid_email->setSubject("Contact-Us -  $full_name");
-$grid_email->addContent("text/html", $message);
+$grid_email->setSubject("365 Contact-Us -  $full_name");
+$grid_email->addContent("text/html", "<div style="white-space: pre-wrap;">365 CONTACT\r\n\r\n" . $message . "</div>");
 
 
 try {
