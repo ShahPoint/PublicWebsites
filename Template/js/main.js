@@ -159,7 +159,7 @@ dp(document).ready(function() {
 			url : 'https://consultingmethods.azurewebsites.net/api/SendEmail',
 			data: JSON.stringify({
                 "from": from,
-                "to": [ "jay.shah@365consulting.io", "steve.wilson@365consulting.io", "nick.brattoli@365consulting.io", "ryan.tedeschi@cloudpcr.net"  ],
+                "to": [ "jay.shah@365consulting.io", "steve.wilson@365consulting.io", "nick.brattoli@365consulting.io" ],
                 "subject": "NEW 365 LEAD",
                 "body": "<div>\
                     <span>Name: " + name + "</span>\
@@ -168,7 +168,7 @@ dp(document).ready(function() {
                     <br />\
                     <span>Message:</span>\
                     <br />\
-                    <span style=\"white-space: pre-wrap\">" + message + "</span>\
+                    <span style='white-space: pre-wrap'>" + message + "</span>\
                 </div>"
             }),
             success : function(result){ 				
