@@ -149,10 +149,10 @@ dp(document).ready(function() {
 		var info = dp(this).serialize();
 		dp('#submit').text('Sending...');
         
-        let from = dp('input[name=email]').val();
-        let name = dp('input[name=name]').val();
-        let phone = dp('input[name=phone]').val();
-        let message = dp('input[name=message]').val();
+        let from = dp('#contact-email').val();
+        let name = dp('#contact-name').val();
+        let phone = dp('#contact-phone').val();
+        let message = dp('#contact-message').val();
 
         dp.ajax({
 			type: 'POST',
