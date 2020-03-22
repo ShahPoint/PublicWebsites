@@ -97,8 +97,7 @@ if($response[0]){
 
 
 //Setup the message for the email
-$message = "365 CONSULTING CONTACT \r\n\n"
-		   ."Contact Information: \r\n\n"
+$message = "Contact Information: \r\n\n"
            ."Name: ".strip_tags($full_name)."\r\n"
            ."Email: ".strip_tags($email)."\r\n"
            ."Phone: ".strip_tags($phone)."\r\n"
@@ -116,8 +115,8 @@ $send_to = [
 ];
 $grid_email->addTos($send_to);
 $grid_email->setFrom($email);
-$grid_email->setSubject("365: Contact-Us - $full_name");
-$grid_email->addContent("text/html", $message);
+$grid_email->setSubject("365 Contact-Us -  $full_name");
+$grid_email->addContent("text/html", "<div style="white-space: pre-wrap;">365 CONTACT\r\n\r\n" . $message . "</div>");
 
 
 try {
