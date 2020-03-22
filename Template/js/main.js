@@ -153,32 +153,32 @@ dp(document).ready(function() {
         let name = dp('input[name=name]').val();
         let phone = dp('input[name=phone]').val();
         let message = dp('input[name=message]').val();
-		
-		dp.ajax({
+
+        dp.ajax({
 			type: 'POST',
-			url : 'https://cloudpcrv3-dev.azurewebsites.net/mpa/admin/SendEmail?apiKey=c4562e33-b688-457e-9046-9da5c7107826',
-			// dataType:"text",
-			crossDomain: true,
+			url : 'https://consultingmethods.azurewebsites.net/api/SendEmail',
 			data: JSON.stringify({
-                from: from,
-                to: [ "jay.shah@365consulting.io", "steve.wilson@365consulting.io", "nick.brattoli@365consulting.io", "ryan.tedeschi@cloudpcr.net" ],
-                subject: "NEW 365 LEAD",
-                body: `<div>
-                    <span>Name: ${name}</span>
-                    <br />
-                    <span>Phone: ${phone}</span>
-                    <br />
-                    <span>Message:</span><br />
-                    <span style="white-space: pre-wrap">${message}</span>
-                </div>`
-            }), 
-			success : function(result){ 				
+                "from": from,
+                "to": [ "jay.shah@365consulting.io", "steve.wilson@365consulting.io", "nick.brattoli@365consulting.io", "ryan.tedeschi@cloudpcr.net"  ],
+                "subject": "NEW 365 LEAD",
+                "body": "<div>\
+                    <span>Name: " + name + "</span>\
+                    <br />\
+                    <span>Phone: " + phone + "</span>\
+                    <br />\
+                    <span>Message:</span>\
+                    <br />\
+                    <span style=\"white-space: pre-wrap\">" + message + "</span>\
+                </div>"
+            }),
+            success : function(result){ 				
 				
 			},
 			error : function(result){
 				$('#error').fadeIn(300).delay(10000).fadeOut(300);
 			}
 		});	
+		
 		var result = 'success';
 		sentMessageAlert(result, name);
 		return false;
