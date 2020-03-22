@@ -810,24 +810,27 @@
                             <div class="row">
 
                                 <div class="col-md-6 mg-sm ">
-                                    <form class="contact-form general-contact" action="contact.php">
-
-                                        <div class="col-md-12 text-center">
-                                            <h2>Contact Us</h2>
-                                            <p>Got questions? We got answers!</p>
+                                    <form role="form" id="emailContact" class="text-left">
+                                        <div class="form-group">
+                                            <label for="contact-email">Email address*</label>
+                                            <input name="email" type="email" class="form-control" id="contact-email" placeholder="" required>
                                         </div>
-    
-                                        <input type="text" name="name" class="form-control" placeholder="Name" required>
-                                        <input type="email" name="email" class="form-control" placeholder="Email" required>
-                                        <input type="text" name="phone" class="form-control" placeholder="Phone Number">
-                                        <textarea name="message" class="form-control" style="min-height:75px;" placeholder="Message" required></textarea>
-    
-                                        <div class="clearfix"></div>
-    
-                                        <div class="col-md-12 form-btn-submit">
-                                            <input class="button button-full contact-submit" name="contact-submit" value="Send Message" type="submit"><span style="padding-left:10px;display:none;" class="loading"><i class="fas fa-spin fa-spinner"></i></span>
+                                        <div class="form-group">
+                                            <label for="contact-name">Name*</label>
+                                            <input name="name" type="text" class="form-control" id="contact-name" placeholder="" required>
                                         </div>
-    
+                                        <div class="form-group">
+                                            <label for="contact-phone">Phone</label>
+                                            <input name="phone" type="tel" class="form-control" id="contact-phone" placeholder="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="contact-message">Message*</label>
+                                            <textarea id="contact-message" name="message" class="form-control" rows="6" required></textarea>
+                                        </div>
+                                        <div class="spacer small"></div>
+                                        <button type="submit" class="btn btn-lg btn-dark btn-default" id="submit">Get A Free Consultation</button>
+                                        <input type="hidden" name="subject" value="ThreeSixFive Contact Form">
+                                        <input type="hidden" name="company_email" value="jay.shah@365consulting.io, steve.wilson@365consulting.io, nick.brattoli@365consulting.io" >
                                     </form>
                                 </div>
                                 <div class="col-md-6 mg-sm text-left ">
