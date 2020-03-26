@@ -1,0 +1,890 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>EMS ePCR charting made easy! &bull; CloudPCR</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="ePCR, Electronic Patient Care Report, EMS, EMS PCR, EMS Charting, ePCR Charting">
+    <meta name="description" content="CloudPCR is the fastest, most easy&#8208;to&#8208;use EMS ePCR on the planet. Find out how CloudPCR can get your agency back into service faster!"/>
+
+
+    <!-- Favicons for Desktop, iOS and android -->
+    <link rel="shortcut icon" href="assets/images/icons/android-icon-36x36-1.png" type="image/x-icon" />
+    <!-- For iPhone -->
+    <link rel="apple-touch-icon" href="assets/images/icons/apple-icon-57x57-1.png">
+    <!-- For iPhone Retina display -->
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/icons/apple-icon-114x114.png">
+    <!-- For iPad -->
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/icons/apple-icon-72x72-1.png">
+    <!-- For iPad Retina display -->
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/images/icons/apple-icon-144x144-1.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/css/simple-line-icons.css" rel="stylesheet">
+    <link href="assets/css/magnific-popup.css" rel="stylesheet">
+    <link href="assets/css/owl.carousel.css" rel="stylesheet">
+    <link href="assets/css/owl.theme.default.css" rel="stylesheet">
+    <link href="assets/css/aos.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/colors/color-1.css" rel="stylesheet">
+    <link href="assets/css/style-adjust.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!--[if IE]>
+    <link href="assets/css/ie.css" rel="stylesheet">
+    <![endif]-->
+
+    <script src="assets/js/modernizr.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131481152-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-131481152-1');
+    </script>
+
+
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+            n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+            document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '239662376473941'); // Insert your pixel ID here.
+        fbq('track', 'PageView');
+    </script>
+
+<script src="https://wchat.freshchat.com/js/widget.js"></script>
+</head>
+
+<body>
+
+<!-- Start Preloader -->
+<div id="page-preloader">
+    <div class="preloader">
+        <span class="circle"></span>
+    </div>
+</div>
+<!-- End Preloader -->
+
+<div id="page" class="site">
+
+    <!-- Start Header -->
+    <header id="masthead" class="site-header">
+
+        <!-- Start Navigation -->
+        <nav id="site-navigation" class="navbar main-navigation nav-dark navbar-top">
+            <div class="container-fluid container-nav nav-no-shadow">
+                <div class="container">
+
+                    <!-- Top menu buttons -->
+                    <div class="menu-buttons">
+                        <ul>
+                            <li><a href="https://cloudpcrv3.azurewebsites.net/Account/Login" class="button button-full" title="Login" target="_blank">Login</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#"><img src="assets/images/cloud-pcr-logo-white.png" class="standard" alt="CloudPCR logo" title="CloudPCR logo"><img src="assets/images/cloud-pcr-logo-blue.png" class="scroll" alt="CloudPCR logo" title="CloudPCR logo"></a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+
+                </div> <!-- .container -->
+            </div> <!-- .container-fluid -->
+        </nav>
+        <!-- End Navigation -->
+
+        <div class="container-fluid header-content-2 header-content-color" id="banner">
+            <div class="container header-container header-2">
+                <div class="row">
+
+                    <div class="title-centered-content">
+                        <div class="col-md-6 col-md-push-6 header-image">
+                            <img src="assets/images/cloud-pcr-on-all-devices.png" alt="CloudPCR works on any device" title="CloudPCR on many devices">
+                        </div> <!-- .header-image -->
+
+                        <div class="col-md-6 col-md-pull-6 header-text">
+                            <h1 style="line-height: 55px;">Get an EMS ePCR <br>that "just works"</h1>
+
+                            <div class="title-desc">
+                                <p style="line-height: 30px;">CloudPCR is an award winning, fast, and intuitive EMS ePCR for any device</p>
+                            </div>
+
+                            <h4 style="color:white">Test drive today with a free demo login!</h4>
+                            <form action="#" method="post" class="free-trial-form">
+                                <fieldset>
+                                    <input type="text" name="name" class="form-control" placeholder="Name" required>
+                                    <input type="email" name="email" class="form-control" placeholder="Email" required>
+                                    <input type="text" name="phone" class="form-control" placeholder="Phone Number">
+                                    <button type="submit" class="button button-white" style="color:#0e83b7; border:solid thin #0e83b7">Create Demo Login</button><span style="padding-left:10px;display:none;" class="loading"><i class="fas fa-spin fa-spinner"></i></span>
+                                </fieldset>
+                            </form>
+
+                        </div> <!-- .header-text -->
+                    </div> <!-- .title-centered-content -->
+
+                </div> <!-- .row -->
+            </div> <!-- .container -->
+        </div> <!-- .container-fluid -->
+
+    </header>
+    <!-- End Header -->
+
+    <div id="content" class="site-content">
+        <div id="primary" class="content-area">
+            <main id="main" class="site-main">
+
+                <!-- Start About Block 1 -->
+                <section id="about---1" class="container-fluid section-block about-1">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-md-push-6 col-md-6 col-sm-7 col-sm-push-5 col-xs-12">
+                                <img src="assets/images/cloud-pcr-on-mobile.png" class="center-block" alt="CloudPCR works without internet" title="CloudPCR on a mobile phone">
+                            </div>
+                            <div class="col-md-6 col-md-pull-6 col-sm-5 col-sm-pull-7 col-xs-12 about-text">
+                                <h2>Offline with AutoSync</h2>
+                                <p style="font-size:1.25rem">Never lose a PCR to a bad connection again. CloudPCR works offline & automatically syncs to the central database when online.</p>
+                                <ul>
+                                    <li>The ONLY offline-web ePCR on the market</li>
+                                    <li>Chart from anywhere, even in remote rural areas</li>
+                                    <li>The apps installs in your browser seamlessly, no permissions needed</li>
+                                </ul>
+                            </div>
+
+                        </div> <!-- .row -->
+                    </div> <!-- .container -->
+                </section>
+                <!-- End About Block 1 -->
+
+                <!-- Start About Block 6 -->
+                <section id="about---6" class="container-fluid section-block about-6 color-block">
+                    <div class="container">
+                        <div class="row">
+
+                            <!-- Image block -->
+                            <div class="col-md-6 col-sm-7 col-xs-12">
+                                <div class="about-image-block">
+                                    <div class="about-image">
+
+                                        <img src="assets/images/cloud-pcr-on-laptop.png" alt="Cloud PCR works on any device" title="CloudPCR on a laptop">
+
+                                    </div> <!-- .about-image -->
+                                </div> <!-- .about-features -->
+                            </div>
+
+                            <!-- Text block -->
+                            <div class= "col-md-6 col-sm-5 col-xs-12 about-text">
+                                <h2>Customizable Form</h2>
+                                <p style="font-size:1.25rem">Our easy form editor allows you to modify the ePCR form without knowing any code.</p>
+                                <ul>
+                                    <li>Hide unnecessary fields on the PCR</li>
+                                    <li>Add or remove the dropdown options</li>
+                                    <li>Change which fields are required </li>
+                                    <li>Set field value defaults in the PCR</li>
+                                    <li>All of the above customizations can be done with clicks of the mouse</li>
+                                    <li>All of the above can be based on patient outcome, example: transported vs cancelled calls</li>
+                                </ul>
+
+                            </div>
+
+                        </div> <!-- .row -->
+                    </div> <!-- .container -->
+                </section>
+                <!-- End About Block 6 -->
+
+                <!-- Start About Block 5 -->
+                <section id="about---5" class="container-fluid section-block about-5">
+                    <div class="container">
+                        <div class="row">
+
+                            <!-- Image block -->
+                            <div class="col-md-6 col-md-push-6 col-sm-7 col-sm-push-5 col-xs-12">
+                                <div class="about-image-block">
+                                    <div class="about-image">
+
+                                        <img src="assets/images/cloud-pcr-on-all-devices-1024x768.png" alt="image" alt="Cloud PCR works on any device" title="Cloud PCR on many devices">
+
+                                    </div> <!-- .about-image -->
+                                </div> <!-- .about-features -->
+                            </div>
+
+                            <!-- Text block -->
+                            <div class="col-md-6 col-md-pull-6 col-sm-5 col-sm-pull-7 col-xs-12 about-text">
+                                <h2>Use on any Device</h2>
+                                <p style="font-size:1.25rem">The same full-use CloudPCR app works on any device, so you don't have to learn different versions of our software for different device types.</p>
+                                <p style="margin-bottom:10px;">Works on:</p>
+                                <ul>
+                                    <li>PCs/Toughbooks</li>
+                                    <li>iPads</li>
+                                    <li>iPhones</li>
+                                    <li>Android Tablets</li>
+                                    <li>Android Phones</li>
+                                    <li>Chromebooks</li>
+                                </ul>
+
+                            </div>
+
+                        </div> <!-- .row -->
+                    </div> <!-- .container -->
+                </section>
+                <!-- End About Block 5 -->
+
+                <!-- Start Features 2 -->
+                <section id="features---2" class="container-fluid section-block features color-block">
+                    <div class="container">
+                        <div class="row">
+
+                            <h2>Features</h2>
+                            <div class="block-desc">
+                                <p>Browse the features that makes us the best ePCR on the market.</p>
+                            </div>
+
+                            <!-- Feature 1 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-bicycle"></i>
+                                <h3>Ease of Use</h3>
+                                <p>So easy, your grandma could use it. <a href="#">Learn More</a></p>
+                            </div>
+
+                            <!-- Feature 1.5 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-prescription-bottle-alt"></i>
+                                <h3>Opioid Alert</h3>
+                                <p>Alert your Medical Director when Opioids are administered. <!--<a href="#">Learn More</a> --></p>
+                            </div>
+
+                            <!-- Feature 2 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-tools"></i>
+                                <h3>Customizable Form</h3>
+                                <p>Use our easy form editor to customize our ePCR form for your agency. <a href="#">Learn More</a></p>
+                            </div>
+
+                            <!-- Feature 3 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-shield-alt"></i>
+                                <h3>HIPAA Compliant Security</h3>
+                                <p>Military grade cloud service that provides data security and encryption for your reports. <a href="#">Learn More</a></p>
+                            </div>
+
+                            <!-- Feature 4 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-globe"></i>
+                                <h3>Smart Location</h3>
+                                <p>Save time by quickly selecting your destination. <a href="#">Learn More</a></p>
+                            </div>
+
+                            <!-- Feature 5 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-search"></i>
+                                <h3>Advanced QA/QI</h3>
+                                <p>View, analyze, and approve PCRs. <a href="#">Learn More</a></p>
+                            </div>
+
+                            <!-- Feature 6 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-mobile-alt"></i>
+                                <h3>Works on Any Device</h3>
+                                <p>Chart on any phone, tablet, or PC. <a href="#">Learn More</a></p>
+                            </div>
+
+                            <!-- Feature 7 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-user-edit"></i>
+                                <h3>Patient Lookup</h3>
+                                <p>Search for your agencies' previous patients by entering their name, date of birth, or <br>social security number. <a href="#">Learn More</a></p>
+                            </div>
+
+
+                            <!-- Feature 8 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-chart-line"></i>
+                                <h3>Visual Reports</h3>
+                                <p>See graphs and charts to understand your <br>run report data. <a href="#">Learn More</a></p>
+                            </div>
+
+                            <!-- Feature 9 -->
+
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-ambulance"></i>
+                                <h3>Auto Load Mileage</h3>
+                                <p>Using google maps, we automatically calculate load mileage based on the scene and <br>destination address. <a href="#">Learn More</a></p>
+                            </div>
+
+                            <!-- Feature 10 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-calculator"></i>
+                                <h3>Auto Calculation</h3>
+                                <p>Our ePCR calculates what can be calculated, saving time and creating accurate run reports. <a href="#">Learn More</a></p>
+                            </div>
+
+                            <!-- Feature 11 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-keyboard"></i>
+                                <h3>IntelliSearch</h3>
+                                <p>Replace horribly long dropdowns with 'google like' search when selecting an drop-down option. (example: Medications and Procedures) <a href="#">Learn More</a> </p>
+                            </div>
+
+                            <!-- Feature 12 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="far fa-clock"></i>
+                                <h3>Time Sync</h3>
+                                <p>One-touch time reporting. <a href="#">Learn More</a></p>
+                            </div>
+
+                            <!-- Feature 13 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-palette"></i>
+                                <h3>Intelligent Design</h3>
+                                <p>Equipped with intelligent technology that searches the data as you type and corrects your information. <a href="#">Learn More</a></p>
+                            </div>
+
+                            <!-- Feature 14 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-align-left"></i>
+                                <h3>Narrative Builder</h3>
+                                <p>Easily compile your text narratives based on custom templates and information already in your<br> run report. <a href="#">Learn More</a></p>
+                            </div>
+
+                            <!-- Feature 15 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-recycle"></i>
+                                <h3>Enterprise Workflows</h3>
+                                <p>Automatically run approvals, QA, billing, notifications, faxes, etc. <a href="#">Learn More</a></p>
+                            </div>
+
+                            <!-- Feature 16 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <h3>Smart Validation</h3>
+                                <p>See validations in real time and navigate to the page & field by clicking on the validation message. <a href="#">Learn More</a></p>
+                            </div>
+
+                            <!-- Feature 17 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="far fa-chart-bar"></i>
+                                <h3>Cloud Database</h3>
+                                <p>Never worry about purchasing a server. <a href="#">Learn More</a></p>
+                            </div>
+
+                            <!-- Feature 18 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-award"></i>
+                                <h3>Nemesis V3</h3>
+                                <p>We are fully compliant with the latest <br>NEMSIS requirements. <a href="#">Learn More</a></p>
+                            </div>
+
+                            <!-- Feature 19 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-upload"></i>
+                                <h3>State Reporting</h3>
+                                <p>Seamless no-hassle state reporting, immediately transmits approved trips to your state bridge with no extra work. <a href="#">Learn More</a></p>
+                            </div>
+
+                            <!-- Feature 20 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-signal"></i>
+                                <h3>Offline with Auto Sync</h3>
+                                <p>Work offline when you have no internet, sync up when your back on-line.  <a href="#">Learn More</a></p>
+                            </div>
+
+                            <!-- Feature 21 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-money-check-alt"></i>
+                                <h3>Billing Integration</h3>
+                                <p>Easily share your PCR's with your billing company. <a href="#">Learn More</a></p>
+                            </div>
+
+                            <!-- Feature 22 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-clinic-medical"></i>
+                                <h3>Hospital Data Access</h3>
+                                <p>Give hospitals access to the data they need,<br> when they need it. <a href="#">Learn More</a></p>
+                            </div>
+
+
+                            <!-- Feature 23 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-camera"></i>
+                                <h3>Camera Enabled</h3>
+                                <p>Add context to your run reports with pictures taken from your device. <a href="#">Learn More</a></p>
+                            </div>
+
+                            <!-- Feature 24 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-search"></i>
+                                <h3>Signatures</h3>
+                                <p>Allow users to save signatures to their account so they can sign documents easily, or have them sign using any touch screen device. <a href="#">Learn More</a></p>
+                            </div>
+
+                            <!-- Feature 25 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-paste"></i>
+                                <h3>Digitized Paper Forms</h3>
+                                <p>Upload forms that your agency frequently uses so that they are all stored and filled out in the<br> same place. <a href="#">Learn More</a></p>
+                            </div>
+
+                            <!-- Feature 26 Duplicate!
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-save"></i>
+                                <h3>AutoSave</h3>
+                                <p>Be protected from loosing data with Autosave. <a href="#">Learn More</a></p>
+                            </div>-->
+
+                            <!-- Feature 27 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-history"></i>
+                                <h3>PCR History</h3>
+                                <p>See previous versions of a patient record. <a href="#">Learn More</a></p>
+                            </div>
+
+                            <!-- Feature 28 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-file-alt"></i>
+                                <h3>Report Notes</h3>
+                                <p>Communicate securely with people in<br> your organization. <a href="#">Learn More</a></p>
+                            </div>
+
+                            <!-- Feature 29 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-microphone"></i>
+                                <h3>Voice-to-Text</h3>
+                                <p> Turn your spoken words into text. <a href="#">Learn More</a></p>
+                            </div>
+
+                            <!-- Feature 30 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-life-ring"></i>
+                                <h3>Help AI</h3>
+                                <p>Our AI help engine shows you video's and articles for the page your on.<a href="#">Learn More</a></p>
+                            </div>
+
+                            <!-- Feature 31 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-bolt"></i>
+                                <h3>Fast Deploying</h3>
+                                <p>Get set up and start using CloudPCR in a matter <br>of hours.<a href="#">Learn More</a></p>
+                            </div>
+                            <!-- Feature 32 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-heartbeat"></i>
+                                <h3>12-Lead Integration</h3>
+                                <p>Import your 12-Lead data into your patient care report.<a href="#">Learn More</a></p>
+                            </div>
+                            <!-- Feature 33 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fab fa-hubspot"></i>
+                                <h3>Basic Dispatch</h3>
+                                <p>Assign new calls to your crews. <a href="#">Learn More</a></p>
+                            </div>
+                            <!-- Feature 34 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-paperclip"></i>
+                                <h3>Document Attachments</h3>
+                                <p>Attach any files or photos to your reports. <a href="#">Learn More</a></p>
+                            </div>
+                            
+                            <!-- Feature 35 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-save"></i>
+                                <h3>AutoSave</h3>
+                                <p>Keep from loosing data with our automatic<br> saving feature. <a href="#">Learn More</a></p>
+                            </div>                            
+
+                            <!-- Feature 36 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-question"></i>
+                                <h3>24/7 In-App Help</h3>
+                                <p>Get instant responses to your most urgent issues.<a href="#">Learn More</a></p>
+                            </div>
+                            <!-- Feature 37 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-laptop-medical"></i>
+                                <h3>CAD Integration</h3>
+                                <p>Make dispatching simpler by integrating your CAD system with our PCR software so that certain fields are filled out automatically.</p>
+                            </div>
+
+
+
+                        </div> <!-- .row -->
+                    </div> <!-- .container -->
+                </section>
+                <!-- End Features 2 -->
+
+                <!-- Start How to use 2 -->
+                <section id="how-to-use---2" class="container-fluid section-block how-to-use-2">
+                    <div class="container">
+                        <div class="row">
+
+                            <h2>We Make it Easy</h2>
+                            <div class="block-desc">
+                                <p>Our software is so easy to learn that we have had many small organizations go live on a single day.</p>
+                            </div>
+
+                            <!-- Block 1 -->
+                            <div class="col-md-4 how-to-block-2">
+                                <span class="number">1</span>
+                                <h3>Sign up for a free trial</h3>
+                                <p>We'll send you log-in credentials and you can start test driving the ePCR right away - no configuration necessary.</p>
+                            </div> <!-- .how-to-block -->
+
+                            <!-- Block 2 -->
+                            <div class="col-md-4 how-to-block-2">
+                                <span class="number">2</span>
+                                <h3>Optimize PCR To Agency</h3>
+                                <p>Configure the ePCR, hide unnecessary fields, change dropdown options, implement agency specific validation. Complete in-app training and documentation.</p>
+                            </div> <!-- .how-to-block -->
+
+                            <!-- Block 3 -->
+                            <div class="col-md-4 how-to-block-2">
+                                <span class="number">3</span>
+                                <h3>Be Awesome</h3>
+                                <p>Start using the ePCR, save time, chart patient data better, and begin spending time on things other than paperwork.</p>
+                            </div> <!-- .how-to-block -->
+
+
+                        </div> <!-- .row -->
+                    </div> <!-- .container -->
+                </section>
+                <!-- End How to use 2 -->
+
+
+                <!-- Start CTA 2 -->
+                <section id="cta---2" class="container-fluid section-block cta">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="cta-content-2">
+
+
+                                <div class="col-md-6 cta-block" style="padding-left: 100px">
+                                    <h2>Starting at $49.99/month.</h2>
+                                </div>
+
+                                <div class="col-md-6 cta-button-block" style="padding-right: 100px">
+                                    <div class="cta-button">
+                                        <a href="#" class="button button-full fly-out">Start Free Trial</a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div> <!-- .row -->
+                    </div> <!-- .container -->
+                </section>
+                <!-- End CTA 2 -->
+
+                <!-- Start FAQ 2 -->
+                <section id="faq---2" class="container-fluid section-block faq">
+                    <div class="container">
+                        <div class="row">
+
+                            <h2>FAQ</h2>
+
+                            <div class="col-md-12">
+                                <!-- Accordion -->
+                                <div id="accordion" class="panel-group faq-group" role="tablist" aria-multiselectable="true">
+
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingOne">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                    <span>Q:</span> <span>Offline? What if I’m in a remote area or have no WiFi/ LGE service available?</span>
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                            <div class="panel-body">
+                                                <p>
+                                                    A: Yes. CloudPCR works seamlessly online AND offline.
+                                                </p>
+                                                <p>
+                                                    If your device is offline CloudPCR will save locally to your browser, and the next time your device regains internet connectivity, your ePCRs will be uploaded automatically in the background.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div> <!-- .panel-default -->
+
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingTwo">
+                                            <h4 class="panel-title">
+                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                    <span>Q:</span> <span>Can the data be accessed from anywhere, is there a way to limit access?</span>
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                            <div class="panel-body">
+                                                <p>
+                                                    A: Yes. CloudPCR is cloud based so by default you can access the application from any device anywhere at anytime. In addition, CloudPCR offers an optional security layer where the system administrator has the ability to lockdown the usage to only agency approved devices.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div> <!-- .panel-default -->
+
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingThree">
+                                            <h4 class="panel-title">
+                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                    <span>Q:</span> <span>You said cloud… is your software HIPAA compliant? Is it secure?</span>
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                            <div class="panel-body">
+                                                <p>
+                                                    A: Yes. CloudPCR is HIPAA/HITECH compliant. Security is always a top priority, all data transmission is encrypted using state of the art security practices. CloudPCR is based on the same Azure cloud technology as the U.S. military cloud system.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div> <!-- .panel-default -->
+
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingFour">
+                                            <h4 class="panel-title">
+                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                    <span>Q:</span> <span>What happens if someone deletes a patient record, is there historical versioning?</span>
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                                            <div class="panel-body">
+                                                <p>
+                                                    A: Yes. The CloudPCR system is engineered from the ground up to never lose or delete any data, the PCR is always versioned or possibly disabled, but the patient report data is always retrievable and never deleted from the database.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div> <!-- .panel-default -->
+
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingFive">
+                                            <h4 class="panel-title">
+                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                                    <span>Q:</span> <span>Is there logging of user actions such as viewing, editing, and printing?</span>
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                                            <div class="panel-body">
+                                                <p>
+                                                    A: Yes. CloudPCR logs everything from creation and editing of patient data to actions by users like viewing and printing. These logs can be viewed and managed by admins and exported into excel if necessary.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div> <!-- .panel-default -->
+
+                                </div> <!-- .panel-group -->
+                            </div>
+
+                            <div class="col-md-12 text-center">
+                                <a href="assets/images/FAQ-CloudPCR.pdf" target="_blank" class="button button-full">Download Full PDF ( 47 FAQs )</a>
+                            </div>
+
+                        </div> <!-- .row -->
+                    </div> <!-- .container -->
+                </section>
+                <!-- End FAQ 2 -->
+
+
+
+                <!-- Start Video 1 -->
+                <section id="video---1" class="container-fluid section-block video">
+                    <div class="container">
+                        <div class="row">
+
+                            <h2>Video</h2>
+
+                            <div class="col-md-12 video-block">
+                                <a class="popup-video" href="https://player.vimeo.com/video/322948573"><!-- Link to a YouTube video -->
+                                    <span class="overlay"></span>
+                                    <img class="preview" src="assets/images/vimeo-preview.png" alt="See all the features of CloudPCR" title="Cloud PCR Promo Video">
+                                    <i class="fa fa-play play-button" aria-hidden="true"></i>
+                                </a>
+                            </div>
+
+                        </div> <!-- .row -->
+                    </div> <!-- .container -->
+                </section>
+                <!-- End Video 1 -->
+
+
+                <!-- Start Contact us -->
+                <section id="contact-us---1" class="container-fluid section-block contact-form-section">
+                    <div class="form-bg"></div> <!-- Background image -->
+                    <div class="overlay"></div>	<!-- Overlay -->
+                    <div class="container">
+                        <div class="row">
+
+                            <!-- Start Contact Form -->
+                            <div class="col-md-6 center-form border-box">
+                                <form class="contact-form general-contact" action="contact.php">
+
+                                    <div class="col-md-12 text-center">
+                                        <h2>Contact Us</h2>
+                                        <p>Got questions? We got answers!</p>
+                                    </div>
+
+                                    <input type="text" name="name" class="form-control" placeholder="Name" required>
+                                    <input type="email" name="email" class="form-control" placeholder="Email" required>
+                                    <input type="text" name="phone" class="form-control" placeholder="Phone Number">
+                                    <textarea name="message" class="form-control" style="min-height:75px;" placeholder="Message" required></textarea>
+
+                                    <div class="clearfix"></div>
+
+                                    <div class="col-md-12 form-btn-submit">
+                                        <input class="button button-full contact-submit" name="contact-submit" value="Send Message" type="submit"><span style="padding-left:10px;display:none;" class="loading"><i class="fas fa-spin fa-spinner"></i></span>
+                                    </div>
+
+                                </form>
+                            </div>
+                            <!-- End Contact Form -->
+
+                        </div> <!-- .row -->
+                    </div> <!-- .container -->
+                </section>
+                <!-- End Contact us -->
+
+            </main>
+        </div> <!-- #primary -->
+    </div> <!-- #content -->
+
+    <!-- Start Footer -->
+    <footer id="colophon" class="container-fluid site-footer cta">
+        <div class="container footer-container site-top-footer">
+            <div class="row">
+
+                <div class="col-md-8 col-sm-12 footer-col footer-col-1">
+                    <h3>About Us</h3>
+                    <p>"I love charting", said no one ... ever ... seriously, never. We have never talked to an EMS professional that joined the EMS industry for all the great paperwork opportunities - but that is where a lot of time is spent. Our team hates unneeded paperwork too. We make charting less painful through our intuitive UI, and more powerful through our streamlined features.</p>
+                    <p>We pride ourselves on being a small team of multifaceted developers, engineers and EMS professionals. We care about the quality of our software and how it improves the experience of its users.</p>
+                    <p><img src="assets/images/jay-shah.png" width="40px" height="40px" alt="Jay Shah">  <span style="padding-left:10px">- Jay Shah, Co-founder/Product Manager</span></p>
+                </div> <!-- .footer-col-1 -->
+
+                <div class="col-md-2 col-sm-6 footer-col footer-col-2">
+                    <h3>PCR</h3>
+                    <ul>
+                        <li><a href="#features---2" title="Features">Features</a></li>
+                        <li><a href="#how-to-use---2" title="Our Process">Our Process</a></li>
+                        <li><a href="#faq---2" title="FAQ">FAQ</a></li>
+                        <li><a href="#video---1" title="Video">Video</a></li>
+                    </ul>
+                </div> <!-- .footer-col-2 -->
+
+                <div class="col-md-2 col-sm-6 footer-col footer-col-3">
+                    <h3>More</h3>
+                    <ul>
+                        <li><a href="https://desk.zoho.com/portal/cloudpcr/home" target="_blank" title="Support Documentation">Support Documentation</a></li>
+                        <li><a href="careers.html" title="Careers">Careers</a></li>
+                        <li><a href="privacy.html" title="Privacy Policy">Privacy Policy</a></li>
+                    </ul>
+                </div> <!-- .footer-col-3 -->
+
+                <div class="col-md-12 col-sm-12 bottom-footer">
+
+                    <div class="col-md-6 col-sm-12 copy-text">
+                        <p>@2019 CloudPCR. All rights reserved</p>
+                    </div>
+
+                </div> <!-- .bottom-footer -->
+
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+</div> <!-- #page -->
+
+<div class="side-tab">Start 30-day trial</div>
+<div class="side-fly-out">
+    <div class="row contact-form-section">
+
+        <!-- Start Contact Form -->
+        <div class="col-md-12 center-form border-box">
+            <form class="contact-form free-trial-form">
+
+                <div class="col-md-12 text-center">
+                    <h2>Start your 30-day free trial</h2>
+                    <p>Use our software for 30-days with no commitment! (no payment info required)</p>
+                </div>
+
+                <input type="text" name="name" class="form-control" placeholder="Name" required>
+                <input type="email" name="email" class="form-control" placeholder="Email" required>
+                <input type="text" name="phone" class="form-control" placeholder="Phone Number">
+
+                <div class="clearfix"></div>
+
+                <div class="col-md-12 form-btn-submit">
+                    <input class="button button-full contact-submit" name="contact-submit" value="Request Trial" type="submit"><span style="padding-left:10px;display:none;" class="loading"><i class="fas fa-spin fa-spinner"></i></span>
+                </div>
+
+            </form>
+        </div>
+        <!-- End Contact Form -->
+
+    </div> <!-- .row -->
+</div>
+
+<!-- Thank You Modal -->
+<div class="contact-form-modal modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button> <h4 class="modal-title" id="myLargeModalLabel" style="text-align:center">Thank You</h4> </div>
+            <div class="modal-body" style="text-align:center"> Thanks for you for your message, we will get back to you shortly. </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Include JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/bootstrap-hover-dropdown.js"></script>
+<script src="assets/js/magnific-popup.min.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/parallax.js"></script>
+<script src="assets/js/aos.js"></script>
+<script src="assets/js/jquery.validate.js"></script>
+<script src="assets/js/js-cookie.js"></script>
+<script src="assets/js/init.js"></script>
+<script src="assets/js/signup.js"></script>
+
+<!--[if lte IE 9]>
+<script src="assets/js/placeholders.js"></script>
+<script src="assets/js/init-for-ie.js"></script>
+<![endif]-->
+
+<!-- <script data-cfasync="false">
+    window.civchat = {
+        apiKey: "ys4zi5",
+    };
+</script>
+<script data-cfasync="false" src="https://widget.userengage.com/widget.js"></script> -->
+
+<script>
+    window.fcWidget.init({
+      token: "0a3bee12-147b-4c20-a8b4-22cd79f8f97e",
+      host: "https://wchat.freshchat.com"
+    });
+  </script>
+
+</body>
+</html>
