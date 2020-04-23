@@ -84,7 +84,7 @@
     </script>
 
 
-<script src="https://wchat.freshchat.com/js/widget.js"></script>
+
 </head>
 
 <body>
@@ -905,12 +905,18 @@
 </script>
 <script data-cfasync="false" src="https://widget.userengage.com/widget.js"></script> -->
 
+
+<!-- BEGIN Intercom -->
+<script>(function () { var w = window; var ic = w.Intercom; if (typeof ic === "function") { ic('reattach_activator'); ic('update', w.intercomSettings); } else { var d = document; var i = function () { i.c(arguments); }; i.q = []; i.c = function (args) { i.q.push(args); }; w.Intercom = i; var l = function () { var s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://widget.intercom.io/widget/o79cl0h3'; var x = d.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); }; if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } } })();</script>
 <script>
-    window.fcWidget.init({
-      token: "0a3bee12-147b-4c20-a8b4-22cd79f8f97e",
-      host: "https://wchat.freshchat.com"
-    });
-  </script>
+    window.intercomSettings = {
+        app_id: "o79cl0h3",
+        app: "365 Public"
+    };
+    Intercom("initialize", window.intercomSettings);
+</script>
+<!-- END Intercom -->
+
 
 </body>
 </html>
