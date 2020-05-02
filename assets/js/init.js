@@ -322,7 +322,7 @@ function trialSubmission(){
 
 
     trialForm.on('submit', function(e){
-        
+
         e.preventDefault();
 
         var $this = jQuery(this);
@@ -575,4 +575,23 @@ jQuery('.feature-center a').on('click', function(e){
             }
         }
     });
+});
+
+var featured = document.querySelectorAll('.feature-center a');
+featured.forEach(function( e, i ){
+    e.id = 'featured' + i;
+
+    var data = {
+        'heading' : e.parentElement.previousElementSibling.innerText
+    };
+
+    Tipped.create("#" + e.id, {
+        ajax: {
+            url: 'feature_display.php',
+            type: 'POST',
+            data: data
+        },
+        skin: 'light',
+        size: 'small'
+    })
 });
