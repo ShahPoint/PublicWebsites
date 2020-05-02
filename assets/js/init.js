@@ -580,18 +580,21 @@ jQuery('.feature-center a').on('click', function(e){
 var featured = document.querySelectorAll('.feature-center');
 featured.forEach(function( e, i ){
     e.id = 'featured' + i;
+    let check = e.querySelector('a');
 
-    var data = {
-        'heading' : e.parentElement.querySelector('h3').innerText
-    };
+    if(check) {
+        var data = {
+            'heading': e.querySelector('h3').innerText
+        };
 
-    Tipped.create("#" + e.id, {
-        ajax: {
-            url: 'feature_display.php',
-            type: 'POST',
-            data: data
-        },
-        skin: 'light',
-        size: 'small'
-    })
+        Tipped.create("#" + e.id, {
+            ajax: {
+                url: 'feature_display.php',
+                type: 'POST',
+                data: data
+            },
+            skin: 'light',
+            size: 'small'
+        })
+    }
 });
