@@ -577,12 +577,12 @@ jQuery('.feature-center a').on('click', function(e){
     });
 });
 
-var featured = document.querySelectorAll('.feature-center a');
+var featured = document.querySelectorAll('.feature-center');
 featured.forEach(function( e, i ){
     e.id = 'featured' + i;
 
     var data = {
-        'heading' : e.parentElement.previousElementSibling.innerText
+        'heading' : e.parentElement.querySelector('h3').innerText
     };
 
     Tipped.create("#" + e.id, {
