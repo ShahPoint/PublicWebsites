@@ -554,7 +554,7 @@ Icon modal popup
 
  */
 
-jQuery('.feature-center a').on('click', function(e){
+jQuery('.homepage .feature-center a').on('click', function(e){
     e.preventDefault();
 
     var heading = jQuery(this).parent().prev('h3').text(),
@@ -564,6 +564,109 @@ jQuery('.feature-center a').on('click', function(e){
 
     jQuery.ajax({
         url: 'feature_display.php',
+        type: 'POST',
+        data: data,
+        success: function(e){
+            if(e !== 'failed') {
+                Swal.fire({
+                    html: e,
+                    showCloseButton: true,
+                    showCancelButton: false
+                })
+            }
+        }
+    });
+});
+
+
+/* For spanish version */
+jQuery('.spanish .feature-center a').on('click', function(e){
+    e.preventDefault();
+
+    var heading = jQuery(this).parent().prev('h3').text(),
+        data = {
+            'heading' : heading
+        };
+
+    jQuery.ajax({
+        url: 'feature_display_spanish.php',
+        type: 'POST',
+        data: data,
+        success: function(e){
+            if(e !== 'failed') {
+                Swal.fire({
+                    html: e,
+                    showCloseButton: true,
+                    showCancelButton: false
+                })
+            }
+        }
+    });
+});
+
+
+/* For French version */
+jQuery('.French .feature-center a').on('click', function(e){
+    e.preventDefault();
+
+    var heading = jQuery(this).parent().prev('h3').text(),
+        data = {
+            'heading' : heading
+        };
+
+    jQuery.ajax({
+        url: 'feature_display_french.php',
+        type: 'POST',
+        data: data,
+        success: function(e){
+            if(e !== 'failed') {
+                Swal.fire({
+                    html: e,
+                    showCloseButton: true,
+                    showCancelButton: false
+                })
+            }
+        }
+    });
+});
+
+
+/* For german version */
+jQuery('.german .feature-center a').on('click', function(e){
+    e.preventDefault();
+
+    var heading = jQuery(this).parent().prev('h3').text(),
+        data = {
+            'heading' : heading
+        };
+
+    jQuery.ajax({
+        url: 'feature_display_german.php',
+        type: 'POST',
+        data: data,
+        success: function(e){
+            if(e !== 'failed') {
+                Swal.fire({
+                    html: e,
+                    showCloseButton: true,
+                    showCancelButton: false
+                })
+            }
+        }
+    });
+});
+
+/* For Arabic version */
+jQuery('.Arabic .feature-center a').on('click', function(e){
+    e.preventDefault();
+
+    var heading = jQuery(this).parent().prev('h3').text(),
+        data = {
+            'heading' : heading
+        };
+
+    jQuery.ajax({
+        url: 'feature_display_arabic.php',
         type: 'POST',
         data: data,
         success: function(e){
