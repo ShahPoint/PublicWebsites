@@ -1,0 +1,912 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AmbuSoft &bull; Ambulance software made easy  </title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="ePCR, Electronic Patient Care Report, EMS, EMS PCR, EMS Charting, ePCR Charting">
+    <meta name="description" content="AmbuSoft is the fastest, most easy&#8208;to&#8208;use EMS ambulance software on the planet. Find out how AmbuSoft can get your agency back into service faster!"/>
+
+
+    <!-- Favicons for Desktop, iOS and android -->
+    <link rel="shortcut icon" href="assets/images/icons/android-icon-36x36-1.png" type="image/x-icon" />
+    <!-- For iPhone -->
+    <link rel="apple-touch-icon" href="assets/images/icons/apple-icon-57x57-1.png">
+    <!-- For iPhone Retina display -->
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/icons/apple-icon-114x114.png">
+    <!-- For iPad -->
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/icons/apple-icon-72x72-1.png">
+    <!-- For iPad Retina display -->
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/images/icons/apple-icon-144x144-1.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/css/simple-line-icons.css" rel="stylesheet">
+    <link href="assets/css/magnific-popup.css" rel="stylesheet">
+    <link href="assets/css/owl.carousel.css" rel="stylesheet">
+    <link href="assets/css/owl.theme.default.css" rel="stylesheet">
+    <link href="assets/css/aos.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/colors/color-1.css" rel="stylesheet">
+    <link href="assets/css/style-adjust.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <style>
+        label.error {
+            display: initial !important;
+        }
+        #banner form input {
+            margin-top: 10px;
+            margin-bottom: 0 !important;
+        }
+
+        .contact-form-section .center-form .contact-form input[type="text"], .contact-form-section .center-form .contact-form input[type="email"], .contact-form-section .center-form .contact-form textarea {
+            margin-bottom: 0 !important;
+            margin-top: 1.5rem;
+        }
+    </style>
+
+    <!--[if IE]>
+    <link href="assets/css/ie.css" rel="stylesheet">
+    <![endif]-->
+
+    <script src="assets/js/modernizr.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131481152-2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-131481152-2');
+    </script>
+
+
+
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+            n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+            document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '239662376473941'); // Insert your pixel ID here.
+        fbq('track', 'PageView');
+    </script>
+
+
+
+</head>
+
+<body class="homepage">
+
+<!-- Start Preloader -->
+<div id="page-preloader">
+    <div class="preloader">
+        <span class="circle"></span>
+    </div>
+</div>
+<!-- End Preloader -->
+
+<div id="page" class="site">
+
+    <!-- Start Header -->
+    <header id="masthead" class="site-header">
+
+        <!-- Start Navigation -->
+        <nav id="site-navigation" class="navbar main-navigation nav-dark navbar-top">
+            <div class="container-fluid container-nav nav-no-shadow">
+                <div class="container">
+
+                    <!-- Top menu buttons -->
+                    <div class="menu-buttons">
+                        <ul>
+                            <li><a href="https://cloudpcrv3.azurewebsites.net/Account/Login" class="button button-full" title="Login" target="_blank">Login</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#"><img src="assets/images/AmbuSoft_LogoReverse180.png" class="standard" alt="AmbuSoft logo" title="AmbuSoft logo"><img src="assets/images/AmbuSoft_LogoSolid180.png" class="scroll" alt="AmbuSoft logo" title="AmbuSoft logo"></a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+
+                </div> <!-- .container -->
+            </div> <!-- .container-fluid -->
+        </nav>
+        <!-- End Navigation -->
+
+        <div class="container-fluid header-content-2 header-content-color" id="banner">
+            <div class="container header-container header-2">
+                <div class="row">
+
+                    <div class="title-centered-content">
+                        <div class="col-md-6 col-md-push-6 header-image">
+                            <img src="assets/images/cloud-pcr-on-all-devices.png" alt="AmbuSoft works on any device" title="AmbuSoft on many devices">
+                        </div> <!-- .header-image -->
+
+                        <div class="col-md-6 col-md-pull-6 header-text">
+                            <h1 style="line-height: 55px;">W końcu! Oprogramowanie karetki szybkie i proste w użyciu.</h1>
+
+                            <div class="title-desc">
+                                <p style="line-height: 30px;">AmbuSoft jest innowacyjnym i niedrogim programem do zarządzania opieką pacjenta w karetce, już od £50/mo</p>
+                            </div>
+
+                            <h4 style="color:white">Darmowa wersja próbna!</h4>
+                            <form action="#" method="post" class="free-trial-form">
+                                <fieldset>
+                                    <input type="text" name="name" class="form-control" placeholder="Nazwa" required>
+                                    <input type="email" name="email" class="form-control" placeholder="Email" required>
+                                    <input type="text" name="phone" class="form-control" placeholder="Numer telefonu" data-rule-international-phone-number>
+                                    <br />
+                                    <button type="submit" class="button button-white" style="color:#0e83b7; border:solid thin #0e83b7">Stwórz login demo</button><span style="padding-left:10px;display:none;" class="loading"><i class="fas fa-spin fa-spinner"></i></span>
+                                </fieldset>
+                            </form>
+
+                        </div> <!-- .header-text -->
+                    </div> <!-- .title-centered-content -->
+
+                </div> <!-- .row -->
+            </div> <!-- .container -->
+        </div> <!-- .container-fluid -->
+
+    </header>
+    <!-- End Header -->
+
+    <div id="content" class="site-content">
+        <div id="primary" class="content-area">
+            <main id="main" class="site-main">
+
+                <!-- Start About Block 1 -->
+                <section id="about---1" class="container-fluid section-block about-1">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-md-push-6 col-md-6 col-sm-7 col-sm-push-5 col-xs-12">
+                                <img src="assets/images/cloud-pcr-on-mobile.png" class="center-block" alt="AmbuSoft works without internet" title="AmbuSoft on a mobile phone">
+                            </div>
+                            <div class="col-md-6 col-md-pull-6 col-sm-5 col-sm-pull-7 col-xs-12 about-text">
+                                <h2>Rozpocznij 30-dniowy okres próbny</h2>
+                                <p style="font-size:1.25rem">Nigdy więcej nie trać raportu przez złe połączenie. AmbuSoft posiada tryb offline i automatycznie synchronizuje się z centralną bazą danych kiedy jest online.</p>
+                                <ul>
+                                    <li>Jedyne oprogramowanie do raportowania stanu pacjenta z funkcją offline</li>
+                                    <li>Wypełniaj wszędzie, nawet w odległych regionach.</li>
+                                    <li>Aplikacja instaluje się w Twojej przeglądarce bez żadnych wymaganych pozwoleń.</li>
+                                </ul>
+                            </div>
+
+                        </div> <!-- .row -->
+                    </div> <!-- .container -->
+                </section>
+                <!-- End About Block 1 -->
+
+                <!-- Start About Block 6 -->
+                <section id="about---6" class="container-fluid section-block about-6 color-block">
+                    <div class="container">
+                        <div class="row">
+
+                            <!-- Image block -->
+                            <div class="col-md-6 col-sm-7 col-xs-12">
+                                <div class="about-image-block">
+                                    <div class="about-image">
+
+                                        <img src="assets/images/cloud-pcr-on-laptop.png" alt="Ambusoft works on any device" title="AmbuSoft on a laptop">
+
+                                    </div> <!-- .about-image -->
+                                </div> <!-- .about-features -->
+                            </div>
+
+                            <!-- Text block -->
+                            <div class= "col-md-6 col-sm-5 col-xs-12 about-text">
+                                <h2>Konfigurowalny formularz</h2>
+                                <p style="font-size:1.25rem">Nasz łatwy w użyciu edytor formularzy pozwala ci dowolnie modyfikować formularz pacjenta bez znajomości jakiegokolwiek języka programowania.</p>
+                                <ul>
+                                    <li>Ukrywaj niepotrzebne pola z formularza</li>
+                                    <li>Dodawaj lub usuwaj opcje rozwijalne</li>
+                                    <li>Decyduj które pola są wymagane</li>
+                                    <li>Ustalaj wartości domyślne w formularzu</li>
+                                    <li>Wszystkie powyższe modyfikacje można zastosować klikając myszką.</li>
+                                    <li>Wszystkie poyższe można bazować na wynikach pacjenta, np. przetransportowani vs zgłoszenia anulowane</li>
+                                </ul>
+
+                            </div>
+
+                        </div> <!-- .row -->
+                    </div> <!-- .container -->
+                </section>
+                <!-- End About Block 6 -->
+
+                <!-- Start About Block 5 -->
+                <section id="about---5" class="container-fluid section-block about-5">
+                    <div class="container">
+                        <div class="row">
+
+                            <!-- Image block -->
+                            <div class="col-md-6 col-md-push-6 col-sm-7 col-sm-push-5 col-xs-12">
+                                <div class="about-image-block">
+                                    <div class="about-image">
+
+                                        <img src="assets/images/cloud-pcr-on-all-devices-1024x768.png" alt="image" alt="AmbuSoft works on any device" title="AmbuSoft on many devices">
+
+                                    </div> <!-- .about-image -->
+                                </div> <!-- .about-features -->
+                            </div>
+
+                            <!-- Text block -->
+                            <div class="col-md-6 col-md-pull-6 col-sm-5 col-sm-pull-7 col-xs-12 about-text">
+                                <h2>Używaj na dowolnym urządzeniu</h2>
+                                <p style="font-size:1.25rem">AmbuSoft działa tak samo na każdym urządzeniu, nie wymaga nauki określonych wersji programu.</p>
+                                <p style="margin-bottom:10px;">Działa na:</p>
+                                <ul>
+                                    <li>PC/ Toughbook</li>
+                                    <li>iPads</li>
+                                    <li>iPhones</li>
+                                    <li>Tabletach z systemem Android</li>
+                                    <li>Telefonach z systemem Android</li>
+                                    <li>Chromebooks</li>
+                                </ul>
+
+                            </div>
+
+                        </div> <!-- .row -->
+                    </div> <!-- .container -->
+                </section>
+                <!-- End About Block 5 -->
+
+                <!-- Start Features 2 -->
+                <section id="features---2" class="container-fluid section-block features color-block">
+                    <div class="container">
+                        <div class="row">
+
+                            <h2>Cechy</h2>
+                            <div class="block-desc">
+                                <p>Oto co sprawia że jesteśmy najlepszym oprogramowaniem dla karetek na rynku.</p>
+                            </div>
+
+                            <!-- Feature 1 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-bicycle"></i>
+                                <h3>Łatwość używania</h3>
+                                <p>Nie musisz się znać na komputerach żeby to używać <a href="#">Dowiedz się więcej</a></p>
+                            </div>
+
+                            <!-- Feature 1.5 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-prescription-bottle-alt"></i>
+                                <h3>Alarm opioidowy</h3>
+                                <p>Powiadom swojego dyrektora medycznego kiedy administrowane są opioidy. <!--<a href="#">Learn More</a> --></p>
+                            </div>
+
+                            <!-- Feature 1.7 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-globe-europe"></i>
+                                <h3>Darmowe tłumaczenie</h3>
+                                <p>Przetłumacz swoje oprogramowanie do opieki nad pacjentem na potrzebny język.<!--<a href="#">Learn More</a> --></p>
+                            </div>
+
+                            <!-- Feature 2 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-tools"></i>
+                                <h3>Konfigurowalny formularz</h3>
+                                <p>Używaj łatwego w użyciu edytora formularzy żeby dostosować formularze do swojej agencji. <a href="#">Dowiedz się więcej</a></p>
+                            </div>
+
+                            <!-- Feature 3 
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-shield-alt"></i>
+                                <h3>HIPAA Compliant Security</h3>
+                                <p>Military grade cloud service that provides data security and encryption for your reports. <a href="#">Learn More</a></p>
+                            </div>-->
+
+                            <!-- Feature 4 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-globe"></i>
+                                <h3>Inteligentne wyszukiwanie lokalizacji</h3>
+                                <p>Oszczędzaj czas szybko wybierając adres docelowy. <a href="#">Dowiedz się więcej</a></p>
+                            </div>
+
+                            <!-- Feature 5 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-search"></i>
+                                <h3>Zaawansowana analityka</h3>
+                                <p>Oglądaj, analizuj i aprobuj raporty pacjentów. <a href="#">Dowiedz się więcej</a></p>
+                            </div>
+
+                            <!-- Feature 6 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-mobile-alt"></i>
+                                <h3>Działa na każdym urządzeniu</h3>
+                                <p>Wypełniaj karty na dowolnym telefonie, tablecie lub PC. <a href="#">Dowiedz się więcej</a></p>
+                            </div>
+
+                            <!-- Feature 7 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-user-edit"></i>
+                                <h3>Wyszukiwanie pacjenta</h3>
+                                <p>Wyszukuj istniejących pacjentów swojej agencji przez wprowadzenie imienia, daty urodzenia lub adresu domowego. <a href="#">Dowiedz się więcej</a></p>
+                            </div>
+
+
+                            <!-- Feature 8 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-chart-line"></i>
+                                <h3>Raporty wizualne</h3>
+                                <p>Zobacz wykresy i diagramy pozwalające lepiej zrozumieć dane. <a href="#">Dowiedz się więcej</a></p>
+                            </div>
+
+                            <!-- Feature 9 -->
+
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-ambulance"></i>
+                                <h3>Automatyczne naliczanie przebiegu</h3>
+                                <p>Używając Google Maps automatycznie przeliczaj dystans i przebieg z obciążeniem na podstawie adresów docelowych. <a href="#">Dowiedz się więcej</a></p>
+                            </div>
+
+                            <!-- Feature 10 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-calculator"></i>
+                                <h3>Automatyczne obliczanie</h3>
+                                <p>Wiele elementów przeliczanych jest automatycznie co oszczędza czas i generuje poprawniejsze raporty. <!-- <a href="#">Learn More</a></p> -->
+                            </div> 
+
+                            <!-- Feature 11 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-keyboard"></i>
+                                <h3>IntelliSearch</h3>
+                                <p>Zamień długie listy rozwijalne na znane z wyszukiwarek rozwiązanie (np.. "Leki i Procedury") <a href="#">Dowiedz się więcej</a> </p>
+                            </div>
+
+                            <!-- Feature 12 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="far fa-clock"></i>
+                                <h3>Time Sync</h3>
+                                <p>Raportowanie czasu jednym dotykiem. <a href="#">Dowiedz się więcej</a></p>
+                            </div>
+
+                            <!-- Feature 13 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-palette"></i>
+                                <h3>Inteligentny design</h3>
+                                <p>Wyposażony w inteligentną technologię która przeszukuje dane kiedy wprowadzasz tekst i poprawia informacje. <a href="#">Dowiedz się więcej</a></p>
+                            </div>
+
+                            <!-- Feature 14 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-align-left"></i>
+                                <h3>Konstruktor opisów</h3>
+                                <p>Łatwo opracuj swoje opisy opierając się na własnych schematach i informacjach które już wprowadziłeś do raportu. <a href="#">Dowiedz się więcej</a></p>
+                            </div>
+
+                            <!-- Feature 15 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-recycle"></i>
+                                <h3>Obiegi w przedsiębiorstwie</h3>
+                                <p>Automatycznie zatwierdzaj, sprawdzaj, wystawiaj rachunki, wysyłaj faxy i powiadomienia itp.. <a href="#">Dowiedz się więcej</a></p>
+                            </div>
+
+                            <!-- Feature 16 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <h3>Inteligentna walidacja</h3>
+                                <p>Zobacz uwagi walidacji formularza na bieżąco i łatwo nawiguj do walidowanych pól klikając na wiadomość. <a href="#">Dowiedz się więcej</a></p>
+                            </div>
+
+                            <!-- Feature 17 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="far fa-chart-bar"></i>
+                                <h3>Baza danych w chmurze</h3>
+                                <p>Nie martw się o zakup serwera. <a href="#">Dowiedz się więcej</a></p>
+                            </div>
+
+                            <!-- Feature 19 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-upload"></i>
+                                <h3>Raportowanie rządowe</h3>
+                                <p>Łatwe raportowanie do instytucji państwowych. <a href="#">Dowiedz się więcej</a></p>
+                            </div>
+
+                            <!-- Feature 20 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-signal"></i>
+                                <h3>Offline z AutoSync</h3>
+                                <p>Możesz pracować offline jeśli nie masz internetu i synchronizować dane kiedy jesteś znowu online. <a href="#">Dowiedz się więcej</a></p>
+                            </div>
+
+                            <!-- Feature 21 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-money-check-alt"></i>
+                                <h3>Integracja fakturowania</h3>
+                                <p>W prosty sposób wysyłaj swoje raporty rachunkowe obsłudze księgowej. <a href="#">Dowiedz się więcej</a></p>
+                            </div>
+
+                            <!-- Feature 22 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-clinic-medical"></i>
+                                <h3>Dostęp do danych szpitalnych</h3>
+                                <p>Udostępniaj szpitalom dostęp do tych danych które potrzebują kiedy tylko chcą. <a href="#">Dowiedz się więcej</a></p>
+                            </div>
+
+
+                            <!-- Feature 23 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-camera"></i>
+                                <h3>Obsługa kamery</h3>
+                                <p>Dodaj kontekst do raportu dzięki zdjęciom ze swojego urządzenia. <a href="#">Dowiedz się więcej</a></p>
+                            </div>
+
+                            <!-- Feature 24 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-search"></i>
+                                <h3>Podpisy</h3>
+                                <p>Zezwalaj użytkownikom zapisywać swoje podpisy na ich konta żeby łatwo mogli podpisywać je na dowolnym urządzeniu z ekranem dotykowym. <a href="#">Dowiedz się więcej</a></p>
+                            </div>
+
+                            <!-- Feature 25 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-paste"></i>
+                                <h3>Digitalizowane formularze papierowe</h3>
+                                <p>Wgraj formularze których Twoja agencja często używa żeby zapewnić łatwy do nich dostęp i przechowywanie <a href="#">Dowiedz się więcej</a></p>
+                            </div>
+
+                            <!-- Feature 26 Duplicate!
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-save"></i>
+                                <h3>AutoSave</h3>
+                                <p>Be protected from loosing data with Autosave. <a href="#">Learn More</a></p>
+                            </div>-->
+
+                            <!-- Feature 27 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-history"></i>
+                                <h3>Historia raportu</h3>
+                                <p>Zobacz poprzednie wersje raportu pacjenta. <a href="#">Dowiedz się więcej</a></p>
+                            </div>
+
+                            <!-- Feature 28 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-file-alt"></i>
+                                <h3>Notatki do raportu</h3>
+                                <p>Komunikuj się bezpiecznie z ludźmi z twojej organizacji. <a href="#">Dowiedz się więcej</a></p>
+                            </div>
+
+                            <!-- Feature 29 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-microphone"></i>
+                                <h3>Mowa-na-tekst</h3>
+                                <p>Zamień swoje słowa w tekst. <a href="#">Dowiedz się więcej</a></p>
+                            </div>
+
+                            <!-- Feature 30 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-life-ring"></i>
+                                <h3>Pomocna AI</h3>
+                                <p>Nasza inteligentna pomoc pokaże Ci filmy i artykuły dla stron na których jesteś.<a href="#">Dowiedz się więcej</a></p>
+                            </div>
+
+                            <!-- Feature 31 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-bolt"></i>
+                                <h3>Szybkie wdrożenie</h3>
+                                <p>Skonfiguruj i rozpocznij korzystanie z AmbuSoft  w przeciągu godzin.<a href="#">Dowiedz się więcej</a></p>
+                            </div>
+                            <!-- Feature 32 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-heartbeat"></i>
+                                <h3>Integracja 12-odprowadzeniowego API</h3>
+                                <p>Importuj dane z kardiomonitora bezpośrednio do raportu.<a href="#">Dowiedz się więcej</a></p>
+                            </div>
+                            <!-- Feature 33 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fab fa-hubspot"></i>
+                                <h3>Podstawowa dyspozytornia</h3>
+                                <p>Przydzielaj zespołom nowe zgłoszenia. <a href="#">Dowiedz się więcej</a></p>
+                            </div>
+                            <!-- Feature 34 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-paperclip"></i>
+                                <h3>Załączniki</h3>
+                                <p>Załączaj dowolne pliki lub zdjęcia do swojego raportu. <a href="#">Dowiedz się więcej</a></p>
+                            </div>
+                            
+                            <!-- Feature 35 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-save"></i>
+                                <h3>AutoSave</h3>
+                                <p>Nie trać danych. <a href="#">Dowiedz się więcej</a></p>
+                            </div>                            
+
+                            <!-- Feature 36 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-question"></i>
+                                <h3>Wbudowana pomoc 24/7</h3>
+                                <p>Uzyskaj natychmiastowe odpowiedzi na najbardziej pilne pytania.<a href="#">Dowiedz się więcej</a></p>
+                            </div>
+                            <!-- Feature 37 -->
+                            <div class="col-md-4 feature feature-center feature-second-color feature-border">
+                                <i class="fas fa-laptop-medical"></i>
+                                <h3>Integracja CAD</h3>
+                                <p>Integracja systemu CAD z Twojej dyspozytorni z naszym oprogramowaniem pozwoli na automatyczne wypełnienie niektórych pól podczas przyjmowania zgłoszenia.</p>
+                            </div>
+
+
+
+                        </div> <!-- .row -->
+                    </div> <!-- .container -->
+                </section>
+                <!-- End Features 2 -->
+
+                <!-- Start How to use 2 -->
+                <section id="how-to-use---2" class="container-fluid section-block how-to-use-2">
+                    <div class="container">
+                        <div class="row">
+
+                            <h2>Upraszczamy</h2>
+                            <div class="block-desc">
+                                <p>Nasz program jest tak prosty w obsłudze, że wielokrotnie mniejsze organizacje wdrażały go w ciągu jednego dnia.</p>
+                            </div>
+
+                            <!-- Block 1 -->
+                            <div class="col-md-4 how-to-block-2">
+                                <span class="number">1</span>
+                                <h3>Zapisz się na darmowy okres próbny</h3>
+                                <p>Wyślemy ci dane do logowania i możesz zacząć testować naszą platformę od razu - bez żadnej konfiguracji.</p>
+                            </div> <!-- .how-to-block -->
+
+                            <!-- Block 2 -->
+                            <div class="col-md-4 how-to-block-2">
+                                <span class="number">2</span>
+                                <h3>Optymalizuj pod swoją agencję</h3>
+                                <p>Konfiguruj formularze pacjenta: ukrywaj niepotrzebne pola, zmieniaja opcje rozwijane, wprowadzaj własną walidację.</p>
+                            </div> <!-- .how-to-block -->
+
+                            <!-- Block 3 -->
+                            <div class="col-md-4 how-to-block-2">
+                                <span class="number">3</span>
+                                <h3>Wyróżnij się</h3>
+                                <p>Zacznij używać platformy, oszczędzaj czas, lepiej wypełniaj dane pacjenta i przeznaczaj mniej czasu na wypełnianie dokumentacji.</p>
+                            </div> <!-- .how-to-block -->
+
+
+                        </div> <!-- .row -->
+                    </div> <!-- .container -->
+                </section>
+                <!-- End How to use 2 -->
+
+
+                <!-- Start CTA 2 -->
+                <section id="cta---2" class="container-fluid section-block cta">
+                    <div class="container">
+                        <div class="row">
+                            <div class="cta-content-2">
+                                <div class="col-md-6 cta-block" style="padding-left: 100px">
+                                    <h2>Zaczynając od £49.99/miesiąc.</h2>
+                                </div>
+                                <div class="col-md-6 cta-button-block" style="padding-right: 100px">
+                                    <div class="cta-button">
+                                        <a href="#" class="button button-full fly-out">rozpocznij darmowy okres próbny</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- .row -->
+                    </div> <!-- .container -->
+                </section>
+                <!-- End CTA 2 -->
+
+                <!-- Start FAQ 2 -->
+                <section id="faq---2" class="container-fluid section-block faq">
+                    <div class="container">
+                        <div class="row">
+                            <h2>FAQ</h2>
+                            <div class="col-md-12">
+                                <!-- Accordion -->
+                                <div id="accordion" class="panel-group faq-group" role="tablist" aria-multiselectable="true">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingOne">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                    <span>Q:</span> <span>Offline? Co jeśli jestem w odległym regionie i nie mam zasięgu sieci WiFi/ LGE?</span>
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                            <div class="panel-body">
+                                                <p>
+                                                    A: Tak. AmbuSoft pracuje bez przerwy online i offline.
+                                                </p>
+                                                <p>
+                                                    Jeśli Twoje urządzenie jest offline CloudPCR zapisze lokalnie do przeglądarki i w chwili kiedy odzyskaasz połączenie internetowe, Twoje karty pacjenta zostaną automatycznie załadowane w tle.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div> <!-- .panel-default -->
+
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingTwo">
+                                            <h4 class="panel-title">
+                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                    <span>Q:</span> <span>Czy dostęp do danych jest swobodny czy istnieją bariery?</span>
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                            <div class="panel-body">
+                                                <p>
+                                                    A: Tak. AmbuSoft jest rozwiązaniem w chmurze - dostęp z dowolnego urządzenia, gdziekolwiek o dowolnym czasie jest zapewniony. Dodatkowo, AmbuSoft oferuje opcjonalną warstwę zabezpieczeń gdzie administrator systemu posiada możliwość zablokowania używania systemu wszystkim urządzeniom, które nie są aprobowane przez organizację.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div> <!-- .panel-default -->
+
+                                    <!-- <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingThree">
+                                            <h4 class="panel-title">
+                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                    <span>Q:</span> <span>You said cloud… is your software HIPAA compliant? Is it secure?</span>
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                            <div class="panel-body">
+                                                <p>
+                                                    A: Yes. AmbuSoft is HIPAA/HITECH compliant. Security is always a top priority, all data transmission is encrypted using state of the art security practices. AmbuSoft is based on the same Azure cloud technology as the U.S. military cloud system.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div> <!-- .panel-default -->
+
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingFour">
+                                            <h4 class="panel-title">
+                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                    <span>Q:</span> <span>Co zrobić jeśli ktoś skasuje raport/ kartę pacjenta, czy istnieje wersjonowanie historii?</span>
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                                            <div class="panel-body">
+                                                <p>
+                                                    A: Tak. Raporty są zawsze odzyskiwalne i nigdy nie kasowane z bazy danych.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div> <!-- .panel-default -->
+
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingFive">
+                                            <h4 class="panel-title">
+                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                                    <span>Q:</span> <span>Czy istnieje log działań użytkowników - przeglądanie, edycja, drukowanie?</span>
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                                            <div class="panel-body">
+                                                <p>
+                                                    A: Tak. AmbuSoft loguje wszystko od stworzenia i edycji danych pacjenta po takie czynności jak wyświetlenie lub drukowanie. Logi te można przeglądać i ustawiać z poziomu administratora, można je też w razie potrzeby eksportować do Excela.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div> <!-- .panel-default -->
+
+                                </div> <!-- .panel-group -->
+                            </div>
+
+                            <div class="col-md-12 text-center">
+                                <a href="assets/images/FAQ-CloudPCR.pdf" target="_blank" class="button button-full">Pobierz - Full PDF. ( 47 FAQs )</a>
+                            </div>
+
+                        </div> <!-- .row -->
+                    </div> <!-- .container -->
+                </section>
+                <!-- End FAQ 2 -->
+
+
+
+                <!-- Start Video 1 -->
+                <section id="video---1" class="container-fluid section-block video">
+                    <div class="container">
+                        <div class="row">
+
+                            <h2>Wideo</h2>
+
+                            <div class="col-md-12 video-block">
+                                <a class="popup-video" href="https://player.vimeo.com/video/322948573"><!-- Link to a YouTube video -->
+                                    <span class="overlay"></span>
+                                    <img class="preview" src="assets/images/vimeo-preview.png" alt="See all the features of AmbuSoft" title="Cloud PCR Promo Video">
+                                    <i class="fa fa-play play-button" aria-hidden="true"></i>
+                                </a>
+                            </div>
+
+                        </div> <!-- .row -->
+                    </div> <!-- .container -->
+                </section>
+                <!-- End Video 1 -->
+
+
+                <!-- Start Contact us -->
+                <section id="contact-us---1" class="container-fluid section-block contact-form-section">
+                    <div class="form-bg"></div> <!-- Background image -->
+                    <div class="overlay"></div>	<!-- Overlay -->
+                    <div class="container">
+                        <div class="row">
+
+                            <!-- Start Contact Form -->
+                            <div class="col-md-6 center-form border-box">
+                                <form class="contact-form general-contact" action="contact.php">
+
+                                    <div class="col-md-12 text-center">
+                                        <h2>Kontakt</h2>
+                                        <p>Masz pytanie? Mamy odpowiedź!</p>
+                                    </div>
+
+                                    <input type="text" name="name" class="form-control" placeholder="Imię" required>
+                                    <input type="email" name="email" class="form-control" placeholder="Email" required>
+                                    <input type="text" name="phone" class="form-control" placeholder="Numer telefonu" data-rule-international-phone-number>
+                                    <textarea name="message" class="form-control" style="min-height:75px;" placeholder="Wiadomość" required></textarea>
+
+                                    <div class="clearfix"></div>
+
+                                    <div class="col-md-12 form-btn-submit">
+                                        <input class="button button-full contact-submit" name="contact-submit" value="Wyślij wiadomość" type="submit"><span style="padding-left:10px;display:none;" class="loading"><i class="fas fa-spin fa-spinner"></i></span>
+                                    </div>
+
+                                </form>
+                            </div>
+                            <!-- End Contact Form -->
+
+                        </div> <!-- .row -->
+                    </div> <!-- .container -->
+                </section>
+                <!-- End Contact us -->
+
+            </main>
+        </div> <!-- #primary -->
+    </div> <!-- #content -->
+
+    <!-- Start Footer -->
+    <footer id="colophon" class="container-fluid site-footer cta">
+        <div class="container footer-container site-top-footer">
+            <div class="row">
+
+                <div class="col-md-8 col-sm-12 footer-col footer-col-1">
+                    <h3>O nas</h3>
+                    <p>"Uwielbiam wypełniać dokumentację", nie powiedział nikt… nigdy. Nigdy nie spotkaliśmy nikogo kto dołączył do służb ratunkowych żeby wypełniać dokumentację - choć zabiera ona masę czasu. Nasz zespół także nie znosi niepotrzebnej roboty papierkowej. Uczyniliśmy wypełnianie kart lepszym dzięki intuicyjnemu interfejsowi i usprawnionym funkcjonalnościom.</p>
+                    <p>Nasz zespół składa się z programistów, inżynierów i specjalistów medycyny ratunkowej. Dbamy o jakość naszego oprogramowania i o to jak poprawia życie użytkownikom.</p>
+                    <p><img src="assets/images/jay-shah.png" width="40px" height="40px" alt="Jay Shah">  <span style="padding-left:10px">- Jay Shah, Co-founder/Product Manager</span></p>
+                </div> <!-- .footer-col-1 -->
+
+                <div class="col-md-2 col-sm-6 footer-col footer-col-2">
+                    <h3>PCR</h3>
+                    <ul>
+                        <li><a href="#features---2" title="Features">Cechy</a></li>
+                        <li><a href="#how-to-use---2" title="Our Process">Nasz proces</a></li>
+                        <li><a href="#faq---2" title="FAQ">FAQ</a></li>
+                        <li><a href="#video---1" title="Video">Wideo</a></li>
+                        <li><a href="privacy.html" title="Privacy Policy">Polityka Prywatności</a></li>
+                    </ul>
+                </div> <!-- .footer-col-2 -->
+
+                <div style="display: none" class="col-md-2 col-sm-6 footer-col footer-col-3" >
+                    <h3>More</h3>
+                    <ul>
+                        <li style="display:none"><a href="https://desk.zoho.com/portal/cloudpcr/home" target="_blank" title="Support Documentation">Support Documentation</a></li>
+                        <li style="display:none"><a href="careers.html" title="Careers">Careers</a></li>
+                        <li><a href="privacy.html" title="Privacy Policy">Privacy Policy</a></li>
+                    </ul>
+                </div> <!-- .footer-col-3 -->
+
+                <div class="col-md-12 col-sm-12 bottom-footer">
+
+                    <div class="col-md-6 col-sm-12 copy-text">
+                        <p>@2019 AmbuSoft. All rights reserved</p>
+                    </div>
+
+                </div> <!-- .bottom-footer -->
+
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+</div> <!-- #page -->
+
+<div class="side-tab">Rozpocznij 30-dniowy okres próbny</div>
+<div class="side-fly-out">
+    <div class="row contact-form-section">
+
+        <!-- Start Contact Form -->
+        <div class="col-md-12 center-form border-box">
+            <form class="contact-form free-trial-form">
+                <div class="col-md-12 text-center">
+                    <h2>Start your 30-day free trial</h2>
+                    <p>Use our software for 30-days with no commitment! (no payment info required)</p>
+                </div>
+
+                <input type="text" name="name" class="form-control" placeholder="Imię" required>
+                <input type="email" name="email" class="form-control" placeholder="Email" required>
+                <input type="text" name="phone" class="form-control" placeholder="Numer telefonu" data-rule-international-phone-number>
+
+                <div class="clearfix"></div>
+
+                <div class="col-md-12 form-btn-submit">
+                    <input class="button button-full contact-submit" name="contact-submit" value="Request Trial" type="submit">
+                    <span style="padding-left:10px;display:none;" class="loading"><i class="fas fa-spin fa-spinner"></i></span>
+                </div>
+            </form>
+        </div>
+        <!-- End Contact Form -->
+
+    </div> <!-- .row -->
+</div>
+
+<!-- Thank You Modal -->
+<div class="contact-form-modal modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button> <h4 class="modal-title" id="myLargeModalLabel" style="text-align:center">Thank You</h4> </div>
+            <div class="modal-body" style="text-align:center"> Thanks for you for your message, we will get back to you shortly. </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Include JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/bootstrap-hover-dropdown.js"></script>
+<script src="assets/js/magnific-popup.min.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/parallax.js"></script>
+<script src="assets/js/aos.js"></script>
+<script src="assets/js/jquery.validate.js"></script>
+<script src="assets/js/js-cookie.js"></script>
+<script src="assets/js/init.js"></script>
+<script src="assets/js/signup.js"></script>
+<script>
+    // $(document).ready(() => {
+        $.validator.addMethod("international-phone-number", (value, element) => {
+            console.log(value);
+            return value.trim().startsWith('+');
+        }, "Phone numbers must start with '+'");
+    // });
+</script>
+
+<!--[if lte IE 9]>
+<script src="assets/js/placeholders.js"></script>
+<script src="assets/js/init-for-ie.js"></script>
+<![endif]-->
+
+<!-- <script data-cfasync="false">
+    window.civchat = {
+        apiKey: "ys4zi5",
+    };
+</script>
+<script data-cfasync="false" src="https://widget.userengage.com/widget.js"></script> -->
+
+
+<!-- BEGIN Intercom -->
+<script>(function () { var w = window; var ic = w.Intercom; if (typeof ic === "function") { ic('reattach_activator'); ic('update', w.intercomSettings); } else { var d = document; var i = function () { i.c(arguments); }; i.q = []; i.c = function (args) { i.q.push(args); }; w.Intercom = i; var l = function () { var s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://widget.intercom.io/widget/o79cl0h3'; var x = d.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); }; if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } } })();</script>
+<script>
+    window.intercomSettings = {
+        app_id: "o79cl0h3",
+        app: "AmbuSoftPublic"
+    };
+    Intercom("initialize", window.intercomSettings);
+</script>
+<!-- END Intercom -->
+
+
+</body>
+</html>
