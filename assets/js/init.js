@@ -1,6 +1,6 @@
 //jQuery code
 
-jQuery(function($) {
+jQuery(function ($) {
 
     'use strict';
 
@@ -58,7 +58,7 @@ function initNavBg() {
 
     var nav = $('.container-nav');
 
-    $(window).on('scroll', function() {
+    $(window).on('scroll', function () {
         if ($(this).scrollTop() > 0) {
             nav.removeClass('nav-no-shadow').addClass('nav-shadow');
         }
@@ -99,15 +99,15 @@ function initPartnersSlider() {
         loop: true,
         autoplay: true,
         autoplayTimeout: 2000,
-        responsive:{
-            0:{
-                items:2
+        responsive: {
+            0: {
+                items: 2
             },
-            767:{
-                items:3
+            767: {
+                items: 3
             },
-            1199:{
-                items:6
+            1199: {
+                items: 6
             }
         }
     });
@@ -126,15 +126,15 @@ function initIndexSlider() {
         margin: 0,
         dots: false,
         nav: true,
-        responsive:{
-            0:{
-                items:2
+        responsive: {
+            0: {
+                items: 2
             },
-            767:{
-                items:3
+            767: {
+                items: 3
             },
-            1199:{
-                items:5
+            1199: {
+                items: 5
             }
         }
     });
@@ -156,17 +156,17 @@ function initContact() {
     var contact_email = $('#contact-email');
     var contact_message = $('#contact-message');
 
-    contact_form.submit(function() { return false; });
-    contact_button.on('click', function(){
-
+    contact_form.submit(function () { return false; });
+    contact_button.on('click', function () {
+        //debugger;
         // first name
         var firstnameval = contact_f_name.val();
         var firstnamelen = firstnameval.length;
 
-        if(firstnamelen < 1) {
+        if (firstnamelen < 1) {
             contact_f_name.addClass('field-error');
         }
-        else if(firstnamelen >= 1){
+        else if (firstnamelen >= 1) {
             contact_f_name.removeClass('field-error');
         }
 
@@ -174,20 +174,20 @@ function initContact() {
         var lastnameval = contact_l_name.val();
         var lastnamelen = lastnameval.length;
 
-        if(lastnamelen < 1) {
+        if (lastnamelen < 1) {
             contact_l_name.addClass('field-error');
         }
-        else if(lastnamelen >= 1){
+        else if (lastnamelen >= 1) {
             contact_l_name.removeClass('field-error');
         }
 
         // email
-        var emailval   = contact_email.val();
+        var emailval = contact_email.val();
         var emailvalid = validateEmail(emailval);
-        if(emailvalid === false) {
+        if (emailvalid === false) {
             contact_email.addClass('field-error');
         }
-        else if(emailvalid === true){
+        else if (emailvalid === true) {
             contact_email.removeClass('field-error');
         }
 
@@ -195,22 +195,23 @@ function initContact() {
         var messageval = contact_message.val();
         var messagelen = messageval.length;
 
-        if(messagelen < 1) {
+        if (messagelen < 1) {
             contact_message.addClass('field-error');
         }
-        else if(messagelen >= 1){
+        else if (messagelen >= 1) {
             contact_message.removeClass('field-error');
         }
 
-        if(firstnamelen >= 1 && lastnamelen >= 1 && emailvalid === true && messagelen >= 1) {
+        //debugger;
+        if (firstnamelen >= 1 && lastnamelen >= 1 && emailvalid === true && messagelen >= 1) {
             contact_button.replaceWith("<span class='form-send form-send-white'>send...</span>");
             $.ajax({
                 type: 'POST',
                 url: 'contact.php',
                 data: contact_form.serialize(),
-                success: function(data) {
-                    if(data === 'true') {
-                        contact_form.fadeOut('fast', function(){
+                success: function (data) {
+                    if (data === 'true') {
+                        contact_form.fadeOut('fast', function () {
                             $(this).before("<p class='contact-send'>Thank you!</p>");
                         });
                     }
@@ -227,28 +228,28 @@ function initNewsletter() {
     var contact_button = $('#newsletter-submit');
     var contact_email = $('#newsletter-email');
 
-    contact_form.submit(function() { return false; });
-    contact_button.on('click', function(){
+    contact_form.submit(function () { return false; });
+    contact_button.on('click', function () {
 
         // email
-        var emailval   = contact_email.val();
+        var emailval = contact_email.val();
         var emailvalid = validateEmail(emailval);
-        if(emailvalid === false) {
+        if (emailvalid === false) {
             contact_button.addClass('newsletter-field-error');
         }
-        else if(emailvalid === true){
+        else if (emailvalid === true) {
             contact_button.removeClass('newsletter-field-error');
         }
 
-        if(emailvalid === true) {
+        if (emailvalid === true) {
             contact_button.replaceWith("<span class='form-send'>send...</span>");
             $.ajax({
                 type: 'POST',
                 url: 'newsletter.php',
                 data: contact_form.serialize(),
-                success: function(data) {
-                    if(data === 'true') {
-                        contact_form.fadeOut('fast', function(){
+                success: function (data) {
+                    if (data === 'true') {
+                        contact_form.fadeOut('fast', function () {
                             $(this).before("<p class='newslatter-send'>Thank you!</p>");
                         });
                     }
@@ -265,28 +266,28 @@ function initNewsletterInHeader() {
     var contact_button = $('#header-newsletter-submit');
     var contact_email = $('#header-newsletter-email');
 
-    contact_form.submit(function() { return false; });
-    contact_button.on('click', function(){
+    contact_form.submit(function () { return false; });
+    contact_button.on('click', function () {
 
         // email
-        var emailval   = contact_email.val();
+        var emailval = contact_email.val();
         var emailvalid = validateEmail(emailval);
-        if(emailvalid === false) {
+        if (emailvalid === false) {
             contact_button.addClass('newsletter-field-error');
         }
-        else if(emailvalid === true){
+        else if (emailvalid === true) {
             contact_button.removeClass('newsletter-field-error');
         }
 
-        if(emailvalid === true) {
+        if (emailvalid === true) {
             contact_button.replaceWith("<span class='form-send'>send...</span>");
             $.ajax({
                 type: 'POST',
                 url: 'header-newsletter.php',
                 data: contact_form.serialize(),
-                success: function(data) {
-                    if(data === 'true') {
-                        contact_form.fadeOut('fast', function(){
+                success: function (data) {
+                    if (data === 'true') {
+                        contact_form.fadeOut('fast', function () {
                             $(this).before("<p class='header-send'>Thank you!</p>");
                         });
                     }
@@ -297,32 +298,33 @@ function initNewsletterInHeader() {
 }
 
 //Sets cookie for UTM data
-function getUTMData(){
+function getUTMData() {
     var params = new URLSearchParams(window.location.search),
-        match = ['utm_source', 'utm_medium', 'utm_campaign','utm_content', 'utm_term'],
+        match = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'],
         utm = [];
 
-    for(var pair of params.entries()){
-        if(match.includes(pair[0].toLowerCase())){
+    for (var pair of params.entries()) {
+        if (match.includes(pair[0].toLowerCase())) {
             utm.push(pair[0] + ' = ' + pair[1]);
         }
     }
 
-    if(utm.length){
-        Cookies.set('cloud_utm', JSON.stringify(utm), {expires: 120});
+    if (utm.length) {
+        Cookies.set('cloud_utm', JSON.stringify(utm), { expires: 120 });
     }
 
 }
 
 
 //Submits Trial Form
-function trialSubmission(){
+function trialSubmission() {
 
+    //debugger;
     var trialForm = jQuery('.free-trial-form');
 
 
-    trialForm.on('submit', function(e){
-
+    trialForm.on('submit', function (e) {
+        //debugger;
         e.preventDefault();
 
         var $this = jQuery(this);
@@ -332,9 +334,9 @@ function trialSubmission(){
         $this.find('.loading').show();
         var key = Cookies.get('__ca__chat');
         var data = {
-                'data' : $this.serializeArray(),
-                'key' : key
-            },
+            'data': $this.serializeArray(),
+            'key': key
+        },
             urlencode = $this.serialize();
 
         var promise2 = jQuery.ajax({
@@ -347,21 +349,21 @@ function trialSubmission(){
             .done((r) => {
                 console.log(r);
                 // if (r[1] === 'true') {
-                    window.location.href = 'thankyou.html?page=trial&' + urlencode;
+                window.location.href = 'thankyou.html?page=trial&' + urlencode;
                 // }
             })
-            // .fail((r) => {
-            //     alert("Failed to create account");
-            // });
+        // .fail((r) => {
+        //     alert("Failed to create account");
+        // });
 
     });
 }
 
-function careerSubmission(){
+function careerSubmission() {
 
     var trialForm = jQuery('#career-contact');
 
-    trialForm.on('submit', function(e){
+    trialForm.on('submit', function (e) {
         e.preventDefault();
 
         var $this = jQuery(this);
@@ -374,8 +376,8 @@ function careerSubmission(){
             url: 'careers.php',
             type: 'POST',
             data: data,
-            success: function(e){
-                if(e === 'true'){
+            success: function (e) {
+                if (e === 'true') {
                     jQuery('.contact-form-modal').modal('show');
                     $this.find('input:not([type=submit])').each((i, e) => {
                         jQuery(e).val('');
@@ -389,15 +391,16 @@ function careerSubmission(){
 }
 
 
-function generalContact(){
+function generalContact() {
 
+    //debugger;
     var trialForm = jQuery('.general-contact');
 
 
 
-    trialForm.on('submit', function(e){
+    trialForm.on('submit', function (e) {
         e.preventDefault();
-
+        //debugger;
         var $this = jQuery(this);
 
 
@@ -405,32 +408,47 @@ function generalContact(){
 
         var key = Cookies.get('__ca__chat'),
             data = {
-                'data' : $this.serializeArray(),
-                'key' : key
+                'data': $this.serializeArray(),
+                'key': key
             },
             urlencode = $this.serialize();
 
-        jQuery.ajax({
+
+        //contact us , send email
+        var promise1 = jQuery.ajax({
             url: 'contact.php',
             type: 'POST',
             data: data,
-            success: function(e){
+            success: function (e) {
 
-                if(e === 'true'){
-                    window.location.href = 'thankyou.html?page=contact&' + urlencode;
-                }
+                // if (e === 'true') {
+                //     window.location.href = 'thankyou.html?page=contact&' + urlencode;
+                // }
             }
         });
+
+        //Create free account
+        var promise2 = SubmitCoreInfo($(this));
+
+        jQuery.when(promise1, promise2)
+            .done((r) => {
+                console.log(r);
+                // if (r[1] === 'true') {
+                window.location.href = 'thankyou.html?page=trial&' + urlencode;
+                // }
+            })
+
+
 
     });
 }
 
 
-function additionalForm(){
+function additionalForm() {
     var form = jQuery('#thankyou-form'),
         params = new URLSearchParams(window.location.search);
 
-    form.on('submit', function(e){
+    form.on('submit', function (e) {
         e.preventDefault();
 
         var $this = jQuery(this);
@@ -439,18 +457,18 @@ function additionalForm(){
         $this.find('.loading').show();
 
         var data = {
-            'data' : $this.serializeArray()
+            'data': $this.serializeArray()
         };
-        data.data.push({name: "name", value: params.get('name')});
-        data.data.push({name: "email", value: params.get('email')});
+        data.data.push({ name: "name", value: params.get('name') });
+        data.data.push({ name: "email", value: params.get('email') });
 
         jQuery.ajax({
             url: 'thankyou-form.php',
             type: 'POST',
             data: data,
-            success: function(e){
+            success: function (e) {
 
-                if(e === 'true') {
+                if (e === 'true') {
                     $this.fadeOut(300);
                     jQuery('.thank-message').fadeOut(300);
                 }
@@ -460,7 +478,7 @@ function additionalForm(){
     });
 }
 
-function slideOut(){
+function slideOut() {
     //Call to Action slide out
 
     var minusDefault = '-40%',
@@ -470,27 +488,27 @@ function slideOut(){
         flyout = jQuery('.side-fly-out'),
         sideTab = jQuery('.side-tab');
 
-    if(windowWidth <= 767){
+    if (windowWidth <= 767) {
         minusDefault = '-100%';
         positiveDefault = '100%';
         cal = '100%';
         flyout.css('right', minusDefault);
         flyout.append('<div class="exit-image"><i class="fas fa-times"></i></div>');
-    }else{
+    } else {
         minusDefault = '-40%',
             positiveDefault = '40%',
             side = 0, cal = '40%';
     }
-    jQuery(window).on('resize', function(e) {
+    jQuery(window).on('resize', function (e) {
         windowWidth = $(window).width();
 
-        if(windowWidth <= 767){
+        if (windowWidth <= 767) {
             minusDefault = '-100%';
             positiveDefault = '100%';
             cal = '100%';
             flyout.css('right', minusDefault);
             flyout.append('<div class="exit-image"><i class="fas fa-times"></i></div>');
-        }else{
+        } else {
             minusDefault = '-40%',
                 positiveDefault = '40%',
                 side = 0, cal = '40%';
@@ -498,47 +516,47 @@ function slideOut(){
         }
     });
 
-    jQuery('body').on('click', '.exit-image', function(){
-        flyout.animate({right: side},{
+    jQuery('body').on('click', '.exit-image', function () {
+        flyout.animate({ right: side }, {
             duration: 300,
-            step: function(){
+            step: function () {
                 jQuery(this).removeClass('shadow');
             }
         });
-        sideTab.animate({right : cal}, 300);
+        sideTab.animate({ right: cal }, 300);
         side = 0;
         cal = positiveDefault;
     });
-    jQuery('.side-tab, a.fly-out').on('click', function(e){
+    jQuery('.side-tab, a.fly-out').on('click', function (e) {
         e.preventDefault();
 
-        if(side == minusDefault && cal == 0){
-            flyout.animate({right: side},{
+        if (side == minusDefault && cal == 0) {
+            flyout.animate({ right: side }, {
                 duration: 300,
-                step: function(){
+                step: function () {
                     sideTab.removeClass('shadow');
                 }
             });
-            sideTab.animate({right : cal}, 300);
+            sideTab.animate({ right: cal }, 300);
             side = 0;
             cal = positiveDefault;
-        }else{
-            flyout.animate({right: side}, 300);
-            sideTab.animate({right : cal}, 300);
+        } else {
+            flyout.animate({ right: side }, 300);
+            sideTab.animate({ right: cal }, 300);
             flyout.addClass('shadow');
             side = minusDefault;
             cal = 0;
         }
     });
-    jQuery(window).on('scroll', function(){
-        if(side == minusDefault && cal == 0){
-            flyout.animate({right: side},{
+    jQuery(window).on('scroll', function () {
+        if (side == minusDefault && cal == 0) {
+            flyout.animate({ right: side }, {
                 duration: 300,
-                step: function(){
+                step: function () {
                     jQuery(this).removeClass('shadow');
                 }
             });
-            sideTab.animate({right : cal}, 300);
+            sideTab.animate({ right: cal }, 300);
             side = 0;
             cal = positiveDefault;
         }
@@ -553,20 +571,20 @@ Icon modal popup
 
  */
 
-jQuery('.feature-center a').on('click', function(e){
+jQuery('.feature-center a').on('click', function (e) {
     e.preventDefault();
 
     var heading = jQuery(this).parent().prev('h3').text(),
         data = {
-            'heading' : heading
+            'heading': heading
         };
 
     jQuery.ajax({
         url: 'feature_display.php',
         type: 'POST',
         data: data,
-        success: function(e){
-            if(e !== 'failed') {
+        success: function (e) {
+            if (e !== 'failed') {
                 Swal.fire({
                     html: e,
                     showCloseButton: true,
@@ -578,11 +596,11 @@ jQuery('.feature-center a').on('click', function(e){
 });
 
 var featured = document.querySelectorAll('.feature-center');
-featured.forEach(function( e, i ){
+featured.forEach(function (e, i) {
     e.id = 'featured' + i;
     let check = e.querySelector('a');
 
-    if(check) {
+    if (check) {
         var data = {
             'heading': e.querySelector('h3').innerText
         };
