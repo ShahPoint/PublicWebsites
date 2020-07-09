@@ -3953,3 +3953,18 @@ a {
     margin-bottom: 1.5rem;
   }
 }
+
+
+.polish .header-text h1{
+  line-height: 44px !important;
+  font-size: 37px;
+  margin-top: 30px;
+}
+.French .header-text h1{
+  line-height: 40px !important;
+  font-size: 33px;
+}
+.spanish .header-text h1{
+  font-size: 30px;
+  line-height: 34px !important;
+}
