@@ -621,8 +621,7 @@
                                     <input type="text" name="name" class="form-control" placeholder="Imię" required>
                                     <input type="email" name="email" class="form-control" placeholder="Email" required>
                                     <input type="text" name="phone" class="form-control" placeholder="Numer telefonu" data-rule-international-phone-number>
-                                    <textarea name="message" class="form-control" style="min-height:75px;" placeholder="Wiadomość" required></textarea>
-
+                                    <textarea name="message" class="form-control" style="min-height:75px;" placeholder="Wiadomość" required oninvalid="this.setCustomValidity('Proszę wypełnić to pole')" oninput="setCustomValidity('')"></textarea>
                                     <div class="clearfix"></div>
 
                                     <div class="col-md-12 form-btn-submit">
@@ -659,7 +658,7 @@
                     <ul>
                         <li><a href="#features---2" title="Features">Cechy</a></li>
                         <li><a href="#how-to-use---2" title="Our Process">Nasz proces</a></li>
-                        <li><a href="#faq---2" title="FAQ">FAQ</a></li>
+                        <!-- <li><a href="#faq---2" title="FAQ">FAQ</a></li> -->
                         <li><a href="privacy.html" title="Privacy Policy">Polityka Prywatności</a></li>
                     </ul>
                 </div> <!-- .footer-col-2 -->
@@ -765,13 +764,16 @@
 
 
 <!-- BEGIN Intercom -->
-<script>(function () { var w = window; var ic = w.Intercom; if (typeof ic === "function") { ic('reattach_activator'); ic('update', w.intercomSettings); } else { var d = document; var i = function () { i.c(arguments); }; i.q = []; i.c = function (args) { i.q.push(args); }; w.Intercom = i; var l = function () { var s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://widget.intercom.io/widget/o79cl0h3'; var x = d.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); }; if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } } })();</script>
+<!-- <script>(function () { var w = window; var ic = w.Intercom; if (typeof ic === "function") { ic('reattach_activator'); ic('update', w.intercomSettings); } else { var d = document; var i = function () { i.c(arguments); }; i.q = []; i.c = function (args) { i.q.push(args); }; w.Intercom = i; var l = function () { var s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://widget.intercom.io/widget/o79cl0h3'; var x = d.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); }; if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } } })();</script> -->
 <script>
-    window.intercomSettings = {
-        app_id: "o79cl0h3",
-        app: "AmbuSoftPublic"
-    };
-    Intercom("initialize", window.intercomSettings);
+    // window.intercomSettings = {
+    //     app_id: "o79cl0h3",
+    //     app: "AmbuSoftPublic"
+    // };
+    // Intercom("initialize", window.intercomSettings);
+
+    $("input[required], select[required]").attr("oninvalid", "this.setCustomValidity('Proszę wypełnić to pole')");
+    $("input[required], select[required]").attr("oninput", "setCustomValidity('')");
 </script>
 <!-- END Intercom -->
 

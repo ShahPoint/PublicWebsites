@@ -753,7 +753,7 @@
                                     <input type="text" name="name" class="form-control" placeholder="Nombre" required>
                                     <input type="email" name="email" class="form-control" placeholder="Correo electrónico" required>
                                     <input type="text" name="phone" class="form-control" placeholder="Número de teléfono" data-rule-international-phone-number>
-                                    <textarea name="message" class="form-control" style="min-height:75px;" placeholder="Mensaje" required></textarea>
+                                    <textarea name="message" class="form-control" style="min-height:75px;" placeholder="Mensaje" required oninvalid="this.setCustomValidity('Por favor rellene este campo')" oninput="setCustomValidity('')"></textarea>
 
                                     <div class="clearfix"></div>
 
@@ -903,6 +903,8 @@
         app: "AmbuSoftPublic"
     };
     Intercom("initialize", window.intercomSettings);
+    $("input[required], select[required]").attr("oninvalid", "this.setCustomValidity('Por favor rellene este campo')");
+    $("input[required], select[required]").attr("oninput", "setCustomValidity('')");
 </script>
 <!-- END Intercom -->
 

@@ -150,8 +150,8 @@
                             <h4 style="color:white">يمكنك تجربته اليوم مع تسجيل دخول تجريبي مجاني!</h4>
                             <form action="#" method="post" class="free-trial-form">
                                 <fieldset>
-                                    <input type="text" name="name" class="form-control" placeholder="الاسم" required>
-                                    <input type="email" name="email" class="form-control" placeholder="البريد الإلكتروني" required>
+                                    <input type="text" name="name" class="form-control" placeholder="الاسم" required oninvalid="this.setCustomValidity('الرجاء ملء هذه الخانة')" oninput="setCustomValidity('')">
+                                    <input type="email" name="email" class="form-control" placeholder="البريد الإلكتروني" required oninvalid="this.setCustomValidity('الرجاء ملء هذه الخانة')" oninput="setCustomValidity('')">
                                     <input type="text" name="phone" class="form-control" placeholder="رقم الهاتف" data-rule-international-phone-number>
                                     <br />
                                     <button type="submit" class="button button-white" style="color:#0e83b7; border:solid thin #0e83b7">إنشاء تسجيل دخول تجريبي</button><span style="padding-left:10px;display:none;" class="loading"><i class="fas fa-spin fa-spinner"></i></span>
@@ -759,10 +759,10 @@
                                         <p>هل لديك أسئلة؟ لدينا الاجابات!</p>
                                     </div>
 
-                                    <input type="text" name="name" class="form-control" placeholder="الاسم" required>
-                                    <input type="email" name="email" class="form-control" placeholder="البريد الإلكتروني" required>
+                                    <input type="text" name="name" class="form-control" placeholder="الاسم" required oninvalid="this.setCustomValidity('الرجاء ملء هذه الخانة')" oninput="setCustomValidity('')">
+                                    <input type="email" name="email" class="form-control" placeholder="البريد الإلكتروني" required oninvalid="this.setCustomValidity('الرجاء ملء هذه الخانة')" oninput="setCustomValidity('')">
                                     <input type="text" name="phone" class="form-control" placeholder="رقم الهاتف" data-rule-international-phone-number>
-                                    <textarea name="message" class="form-control" style="min-height:75px;" placeholder="الرسالة" required></textarea>
+                                    <textarea name="message" class="form-control" style="min-height:75px;" placeholder="الرسالة" required oninvalid="this.setCustomValidity('الرجاء ملء هذه الخانة')" oninput="setCustomValidity('')"></textarea>
 
                                     <div class="clearfix"></div>
 
@@ -843,8 +843,8 @@
                     <p>استخدم برنامجنا لمدة 30 يومًا بدون أي التزامات (لا معلومات الدفع المطلوبة)</p>
                 </div>
 
-                <input type="text" name="name" class="form-control" placeholder="الاسم" required>
-                <input type="email" name="email" class="form-control" placeholder="البريد الإلكتروني" required>
+                <input type="text" name="name" class="form-control" placeholder="الاسم" required oninvalid="this.setCustomValidity('الرجاء ملء هذه الخانة')" oninput="setCustomValidity('')">
+                <input type="email" name="email" class="form-control" placeholder="البريد الإلكتروني" required oninvalid="this.setCustomValidity('الرجاء ملء هذه الخانة')" oninput="setCustomValidity('')">
                 <input type="text" name="phone" class="form-control" placeholder="رقم الهاتف" data-rule-international-phone-number>
 
                 <div class="clearfix"></div>
@@ -892,6 +892,7 @@
             return value.trim().startsWith('+');
         }, "Phone numbers must start with '+'");
     // });
+
 </script>
 
 <!--[if lte IE 9]>
