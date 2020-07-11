@@ -680,3 +680,28 @@ jQuery('.Arabic .feature-center a').on('click', function(e){
         }
     });
 });
+
+/* For Polish version */
+jQuery('.polish .feature-center a').on('click', function(e){
+    e.preventDefault();
+
+    var heading = jQuery(this).parent().prev('h3').text(),
+        data = {
+            'heading' : heading
+        };
+
+    jQuery.ajax({
+        url: 'feature_display_polish.php',
+        type: 'POST',
+        data: data,
+        success: function(e){
+            if(e !== 'failed') {
+                Swal.fire({
+                    html: e,
+                    showCloseButton: true,
+                    showCancelButton: false
+                })
+            }
+        }
+    });
+});

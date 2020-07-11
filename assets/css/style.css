@@ -3968,3 +3968,12 @@ a {
   font-size: 30px;
   line-height: 34px !important;
 }
+
+@media (max-width: 767px){
+  .nav-no-shadow .standard{
+    display: none !important;
+  }
+  .nav-no-shadow .scroll{
+    display: block !important;
+  }
+}
