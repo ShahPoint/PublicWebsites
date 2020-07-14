@@ -2,7 +2,7 @@
 
 namespace CloudPCR;
 
-if($_SERVER['REQUEST_METHOD'] != 'POST') exit('Permission Denied');
+// if($_SERVER['REQUEST_METHOD'] != 'POST') exit('Permission Denied');
 
 class feature_display {
 
@@ -26,7 +26,7 @@ class feature_display {
 
 		$context = stream_context_create($opts);
 
-		$file_path = 'features_content/' . $file . '.html';
+		$file_path = 'features_content_homemain/' . $file . '.html';
 		if(file_exists($file_path)){
 			$html = file_get_contents($file_path, false, $context);
 			echo $html;

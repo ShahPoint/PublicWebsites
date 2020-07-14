@@ -4,7 +4,7 @@ namespace CloudPCR;
 
 if($_SERVER['REQUEST_METHOD'] != 'POST') exit('Permission Denied');
 
-class feature_display {
+class feature_display_french {
 
 	private $regex = "/[^a-zA-Z0-9\-]/";
 
@@ -38,4 +38,4 @@ class feature_display {
 	}
 }
 
-new feature_display();
+new feature_display_french();

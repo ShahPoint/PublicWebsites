@@ -2,9 +2,9 @@
 
 namespace CloudPCR;
 
-if($_SERVER['REQUEST_METHOD'] != 'POST') exit('Permission Denied');
+// if($_SERVER['REQUEST_METHOD'] != 'POST') exit('Permission Denied');
 
-class feature_display {
+class feature_display_spanish {
 
 	private $regex = "/[^a-zA-Z0-9\-]/";
 
@@ -27,6 +27,7 @@ class feature_display {
 		$context = stream_context_create($opts);
 
 		$file_path = 'features_content_spanish/' . $file . '.html';
+		//echo $file_path; die;
 		if(file_exists($file_path)){
 			$html = file_get_contents($file_path, false, $context);
 			echo $html;
@@ -38,4 +39,4 @@ class feature_display {
 	}
 }
 
-new feature_display();
+new feature_display_spanish();
