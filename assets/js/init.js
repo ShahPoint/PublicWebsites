@@ -705,3 +705,28 @@ jQuery('.polish .feature-center a').on('click', function(e){
         }
     });
 });
+
+/* For UK version */
+jQuery('.UK .feature-center a').on('click', function(e){
+    e.preventDefault();
+
+    var heading = jQuery(this).parent().prev('h3').attr('data-title'),
+        data = {
+            'heading' : heading
+        };
+
+    jQuery.ajax({
+        url: 'feature_display_uk.php',
+        type: 'POST',
+        data: data,
+        success: function(e){
+            if(e !== 'failed') {
+                Swal.fire({
+                    html: e,
+                    showCloseButton: true,
+                    showCancelButton: false
+                })
+            }
+        }
+    });
+});
