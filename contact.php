@@ -114,7 +114,8 @@ $send_to = [
 	"sam.kilzer@cloudpcr.net" => "Sam Kilzer"
 ];
 $grid_email->addTos($send_to);
-$grid_email->setFrom($email);
+//$grid_email->setFrom($email);
+$grid_email->setFrom('system@cloudpcr.net');
 $grid_email->setSubject("Contact-Us -  $full_name");
 $grid_email->addContent("text/html", $message);
 
