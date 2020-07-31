@@ -563,7 +563,7 @@ jQuery('.homepage .feature-center a').on('click', function(e){
         };
 
     jQuery.ajax({
-        url: 'feature_display.php',
+        url: 'feature_display_homemain.php',
         type: 'POST',
         data: data,
         success: function(e){
@@ -583,7 +583,7 @@ jQuery('.homepage .feature-center a').on('click', function(e){
 jQuery('.spanish .feature-center a').on('click', function(e){
     e.preventDefault();
 
-    var heading = jQuery(this).parent().prev('h3').text(),
+    var heading = jQuery(this).parent().prev('h3').attr('data-title'),
         data = {
             'heading' : heading
         };
@@ -609,7 +609,7 @@ jQuery('.spanish .feature-center a').on('click', function(e){
 jQuery('.French .feature-center a').on('click', function(e){
     e.preventDefault();
 
-    var heading = jQuery(this).parent().prev('h3').text(),
+    var heading = jQuery(this).parent().prev('h3').attr('data-title'),
         data = {
             'heading' : heading
         };
@@ -635,7 +635,7 @@ jQuery('.French .feature-center a').on('click', function(e){
 jQuery('.german .feature-center a').on('click', function(e){
     e.preventDefault();
 
-    var heading = jQuery(this).parent().prev('h3').text(),
+    var heading = jQuery(this).parent().prev('h3').attr('data-title'),
         data = {
             'heading' : heading
         };
@@ -660,7 +660,7 @@ jQuery('.german .feature-center a').on('click', function(e){
 jQuery('.Arabic .feature-center a').on('click', function(e){
     e.preventDefault();
 
-    var heading = jQuery(this).parent().prev('h3').text(),
+    var heading = jQuery(this).parent().prev('h3').attr('data-title'),
         data = {
             'heading' : heading
         };
@@ -685,13 +685,38 @@ jQuery('.Arabic .feature-center a').on('click', function(e){
 jQuery('.polish .feature-center a').on('click', function(e){
     e.preventDefault();
 
-    var heading = jQuery(this).parent().prev('h3').text(),
+    var heading = jQuery(this).parent().prev('h3').attr('data-title'),
         data = {
             'heading' : heading
         };
 
     jQuery.ajax({
         url: 'feature_display_polish.php',
+        type: 'POST',
+        data: data,
+        success: function(e){
+            if(e !== 'failed') {
+                Swal.fire({
+                    html: e,
+                    showCloseButton: true,
+                    showCancelButton: false
+                })
+            }
+        }
+    });
+});
+
+/* For UK version */
+jQuery('.UK .feature-center a').on('click', function(e){
+    e.preventDefault();
+
+    var heading = jQuery(this).parent().prev('h3').attr('data-title'),
+        data = {
+            'heading' : heading
+        };
+
+    jQuery.ajax({
+        url: 'feature_display_uk.php',
         type: 'POST',
         data: data,
         success: function(e){
