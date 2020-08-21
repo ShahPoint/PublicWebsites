@@ -3953,3 +3953,6 @@ a {
     margin-bottom: 1.5rem;
   }
 }
+
+
+input#website, input#bottom-contact-form, input#side-contactform{display: none;}

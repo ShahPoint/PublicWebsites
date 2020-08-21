@@ -57,8 +57,6 @@
 
         gtag('config', 'UA-131481152-1');
     </script>
-
-
     <script>
         !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
             n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
@@ -133,6 +131,7 @@
                                     <input type="text" name="name" class="form-control" placeholder="Name" required>
                                     <input type="email" name="email" class="form-control" placeholder="Email" required>
                                     <input type="text" name="phone" class="form-control" placeholder="Phone Number">
+                                    <input id="website" name="website" type="text" value=""  />
                                     <button type="submit" class="button button-white" style="color:#0e83b7; border:solid thin #0e83b7">Create Demo Login</button><span style="padding-left:10px;display:none;" class="loading"><i class="fas fa-spin fa-spinner"></i></span>
                                 </fieldset>
                             </form>
@@ -745,6 +744,7 @@
                                     <input type="text" name="name" class="form-control" placeholder="Name" required>
                                     <input type="email" name="email" class="form-control" placeholder="Email" required>
                                     <input type="text" name="phone" class="form-control" placeholder="Phone Number">
+                                    <input id="bottom-contact-form" name="bottom-contact-form" type="text" value=""  />
                                     <textarea name="message" class="form-control" style="min-height:75px;" placeholder="Message" required></textarea>
 
                                     <div class="clearfix"></div>
@@ -828,7 +828,7 @@
                 <input type="text" name="name" class="form-control" placeholder="Name" required>
                 <input type="email" name="email" class="form-control" placeholder="Email" required>
                 <input type="text" name="phone" class="form-control" placeholder="Phone Number">
-
+                <input id="side-contactform" name="side-contactform" type="text" value=""  />
                 <div class="clearfix"></div>
 
                 <div class="col-md-12 form-btn-submit">
@@ -904,7 +904,27 @@
         projectKey: 'ljgB4IlDBrU'
     });
 </script>
-  <!-- END Intercom -->
+<!-- END Intercom -->
+
+<!-- BEGIN Honeypot -->
+<script>
+    $('.free-trial-form').submit(function(){    
+        if ($('input#website').val().length != 0) {
+            return false;
+        } 
+    });
+    $('.free-trial-form').submit(function(){    
+        if ($('input#side-contactform').val().length != 0) {
+            return false;
+        } 
+    });
+    $('.general-contact').submit(function(){    
+        if ($('input#bottom-contact-form').val().length != 0) {
+            return false;
+        } 
+    });        
+</script>
+<!-- END Honeypot -->
 
 </body>
 </html>
