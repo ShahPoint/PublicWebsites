@@ -149,7 +149,7 @@
                                     <input type="text" name="name" class="form-control" placeholder="Nombre" required>
                                     <input type="email" name="email" class="form-control" placeholder="Correo electrónico" required>
                                     <input type="text" name="phone" class="form-control" placeholder="Número de teléfono" data-rule-international-phone-number>
-                                    <input id="website" name="website" type="text" value=""  />
+                                    <input id="website" name="website" type="text" value="1"  />
                                     <br />
                                     <button type="submit" class="button button-white" style="color:#0e83b7; border:solid thin #0e83b7">Crear demo de inicio de sesión</button><span style="padding-left:10px;display:none;" class="loading"><i class="fas fa-spin fa-spinner"></i></span>
                                 </fieldset>
@@ -755,7 +755,7 @@
                                     <input type="text" name="name" class="form-control" placeholder="Nombre" required>
                                     <input type="email" name="email" class="form-control" placeholder="Correo electrónico" required>
                                     <input type="text" name="phone" class="form-control" placeholder="Número de teléfono" data-rule-international-phone-number>
-                                    <input id="bottom-contact-form" name="bottom-contact-form" type="text" value=""  />
+                                    <input id="bottom-contact-form" name="bottom-contact-form" type="text" value="1"  />
                                     <textarea name="message" class="form-control" style="min-height:75px;" placeholder="Mensaje" required oninvalid="this.setCustomValidity('Por favor rellene este campo')" oninput="setCustomValidity('')"></textarea>
 
                                     <div class="clearfix"></div>
@@ -827,7 +827,7 @@
 
         <!-- Start Contact Form -->
         <div class="col-md-12 center-form border-box">
-            <form class="contact-form free-trial-form">
+            <form class="contact-form free-trial-form side-contactform">
 
                 <div class="col-md-12 text-center">
                     <h2>Empiza La prueba gratuita de 30 días</h2>
@@ -837,7 +837,7 @@
                 <input type="text" name="name" class="form-control" placeholder="Nombre" required>
                 <input type="email" name="email" class="form-control" placeholder="Correo electrónico" required>
                 <input type="text" name="phone" class="form-control" placeholder="Número de teléfono" data-rule-international-phone-number>
-                <input id="side-contactform" name="side-contactform" type="text" value=""  />
+                <input id="side-contactform" name="side-contactform" type="text" value="1"  />
                 <div class="clearfix"></div>
                 <div class="col-md-12 form-btn-submit">
                     <input class="button button-full contact-submit" name="contact-submit" value="solicitar juicio" type="submit">
@@ -917,7 +917,7 @@
             return false;
         } 
     });
-    $('.free-trial-form').submit(function(){    
+    $('.side-contactform').submit(function(){    
         if ($('input#side-contactform').val().length != 0) {
             return false;
         } 
