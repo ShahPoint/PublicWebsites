@@ -66,18 +66,21 @@ function SubmitCoreInfo($form) {
         formData = Object.assign(formData, utmData);
         // let loading = SetLoading();
 
-        return jQuery.ajax({
-            type: "GET",
-            url: URL,
-            data: formData
-        }).done((data) => {
-            // if (data.Success)
-            //     window.location = `completeSignup.html?referenceId=${data.ReferenceId}`;
-            // else
-            //     swal("Oh Snap!", "Maybe you have already signed up?  You can create a new account by trying a different email address, or send us a message using our chat in the bottom right!", "warning");
-        }).fail(() => {
-            // swal("Oh Snap!", "There was an issue creating your account. If this keeps happening, just send us a message using our chat in the bottom right!", "warning");
-        })//.always(() => loading.remove());
+      if (!$("[name=website]").val() && !$("[name=bottom-contact-form]").val() && !$("[name=side-contactform]").val() ) {
+
+            return jQuery.ajax({
+                type: "GET",
+                url: URL,
+                data: formData
+            }).done((data) => {
+                // if (data.Success)
+                //     window.location = `completeSignup.html?referenceId=${data.ReferenceId}`;
+                // else
+                //     swal("Oh Snap!", "Maybe you have already signed up?  You can create a new account by trying a different email address, or send us a message using our chat in the bottom right!", "warning");
+            }).fail(() => {
+                // swal("Oh Snap!", "There was an issue creating your account. If this keeps happening, just send us a message using our chat in the bottom right!", "warning");
+            })//.always(() => loading.remove());
+        }
     }
     else {
         var d = new $.Deferred();
