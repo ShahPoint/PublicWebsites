@@ -339,18 +339,15 @@ function trialSubmission() {
         },
             urlencode = $this.serialize();
 
-        var promise2 = jQuery.ajax({
-            url: 'mail.php',
-            type: 'POST',
-            data: data
-        });
+        //var promise2 = jQuery.ajax({
+        //    url: 'mail.php',
+        //    type: 'POST',
+        //    data: data
+        //});
 
-        jQuery.when(promise1, promise2)
+        jQuery.when(promise1)
             .done((r) => {
-                console.log(r);
-                // if (r[1] === 'true') {
-                window.location.href = 'thankyou.html?page=trial&' + urlencode;
-                // }
+                thankyou(r, urlencode);
             })
         // .fail((r) => {
         //     alert("Failed to create account");
@@ -415,27 +412,24 @@ function generalContact() {
 
 
         //contact us , send email
-        var promise1 = jQuery.ajax({
-            url: 'contact.php',
-            type: 'POST',
-            data: data,
-            success: function (e) {
+        //var promise1 = jQuery.ajax({
+        //    url: 'contact.php',
+        //    type: 'POST',
+        //    data: data,
+        //    success: function (e) {
 
-                // if (e === 'true') {
-                //     window.location.href = 'thankyou.html?page=contact&' + urlencode;
-                // }
-            }
-        });
+        //        // if (e === 'true') {
+        //        //     window.location.href = 'thankyou.html?page=contact&' + urlencode;
+        //        // }
+        //    }
+        //});
 
         //Create free account
         var promise2 = SubmitCoreInfo($(this));
 
-        jQuery.when(promise1, promise2)
+        jQuery.when(promise2)
             .done((r) => {
-                console.log(r);
-                // if (r[1] === 'true') {
-                window.location.href = 'thankyou.html?page=trial&' + urlencode;
-                // }
+                thankyou(r, urlencode);
             })
 
 
@@ -443,6 +437,13 @@ function generalContact() {
     });
 }
 
+function thankyou(r, urlencode) {
+    if (r && r.ReferenceId) {
+        console.log(r);
+        // if (r[1] === 'true') {
+        window.location.href = 'thankyou.html?page=trial&referenceId=' + r.ReferenceId + '&' + urlencode;
+    }
+ }
 
 function additionalForm() {
     var form = jQuery('#thankyou-form'),
@@ -462,19 +463,30 @@ function additionalForm() {
         data.data.push({ name: "name", value: params.get('name') });
         data.data.push({ name: "email", value: params.get('email') });
 
-        jQuery.ajax({
-            url: 'thankyou-form.php',
-            type: 'POST',
-            data: data,
-            success: function (e) {
-
-                if (e === 'true') {
-                    $this.fadeOut(300);
-                    jQuery('.thank-message').fadeOut(300);
-                }
-            }
+        var dataObj = {};
+        $(data.data).each(function (i, field) {
+            dataObj[field.name] = field.value;
         });
 
+        let formData = {
+            referenceId: params.get('referenceId'),
+            emailAddress: params.get('email'),
+            agencyName: dataObj['agency_name'],
+            state: dataObj['state'],
+            trips: dataObj['trips'],
+            position: dataObj['position'],
+            notes: dataObj['comments']
+        };
+
+        jQuery.ajax({
+            type: "POST",
+            url: URL,
+            data: formData,
+            success: function (e) {
+                $this.fadeOut(300);
+                jQuery('.thank-message').fadeOut(300);
+            }
+        });
     });
 }
 

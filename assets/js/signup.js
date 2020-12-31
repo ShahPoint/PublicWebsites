@@ -69,7 +69,7 @@ function SubmitCoreInfo($form) {
       if (!$("[name=website]").val() && !$("[name=bottom-contact-form]").val() && !$("[name=side-contactform]").val() ) {
 
             return jQuery.ajax({
-                type: "GET",
+                type: "POST",
                 url: URL,
                 data: formData
             }).done((data) => {
