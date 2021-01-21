@@ -315,47 +315,18 @@ function getUTMData() {
 
 }
 
+function NavigateToThankYou(formData) {
+    window.location.href = 'thankyou.html?page=trial&referenceId=' + formData.ReferenceId;
+}
 
 //Submits Trial Form
 function trialSubmission() {
-
-    //debugger;
     var trialForm = jQuery('.free-trial-form');
-
-
     trialForm.on('submit', function (e) {
-        //debugger;
         e.preventDefault();
-
         var $this = jQuery(this);
-
-        var promise1 = SubmitCoreInfo($(this));
-
         $this.find('.loading').show();
-        var key = Cookies.get('__ca__chat');
-        var data = {
-            'data': $this.serializeArray(),
-            'key': key
-        },
-            urlencode = $this.serialize();
-
-        var promise2 = jQuery.ajax({
-            url: 'mail.php',
-            type: 'POST',
-            data: data
-        });
-
-        jQuery.when(promise1, promise2)
-            .done((r) => {
-                console.log(r);
-                // if (r[1] === 'true') {
-                window.location.href = 'thankyou.html?page=trial&' + urlencode;
-                // }
-            })
-        // .fail((r) => {
-        //     alert("Failed to create account");
-        // });
-
+        var promise1 = SubmitCoreInfo($this).then(NavigateToThankYou);
     });
 }
 
@@ -428,53 +399,23 @@ function generalContact() {
         });
 
         //Create free account
-        var promise2 = SubmitCoreInfo($(this));
+        var data = null;
+        var promise2 = SubmitCoreInfo($(this)).then((d) => data = d);
 
         jQuery.when(promise1, promise2)
             .done((r) => {
-                console.log(r);
-                // if (r[1] === 'true') {
-                window.location.href = 'thankyou.html?page=trial&' + urlencode;
-                // }
-            })
-
-
-
+                NavigateToThankYou(data);
+            });
     });
 }
 
-
 function additionalForm() {
-    var form = jQuery('#thankyou-form'),
-        params = new URLSearchParams(window.location.search);
-
+    var form = jQuery('#thankyou-form');
     form.on('submit', function (e) {
         e.preventDefault();
-
         var $this = jQuery(this);
-
-
         $this.find('.loading').show();
-
-        var data = {
-            'data': $this.serializeArray()
-        };
-        data.data.push({ name: "name", value: params.get('name') });
-        data.data.push({ name: "email", value: params.get('email') });
-
-        jQuery.ajax({
-            url: 'thankyou-form.php',
-            type: 'POST',
-            data: data,
-            success: function (e) {
-
-                if (e === 'true') {
-                    $this.fadeOut(300);
-                    jQuery('.thank-message').fadeOut(300);
-                }
-            }
-        });
-
+        SubmitAdditionalInfo($this);
     });
 }
 

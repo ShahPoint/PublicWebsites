@@ -77,6 +77,7 @@ function SubmitCoreInfo($form) {
                 //     window.location = `completeSignup.html?referenceId=${data.ReferenceId}`;
                 // else
                 //     swal("Oh Snap!", "Maybe you have already signed up?  You can create a new account by trying a different email address, or send us a message using our chat in the bottom right!", "warning");
+                return data;
             }).fail(() => {
                 // swal("Oh Snap!", "There was an issue creating your account. If this keeps happening, just send us a message using our chat in the bottom right!", "warning");
             })//.always(() => loading.remove());
@@ -90,14 +91,12 @@ function SubmitCoreInfo($form) {
     }
 }
 
-function SubmitAdditionalInfo() {
-    let $form = $("#additionalInfoForm")
+function SubmitAdditionalInfo($form) {
     let validator = $form.validate();
 
     if (validator.form()) {
         let formData = SerializeFormToJson($form);
         formData.referenceId = getUrlParameter("referenceId");
-        // formData.testing = true;
         let loading = SetLoading();
 
         jQuery.ajax({
