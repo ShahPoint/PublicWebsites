@@ -76,7 +76,71 @@
 
     <!-- Start Header -->
     <header id="masthead" class="site-header">
+            <style>
+                .hd-topbar {
+                    background: white;
+                    color: #0e83b7;
+                    padding: 5px;
+                }
 
+                .modal-dialog-centered {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    min-height: calc(100% - (0.5rem * 2));
+                }
+                
+                .hd-hide {
+                    display: none;
+                    transition: .5s;
+                }
+                
+                .hd-show {
+                    display: block;
+                    transition: .5s;
+                }
+                
+                .mr-2 {
+                    margin-right: 10px;
+                }
+
+                @media (min-width: 576px) {
+                    .modal-dialog-centered {
+                        min-height: calc(100% - (1.75rem * 2));
+                    }
+                }
+            </style>
+            <script>
+                window.addEventListener("scroll", function () {
+                    if (window.scrollY == 0) {
+                        $('.hd-topbar').addClass('hd-show')
+                        $('.hd-topbar').removeClass('hd-hide')
+                        // $('.hd-topbar').css("height", "auto")
+                        // $('.hd-topbar').css("padding", "5px")
+                        //user is at the top of the page; no need to show the back to top button
+                        //goToTop.style.display = "";
+                    } else {
+                        $('.hd-topbar').addClass('hd-hide')
+                        $('.hd-topbar').removeClass('hd-show')
+                        // $('.hd-topbar').css("height", "0px")
+                        // $('.hd-topbar').css("padding", "0px")
+                        //goToTop.style.display = "block";
+                    }
+                });
+            </script>
+            <div class="hd-topbar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <b>This page has moved!</b> | The new URL for this page is <b><a
+                                href="www.unified-solutions.io/pcr/">www.unified-solutions.io/pcr</a></b>
+                        </div>
+                    </div>
+                </div>
+            </div>
         <!-- Start Navigation -->
         <nav id="site-navigation" class="navbar main-navigation nav-dark navbar-top">
             <div class="container-fluid container-nav nav-no-shadow">
@@ -254,6 +318,37 @@
 
 </div> <!-- #page -->
 
+<style>
+        .hd-modal-body {
+            padding: 35px;
+        }
+    </style>
+    <!-- Modal -->
+    <div class="modal fade" id="alertModal">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <!-- <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div> -->
+                <div class="modal-body text-center hd-modal-body">
+                    <h3 style="margin: 0px">This page has moved!</h3>
+                    <h5>The new URL for this page is <a href="https://www.unified-solutions.io/pcr/">www.unified-solutions.io/pcr/</a></h5>
+                    <div>
+                        <a class="btn btn-primary mr-2" href="https://www.unified-solutions.io/pcr/">Go to the new
+                            page</a>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                <!-- <div class="modal-footer text-center">
+        
+                        </div> -->
+            </div>
+        </div>
+    </div>
+
 <!-- Include JS -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
@@ -269,7 +364,47 @@
 <script src="assets/js/placeholders.js"></script>
 <script src="assets/js/init-for-ie.js"></script>
 <![endif]-->
+<script>
+    $(document).ready(function () {
+            setTimeout(function () {
+                $('#alertModal').modal()
+            }, 5000)
+        })
+</script>
+    <!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/21057826.js"></script>
+<script >
+    //delay hubspot chat
+    jQuery(document).ready(function() {
 
+        var isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
+
+        if (window.HubSpotConversations) {
+            window.hsConversationsSettings = {
+                loadImmediately: false,
+            };
+        } else {
+            window.hsConversationsOnReady = [
+                () => {
+                    window.hsConversationsSettings = {
+                        loadImmediately: false,
+                    };
+                },
+            ];
+        }
+        setTimeout(function() {
+//don't load widgetOpen on mobile
+            if (isMobile) {
+                window.HubSpotConversations.widget.load();
+            } else {
+                window.HubSpotConversations.widget.load({
+                    widgetOpen: true
+                });
+            }
+        }, 500);
+    });
+</script>
+<!-- End of HubSpot Embed Code -->
 <script data-cfasync="false"> window.civchat = { apiKey: "Fz6pn6", }; </script> <script data-cfasync="false" src="https://cloudpcrtest.user.com/widget.js"></script>
 </body>
 </html>
